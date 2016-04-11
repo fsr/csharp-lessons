@@ -1,0 +1,38 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Hello World!}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+
+\section{Test!}
+
+\begin{frame}{Test}
+    Hallo!
+    \begin{itemize}
+        \item Eine Aufzählung! $\backslash$o/
+        \item Ein \alert{hervorgehobenes} Wort
+    \end{itemize}
+\end{frame}
+
+\subsection{Hallo Welt!}
+\begin{frame}{Mein erstes Programm! :')}
+    \lstinputlisting{resources/01_getting_started/helloworld.cs}
+\end{frame}
+
+\end{document}
