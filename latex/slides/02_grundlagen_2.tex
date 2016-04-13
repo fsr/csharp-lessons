@@ -1,0 +1,125 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Grundlagen von C\texttt{\#} - 2}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Kontrollstrukturen ------------------------------
+\section{Array}
+\begin{frame}{Array}
+	\begin{itemize}
+		\item Sind Aufzählung einer "beliebigen" Anzahl von Variablen gleichen Typs
+		\item Können über eine Index aufgerufen werden
+		\begin{itemize}
+			\item Dieser geht von 0 bis Größe - 1
+		\end{itemize}
+		\item Können ein- oder mehrdimensional sein
+	\end{itemize}
+	\textbf{Eindimensionales Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/array.cs}	
+\end{frame}
+
+\begin{frame}{Array}
+	\textbf{Array von einem Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/array_of_array.cs}
+	\textbf{Mehrdimensionales Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/multi_array.cs}	
+\end{frame}
+
+% ----------------------- Kontrollstrukturen ------------------------------
+\section{Kontrollstrukturen}
+\begin{frame}{Kontrollstrukturen}
+	\begin{itemize}
+		\item Verändern den Ablauf des Programms
+		\item Können Verzweigungen oder Schleifen sein
+		\item Benötigen bool'sche Ausdrücke als Abfrage
+		\begin{itemize}
+			\item Kann eine bool-Variable/-Methode sein
+			\item oder ein Vergleich
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Verzweigungen}
+\begin{frame}{Verzweigungen}
+	\textbf{if:}\\
+	\lstinputlisting{resources/02_grundlagen_2/if.cs}
+\end{frame}
+
+\begin{frame}{Verzweigungen}
+	\textbf{Tertiäre-Verzweigung:}\\
+	\begin{itemize}
+		\item Werden genauso genutzt wie eine if-else-Verzweigung
+		\item Dabei besteht folgende Syntax:
+		\begin{itemize}
+			\item \alert{\texttt{<Bedingung> ? <Dann-Pfad> : <Sonst-Pfad>}}
+		\end{itemize}
+		\item Das \alert{\texttt{?}} steht für \alert{dann}
+		\item Das \alert{\texttt{:}} steht für \alert{sonst}
+	\end{itemize}		
+	\lstinputlisting{resources/02_grundlagen_2/tertiary.cs}
+\end{frame}
+
+\begin{frame}{Verzweigungen}
+	\textbf{switch case:}\\
+	\lstinputlisting{resources/02_grundlagen_2/switch_case.cs}
+\end{frame}
+
+\subsection{Schleifen}
+\begin{frame}{Schleifen}
+	\textbf{while:} \\
+	\begin{itemize}
+		\item Die Schleife läuft so lange durch deren Körper wie die Bedingung in den Klammern erfüllt ist
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/while.cs}	
+\end{frame}
+
+\begin{frame}{Schleifen}
+	\textbf{do while:} \\
+	\begin{itemize}
+		\item Selbe Funktion wie die while-Schleife
+		\item Einziger Unterschied ist, dass diese Schleife einmal ihren Körper durchläuft, bevor sie die Bedingung überprüft
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
+\end{frame}
+
+\begin{frame}{Schleifen}
+	\textbf{for:} \\
+	\begin{itemize}
+		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
+		\item Die Schleife hat folgenden Aufbau:
+		\begin{itemize}
+			\item \alert{\texttt{for( <Zählvariable>; <Bedingung>; <Schrittweite> )}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/for.cs}	
+\end{frame}
+
+\begin{frame}{Schleifen}
+	\textbf{foreach:} \\
+	\begin{itemize}
+		\item Läuft durch eine Aufzählung an Elementen eines Typen durch 
+		\item Weist jeden Durchlauf ein neues Element aus der Aufzählung der Variable zu 
+		\item Die Schleife hat folgenden Aufbau:
+		\begin{itemize}
+			\item \alert{\texttt{foreach( <Datentyp> <Variablenname> in <Aufzählung> )}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/foreach.cs}	
+\end{frame}
+
+\end{document}

@@ -5,7 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Grundlagen von C\texttt{\#}}
+\title{Grundlagen von C\texttt{\#} - 1}
 \date{\today}
 
 
@@ -54,14 +54,12 @@
 
 
 % ----------------------- Hello World ------------------------------
-\section{Hello World}
+\section{Erstes Programm: Hello World}
 \begin{frame}{Hello World}
-    \lstinputlisting{resources/01_getting_started/helloworld.cs}
-\end{frame}
+    \lstinputlisting{resources/01_grundlagen_1/helloworld.cs}   
+\end{frame} 
 
-% ----------------------- Grundlagen der Sprache ------------------------------
-\section{Grundlagen der Sprache}
-\subsection{Wichtige Eigenschaften}
+\subsection{Grundlegende Eigenschaften}
 \begin{frame}{Wichtige Eigenschaften}
 	\begin{itemize}
 		\item Am Ende jedem Befehls steht ein Semikolon (;)
@@ -71,10 +69,23 @@
 		\item Codeblöcke werden durch geschweifte Blöcke gekennzeichnet
 		\item Einrückungen sind nicht zwingend aber hilfreich
 		\item Methodendefinition
-		\begin{itemize}
-			\item \alert{\texttt{<Rückgabetyp><Methodenname>([Übergabeparameter])}}
-		\end{itemize}
 	\end{itemize}
+\end{frame}
+
+% ----------------------- Grundlagen der Sprache ------------------------------
+\section{Grundlagen der Sprache}
+\begin{frame}{Grundlagen der Sprache}
+	\begin{itemize}
+		\item C\texttt{\#} ist eine typsichere, objektorientierte Allzweck-Programmiersprache	
+		\item Benutzt auch andere Paradigmen wie:
+		\begin{itemize}
+			\item imperativ
+			\item deklarativ
+			\item ereignisorientiert
+			\item generisch
+			\item ...
+		\end{itemize}
+	\end{itemize}	
 \end{frame}
 
 \subsection{Kommentare}
@@ -83,11 +94,11 @@
 		\item Werden vom Compiler nicht beachtet und dienen nur zum besseren Verständnis des Codes
 		\item Außerdem kann aus Dokumentationskommentare eine Dokumentation erstellt werden
 	\end{itemize}
-	\lstinputlisting{resources/01_getting_started/comments.cs}
+	\lstinputlisting{resources/01_grundlagen_1/comments.cs}
 \end{frame}
 
 \subsection{Datentypen}
-\begin{frame}{Datentypen}
+\begin{frame}{Primitive Datentypen}
 	\begin{tabular}{c|l}
 		Name & Funktion \\ \hline
 		\texttt{int, long} & Ganzzahl "beliebiger" Größe \\
@@ -98,6 +109,7 @@
 		\texttt{bool} & Wahrheitswert (\texttt{True}, \texttt{False})\\
         \texttt{char} & Ein einzelnes Zeichen \\
 		\texttt{string} & Eine Folge von Zeichen \\
+		\texttt{void} & dt. "Nichts", wird für Methoden genutzt \\
 	\end{tabular}
 	\begin{itemize}
 		 \item Die Variablen mit u (unsigned) als ersten Buchstaben werden normalerweise nicht genutzt
@@ -108,10 +120,29 @@
 \begin{frame}{Operatoren}
 	\begin{description}
 	    \item[mathematisch] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, \alert{\texttt{\%}}
+	    \item[mathematisch] \alert{\texttt{+=}}, \alert{\texttt{-=}}, \alert{\texttt{*=}}, \alert{\texttt{/=}}, \alert{\texttt{++}} (Inkrementieren), \alert{\texttt{--}} (Dekrementieren)
 	    \item[vergleichend] \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}, \alert{\texttt{==}} (Gleichheit), \alert{\texttt{!=}} (Ungleichheit)
 	    \item[logisch] \alert{\texttt{\&\&}} (Und), \alert{\texttt{||}} (Oder), \alert{\texttt{!}} (Negation)
 	    \item[bitweise] \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}, \alert{\texttt{\^}} (xor), \alert{\texttt{\~}} (invertieren)
 	\end{description}
+\end{frame}
+
+\subsection{Methoden/Variablen Deklaration}
+\begin{frame}{Methoden/Variablen Deklaration}
+	\begin{itemize}
+		\item Variablen
+		\lstinputlisting{resources/01_grundlagen_1/variables.cs}
+		\begin{itemize}
+			\item \alert{\texttt{<Datentyp><Variablenname>}}
+			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen)
+		\end{itemize}
+		\item Methoden		
+		\lstinputlisting{resources/01_grundlagen_1/methods.cs}
+		\begin{itemize}			
+			\item \alert{\texttt{<Rückgabetyp><Methodenname>( [Übergabeparameter] )}}
+		\end{itemize}
+		\item Diese können noch durch Schlüsselwörter modifiziert werden
+	\end{itemize}
 \end{frame}
 
 \end{document}
