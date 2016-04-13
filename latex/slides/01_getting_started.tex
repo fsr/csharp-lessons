@@ -5,8 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-% TODO Change the topic of the lesson
-\title{Hello World!}
+\title{Grundlagen von C\texttt{\#}}
 \date{\today}
 
 
@@ -19,20 +18,100 @@
 	\tableofcontents
 \end{frame}
 
-
-\section{Test!}
-
-\begin{frame}{Test}
-    Hallo!
-    \begin{itemize}
-        \item Eine Aufzählung! $\backslash$o/
-        \item Ein \alert{hervorgehobenes} Wort
-    \end{itemize}
+% ----------------------- Über den Kurs ------------------------------
+\section{Über diesen Kurs}
+\begin{frame}{Über diesen Kurs}
+	\begin{itemize}
+		\item 10 Kurseinheiten
+		\item keine besonderen Programmierkenntnisse vorausgesetzt, aber nützlich
+		\item Ressourcen
+		\begin{itemize}
+			\item Google (C\texttt{\#} meine Frage hier); man landet oft auf der Microsoft Seite
+			\item \href{http://stackoverflow.com/}{Stackoverflow}
+			\item unsere \href{https://github.com/fsr}{Github-Organisation}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
-\subsection{Hallo Welt!}
-\begin{frame}{Mein erstes Programm! :')}
+% ----------------------- Software ------------------------------
+\section{Benötigte Software}
+\begin{frame}{Benötigte Software}
+	.Net-Framework
+	\begin{itemize}
+		\item Kann mit Visual Studio installiert werden
+		\item oder mit \href{http://www.mono-project.com/}{Mono} für Linux, Windows oder Mac
+	\end{itemize}
+	IDEs
+	\begin{itemize}
+		\item \href{https://www.visualstudio.com/}{Visual Studio} für Windows
+		\item \href{http://www.monodevelop.com/}{Mono Develop} für Linux, Windows oder Mac
+		\item \href{https://www.visualstudio.com/de-de/products/code-vs.aspx}{Visual Code} für Linux, Windows oder Mac
+		\begin{itemize}
+			\item Benötigt noch eine C\texttt{\#}-Extension (Ctrl+P \texttt{->} ext install C\texttt{\#})
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+% ----------------------- Hello World ------------------------------
+\section{Hello World}
+\begin{frame}{Hello World}
     \lstinputlisting{resources/01_getting_started/helloworld.cs}
+\end{frame}
+
+% ----------------------- Grundlagen der Sprache ------------------------------
+\section{Grundlagen der Sprache}
+\subsection{Wichtige Eigenschaften}
+\begin{frame}{Wichtige Eigenschaften}
+	\begin{itemize}
+		\item Am Ende jedem Befehls steht ein Semikolon (;)
+		\begin{itemize}
+			\item Befehle können auch über mehrere Zeilen gezogen werden
+		\end{itemize}
+		\item Codeblöcke werden durch geschweifte Blöcke gekennzeichnet
+		\item Einrückungen sind nicht zwingend aber hilfreich
+		\item Methodendefinition
+		\begin{itemize}
+			\item \alert{\texttt{<Rückgabetyp><Methodenname>([Übergabeparameter])}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Kommentare}
+\begin{frame}{Kommentare}
+	\begin{itemize}
+		\item Werden vom Compiler nicht beachtet und dienen nur zum besseren Verständnis des Codes
+		\item Außerdem kann aus Dokumentationskommentare eine Dokumentation erstellt werden
+	\end{itemize}
+	\lstinputlisting{resources/01_getting_started/comments.cs}
+\end{frame}
+
+\subsection{Datentypen}
+\begin{frame}{Datentypen}
+	\begin{tabular}{c|l}
+		Name & Funktion \\ \hline
+		\texttt{int, long} & Ganzzahl "beliebiger" Größe \\
+		\texttt{uint, ulong} & Natürliche Zahle "beliebiger" Größe \\
+		\texttt{float, double} & Gleitkommazahl "beliebiger" Größe \\
+		\texttt{ufloat, udouble} & Positive Gleitkommazahl "beliebiger" Größe \\
+        \texttt{decimal} & Präziser Bruch/Ganzzahl mit 29 signifikanten Stellen \\
+		\texttt{bool} & Wahrheitswert (\texttt{True}, \texttt{False})\\
+        \texttt{char} & Ein einzelnes Zeichen \\
+		\texttt{string} & Eine Folge von Zeichen \\
+	\end{tabular}
+	\begin{itemize}
+		 \item Die Variablen mit u (unsigned) als ersten Buchstaben werden normalerweise nicht genutzt
+	\end{itemize}
+\end{frame}
+
+\subsection{Operatoren}
+\begin{frame}{Operatoren}
+	\begin{description}
+	    \item[mathematisch] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, \alert{\texttt{\%}}
+	    \item[vergleichend] \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}, \alert{\texttt{==}} (Gleichheit), \alert{\texttt{!=}} (Ungleichheit)
+	    \item[logisch] \alert{\texttt{\&\&}} (Und), \alert{\texttt{||}} (Oder), \alert{\texttt{!}} (Negation)
+	    \item[bitweise] \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}, \alert{\texttt{\^}} (xor), \alert{\texttt{\~}} (invertieren)
+	\end{description}
 \end{frame}
 
 \end{document}

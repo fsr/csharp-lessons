@@ -1,14 +1,13 @@
-// A Hello World! program in C#.
 using System;
 namespace HelloWorld
 {
-    class Hello
+    public class Hello
     {
-        static void Main()
+        public static void Main()
         {
             Console.WriteLine("Hello World!");
 
-            // Keep the console window open in debug mode.
+            // Laesst die Konsole offen.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
