@@ -52,7 +52,11 @@
 	\end{itemize}
 \end{frame}
 
-
+\section[Exkurs: \newline Architektur von .NET und C\#]{Exkurs:  Architektur von .NET und C\#}
+\begin{frame}{Exkurs: Architektur von .NET und C\#}
+	\centering
+	\href{https://mva.microsoft.com/de-de/training-courses/einstieg-in-c-fr-programmierer-8826?l=MoyWcix2_1304984382}{Link zum Foliensatz "Einleitung und Theorie" des MVA Kurses \\"Einstieg in C\# für Programmierer"}
+\end{frame} 
 % ----------------------- Hello World ------------------------------
 \section{Erstes Programm: Hello World}
 \begin{frame}{Hello World}
@@ -91,7 +95,7 @@
 \subsection{Kommentare}
 \begin{frame}{Kommentare}
 	\begin{itemize}
-		\item Werden vom Compiler nicht beachtet und dienen nur zum besseren Verständnis des Codes
+		\item Werden vom Compiler nicht beachtet und dienen nur zum besseren Verständnis des Codes für Programmierer
 		\item Außerdem kann aus Dokumentationskommentare eine Dokumentation erstellt werden
 	\end{itemize}
 	\lstinputlisting{resources/01_grundlagen_1/comments.cs}
@@ -109,7 +113,6 @@
 		\texttt{bool} & Wahrheitswert (\texttt{True}, \texttt{False})\\
         \texttt{char} & Ein einzelnes Zeichen \\
 		\texttt{string} & Eine Folge von Zeichen \\
-		\texttt{void} & dt. "Nichts", wird für Methoden genutzt \\
 	\end{tabular}
 	\begin{itemize}
 		 \item Die Variablen mit u (unsigned) als ersten Buchstaben werden normalerweise nicht genutzt
@@ -133,13 +136,13 @@
 		\item Variablen
 		\lstinputlisting{resources/01_grundlagen_1/variables.cs}
 		\begin{itemize}
-			\item \alert{\texttt{<Datentyp><Variablenname>}}
-			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen)
+			\item \alert{\texttt{<Datentyp> <Variablenname>};}
+			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen, siehe obere Box)
 		\end{itemize}
 		\item Methoden/Funktionen		
 		\lstinputlisting{resources/01_grundlagen_1/methods.cs}
 		\begin{itemize}			
-			\item \alert{\texttt{<Rückgabetyp><Methodenname>( [Übergabeparameter] )}}
+			\item \alert{\texttt{<Rückgabetyp> <Methodenname>( [Übergabeparameter]) \\ \{ <Code> \}}}
 		\end{itemize}
 		\item Diese können noch durch Schlüsselwörter modifiziert werden
 	\end{itemize}
