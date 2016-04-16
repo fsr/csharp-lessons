@@ -18,7 +18,7 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Kontrollstrukturen ------------------------------
+% ----------------------- Arrays ------------------------------
 \section{Arrays}
 \begin{frame}{Arrays}
 	\begin{itemize}
@@ -51,12 +51,21 @@
 		\begin{itemize}
 			\item Beispiele: bool-Variable/-Methode, Vergleichsoperation, ...
 		\end{itemize}
+		\item Besitzen immer einen Block, den sie Ausführen, wenn die zugehörige Bedingung erfüllt ist
+		\begin{itemize}
+			\item Falls der Block nur eine Zeile hat, können die geschweiften Klammern weggelassen werden
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \subsection{Verzweigungen}
 \begin{frame}{Verzweigungen}
 	\textbf{if:}\\
+	\begin{itemize}
+		\item Prüft die Bedingungen der Köpfe von oben nach unten
+		\item Falls einer zutrifft, wird der zugehörige Block ausgeführt und die anderen Bedingen werden nicht mehr geprüft
+		\item Falls keine der Bedingungen zutrifft wird der else Block gewählt
+	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/if.cs}
 \end{frame}
 
@@ -76,6 +85,10 @@
 
 \begin{frame}{Verzweigungen}
 	\textbf{switch case:}\\
+	\begin{itemize}
+		\item Verhält sich wie die if-Verzweigung; default = else
+		\item Jeder case prüft die variable im switch auf Gleichheit und führt den darunterliegenden Code bis zum break aus
+	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/switch_case.cs}
 \end{frame}
 
@@ -103,7 +116,7 @@
 		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
 		\item Aufbau:
 		\begin{itemize}
-			\item \alert{\texttt{for( <Zählvariable>; <Bedingung>; <Schrittweite> ) \\ \{ <Code> \} }}
+			\item \alert{\texttt{for( <Zählvariable>; <Bedingung>; <Schrittweite> )\\ \{ <Code> \}}}
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/for.cs}	
@@ -116,10 +129,31 @@
 		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu 
 		\item Aufbau:
 		\begin{itemize}
-			\item \alert{\texttt{foreach( <Datentyp> <Variablenname> in <Aufzählung> )  \\ \{ <Code> \}}}
+			\item \alert{\texttt{foreach( <Datentyp> <Variablenname> in <Aufzählung> )\\ \{ <Code> \}}}
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/foreach.cs}	
+\end{frame}
+
+\begin{frame}{Schleifen}
+	\textbf{break}\\
+	\begin{itemize}
+		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
+		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch gegeben hätte
+	\end{itemize}
+	\textbf{continue}\\
+	\begin{itemize}
+		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zum Kopf der Schleife zurück
+		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortgesetzt werden
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schleifen}
+	\textbf{break \& continue:}\\
+	\begin{itemize}
+		\item Beide können und sollten mit Verzweigungen benutzt werden
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/break_continue.cs}
 \end{frame}
 
 \end{document}
