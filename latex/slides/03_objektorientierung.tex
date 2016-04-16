@@ -18,10 +18,144 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Arrays ------------------------------
+% ----------------------- Objektorientierung ------------------------------
 \section{Objektorientierung}
 \begin{frame}{Objektorientierung}
-	
+	\begin{itemize}
+		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. int oder bool
+		\item Damit kann alles in C\texttt{\#} Attribute und Methoden besitzen		
+	\end{itemize}
+\end{frame}
+
+% ----------------------- Klassen und Objekte ------------------------------
+\section{Klassen und Objekte}
+\begin{frame}{Klassen}
+	\begin{itemize}
+		\item Ist eine Vorlage oder ein Baupläne
+		\item Kann Felder, Eigenschaften und Methoden besitzen
+		\item Klassen werden durch das Schlüsselwort \alert{class} gekennzeichnet
+	\end{itemize}	
+	\lstinputlisting{resources/03_objektorientierung/class.cs}
+\end{frame}
+
+\begin{frame}{Objekte}
+	\begin{itemize}
+		\item Werden nach Klassen erstellt und sind somit Instanzen einer Klasse
+		\begin{itemize}
+			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
+		\end{itemize}
+		\item Haben konkrete Werte in den von der Klasse vorgeschriebenen Attributen
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
+\end{frame}
+
+% ----------------------- Konstruktor ------------------------------
+\section{Konstruktor}
+\begin{frame}{Konstruktor}
+	\begin{itemize}
+		\item Sind spezielle Methoden die beim Erstellen eines Objektes einer Klasse aufgerufen werden
+		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/constructor.cs}	
+\end{frame}
+
+% ----------------------- Felder und Eigenschaften ------------------------------
+\section{Felder \& Eigenschaften}
+\begin{frame}{Felder \& Eigenschaften}
+	\textbf{Felder}\\
+	\begin{itemize}
+		\item Werden auch Attribute genannt
+		\item Sind Variablen eines Typs, welche direkt in einer Klasse deklariert wurden
+	\end{itemize}
+	\textbf{Eigenschaften}\\
+	\begin{itemize}
+		\item Bietet flexible Mechanismen zum Lesen, Schreiben und Berechnen der Werte eines Feldes
+		\item Besitzen nach dem Namen einen Block in denen ein \alert{get} und \alert{set} definiert werden kann
+		\begin{itemize}
+			\item Diese agieren wie Methoden
+			\item \alert{set} hat dabei einen Übergabeparameter, und zwar \alert{value}
+			\begin{itemize}
+				\item Dieser ist vom selben Typ, wie die Eigenschaft
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Felder \& Eigenschaften}	
+	\lstinputlisting{resources/03_objektorientierung/field_property.cs}
+\end{frame}
+
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
+\section{Zugriffsmodifikatoren/Sichtbarkeiten}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\begin{itemize}
+		\item Geben an, ob der zugehörige Code von anderen Code-Abschnitten verwendet werden kann
+		\item Es gibt mehrere Arten
+		\begin{description}
+			\item[public] kann von überall zugriffen werden, solange darauf verweist wird
+			\item[private] kann nur von Code in der eigenen Klasse benutzt werden
+			\item[protected] kann nur von Code in der eigenen und von abgeleiteten Klassen benutzt werden
+			\item[internal]
+		\end{description}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\lstinputlisting{resources/03_objektorientierung/access_modifier.cs}
+\end{frame}
+
+% ----------------------- namespace und using ------------------------------
+\section{namespace \& using}
+\begin{frame}{namespace \& using}
+	\textbf{namespace}\\
+	\begin{itemize}
+		\item Werden zur Organisation von Klassen und anderem Code genutzt
+	\end{itemize}	
+	\lstinputlisting{resources/03_objektorientierung/namespace.cs}
+\end{frame}
+
+\begin{frame}{namespace \& using}
+	\textbf{using}\\
+	\begin{itemize}
+		\item Ein Schlüsselwort zur Nutzung eines bestimmten namespace
+		\item Dies erspart die Eingabe des gesamten namespace bei Nutzung einer Klasse
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/using.cs}
+\end{frame}
+
+% ----------------------- Dokumentationskommentare ------------------------------
+\section{Dokumentationskommentare}
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Das Kommentar beginnt mit 3, anstatt 2 \alert{/}
+		\item Beschreiben nur Klassen, Felder/Eigenschaften und Methoden
+		\begin{itemize}
+			\item Das Kommentar steht dabei immer direkt über den zu kommentierenden Code
+		\end{itemize}
+		\item Man kann aus diesen eine Dokumentation generieren
+		\item Außerdem können einige IDEs (z.B. Visual Studio) daraus eine Kurzbeschreibung während des Programmierens schaffen		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\textbf{Tags}
+	\begin{itemize}
+		\item Geben an, was genau von dem Code dokumentiert werden soll
+		\item 3 wichtige Tags:
+		\begin{description}
+			\item[summary] Beschreibung des zu kommentierenden Codes\\ Für alle 3 Arten
+			\item[param] Beschreibung der Übergabeparameter einer Methode
+			\item[returns] Beschreibung des Rückgabewertes einer Methode
+		\end{description}
+		\item \href{https://msdn.microsoft.com/de-de/library/5ast78ax.aspx}{Hier findet man weitere Tags}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Die genannten Tags am Beispiel einer Methode:
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/documentation.cs}	
 \end{frame}
 
 \end{document}
