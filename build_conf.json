@@ -5,7 +5,9 @@
             "target_dir": "build/pdf",
             "command": "pdflatex",
             "files": [
-                "01_getting_started.tex"
+                "01_grundlagen_1.tex",
+                "02_grundlagen_2.tex",
+                "03_objektorientierung.tex"
             ]
         },
         "html": {
