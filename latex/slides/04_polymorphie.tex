@@ -37,10 +37,10 @@
 		\begin{itemize}
 			\item überschreiben
 			\item erweitern
-			\item ändern
 			\item benutzen
 		\end{itemize}
 		\item Alle Klassen erben von der Klasse \alert{Object}
+		\item Klassen können maximal von einer Klasse erben
 		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
 		\item Syntax:
 		\begin{itemize}
@@ -51,25 +51,143 @@
 \end{frame}
 
 \subsection{Polymorphie}
-\begin{frame}{Vererbung}
-	% protected, base, as
+\begin{frame}{Polymorphie}
+	\begin{itemize}
+		\item Zu dt. Vielgestaltigkeit
+		\item Bedeutet das abgeleitete Klassen zur Laufzeit als ihre Basisklassen behandelt werden können
+		\begin{itemize}
+			\item Somit stimmt der Typ des Objekts nicht mehr mit dem Laufzeittyp überein
+		\end{itemize}
+		\item Basisklassen können Methoden und Eigenschaften besitzen, die von den abgeleiteten Klassen überschrieben werden können
+		\item Während der Nutzung eines Objekts als Basisklasse wird der Laufzeittyp ermittelt und die überschrieben/veränderten Methoden und Eigenschaften genutzt
+		\item Falls es keine Überschreibungen gibt, wir die Methode aus der Basisklasse genutzt
+	\end{itemize} 
+\end{frame}
+
+\subsection{Methoden- \& Eigenschaftsüberschreibung}
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
+	\textbf{virtual}\\
+	\begin{itemize}
+		\item Erlaubt das Überschreiben einer Methode
+		\item Wird an die Methoden einer Basisklasse geschrieben
+	\end{itemize}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/virtual.cs}
+\end{frame}
+
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
+	\textbf{override}\\
+	\begin{itemize}
+		\item Gibt an, dass es sich um eine Überschreibung einer Methode aus der Basisklasse handelt
+		\begin{itemize}
+			\item Es darf bloß überschrieben werden, wenn die Methode in der Basisklasse ein \alert{virtual} hat
+		\end{itemize}
+		\item Wird an die Methoden in der abgeleiteten Klasse geschrieben
+	\end{itemize}
+	\textbf{new}\\
+	\begin{itemize}
+		\item Gibt an ob eine bekannte Methode aus der Basisklasse überschrieben werden soll, obwohl diese es nicht erlaubt
+		\begin{itemize}
+			\item Diese Methode hat also kein \alert{virtual} in der Basisklasse
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/override_new.cs}	
+	\textbf{Hinweis:}
+	\begin{itemize}
+		\item Die Überschreibung von Eigenschaften geht nur, wenn diese schon einen Körper zu ihrem \alert{get} und/oder \alert{set} haben
+	\end{itemize}
 \end{frame}
 
 \subsection{Weitere Schlüsselwörter}
 \begin{frame}{Weitere Schlüsselwörter}
-	% virtual, override, sealdes, new
+	\textbf{sealed}\\
+	\begin{itemize}
+		\item Modifikator für Klassen
+		\item Verhindert das diese Klasse als Basisklasse genutzt werden kann
+	\end{itemize}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/sealed.cs}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\textbf{as}\\
+	\begin{itemize}
+		\item Wird als Casting-Operator zwischen vererbten Klassen genutzt
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{(\alert{<Variable>} as \alert{<Datentyp/Klasse>})}
+		\end{itemize}
+		\item Nach der Klammer kann auf die Variable als der neue Typ darauf zugegriffen werden
+		\item Falls die Umwandlung nicht möglich ist, wird die Operation als \alert{null} ausgewertet
+	\end{itemize}	
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/as.cs}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\textbf{base}\\
+	\begin{itemize}
+		\item Es ist das Objekt der Basisklasse
+		\item Ermöglicht es auf die Methoden- und Eigenschaftsimplementationen der Basisklasse zuzugreifen
+		\item Dies geht auch, wenn man diese in seiner Klasse schon überschrieben hat
+	\end{itemize}
+	\begin{itemize}
+		\item Muss genutzt werden, wenn die Basisklasse einen Konstruktor mit Übergabeparametern hat
+		\begin{itemize}
+			\item Dabei wird der Konstruktor der Basisklasse vor dem eigenen aufgerufen
+			\item Es müssen auch die "Bedingungen" des Basisklasse erfüllt sein
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{Klasse}(\alert{[Übergabeparameter-B][Übergabeparameter]})\\ : base(\alert{[Übergabeparameter-B]}) \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/base.cs}
 \end{frame}
 
 % ----------------------- Abstrakt ------------------------------
 \section{Abstrakt}
 \begin{frame}{Abstrakt}
+	\begin{itemize}
+		\item Schlüsselwort \alert{abstract}
+		\begin{itemize}
+			\item Kann für Klassen, Methoden und Eigenschaften genutzt werden		
+		\end{itemize}
+		\item Gibt an ob eine Implementierung existiert
+		\item Von Klassen die \alert{abstract} sind, können keine Objekte initialisiert werden
+		\begin{itemize}
+			\item Dementsprechend muss von diesen geerbt werden um diese zu Nutzen
+		\end{itemize}
+		\item Methoden und Eigenschaften besitzen keinen Körper wenn diese \alert{abstract} sind
+		\begin{itemize}
+			\item Dementsprechend wird eine Klasse, die davon erbt, gezwungen diese Methoden und Eigenschaften zu überschreiben und zu implementieren
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Abstrakt}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/abstract.cs}
 \end{frame}
 
 % ----------------------- Interface ------------------------------
 \section{Interface}
 \begin{frame}{Interface}
+	\begin{itemize}
+		\item Zu dt. Schnittstelle
+		\item Enthält nur die \alert{Signaturen} von Methoden und Eigenschaften
+		\begin{itemize}
+			\item Das heißt diese haben alle keinen Körper
+		\end{itemize}
+		\item Interfaces und Klassen können von beliebig vielen Interfaces erben
+		\item Die Klassen, die von Interfaces erben, werden gezwungen zu allen Signaturen Implementationen zu haben
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Interface}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/interface.cs}
 \end{frame}
 
 \end{document}
