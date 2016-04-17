@@ -5,7 +5,7 @@
 \input{../templates/course_information}
 
 % Presentation title
-\title{Objektorientierung}
+\title{Vererbung und Polymorphie}
 \date{\today}
 
 
@@ -18,21 +18,57 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Polymorphie ------------------------------
-\section{Polymorphie}
-\begin{frame}{Polymorphie}
-	\
+% ----------------------- Methodenüberladung ------------------------------
+\section{Methodenüberladung}
+\begin{frame}{Methodenüberladung}
+	\begin{itemize}
+		\item Mehrere Methoden können den selben Namen haben
+		\item Diese Unterscheiden sich dann in dem Rückgabewert und/oder den Übergabeparametern
+		\item Wird genutzt wenn es mehrere Wege gibt eine Berechnung/Algorithmus auszuführen
+	\end{itemize}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/method_overload.cs}
 \end{frame}
 
 % ----------------------- Vererbung ------------------------------
 \section{Vererbung}
 \begin{frame}{Vererbung}
+	\begin{itemize}
+		\item Ermöglicht es einer Klasse definiertes Verhalten einer anderen Klasse (Methoden, Variablen, Eigenschaften) zu
+		\begin{itemize}
+			\item überschreiben
+			\item erweitern
+			\item ändern
+			\item benutzen
+		\end{itemize}
+		\item Alle Klassen erben von der Klasse \alert{Object}
+		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/inheritance.cs}
+\end{frame}
 
+\subsection{Polymorphie}
+\begin{frame}{Vererbung}
+	% protected, base, as
+\end{frame}
+
+\subsection{Weitere Schlüsselwörter}
+\begin{frame}{Weitere Schlüsselwörter}
+	% virtual, override, sealdes, new
 \end{frame}
 
 % ----------------------- Abstrakt ------------------------------
 \section{Abstrakt}
 \begin{frame}{Abstrakt}
+
+\end{frame}
+
+% ----------------------- Interface ------------------------------
+\section{Interface}
+\begin{frame}{Interface}
 
 \end{frame}
 

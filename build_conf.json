@@ -7,8 +7,8 @@
             "files": [
                 "01_grundlagen_1.tex",
                 "02_grundlagen_2.tex",
-                "03_objektorientierung_1.tex",
-                "04_objektorientierung_2.tex",
+                "03_objektorientierung.tex",
+                "04_vererbung_und_polymorphie.tex",
                 "05_null_exceptions_generics_collections.tex"
             ]
         },
