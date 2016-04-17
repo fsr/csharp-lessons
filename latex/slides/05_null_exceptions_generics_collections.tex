@@ -1,0 +1,78 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Awesome Stuff}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- null ------------------------------
+\section{null}
+\begin{frame}{null}
+	\begin{itemize}
+		\item Schlüsselwort für eine Referenz die auf kein Objekt zeigt
+		\item Alle Referenztyp-Variablen können \alert{null} sein
+		\item Mit/auf \alert{null} kann man nicht arbeiten, sonst gibt es eine NullPointerException
+		\begin{itemize}
+			\item Außer ein Vergleich ob eine Variable \alert{null} ist
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/05_null_exceptions_generics_collections/null.cs}	
+\end{frame}
+
+\subsection{Nullable}
+\begin{frame}{Nullable}
+	\begin{itemize}
+		\item Werden genutzt, damit Werttyp-Variablen ebenfalls \alert{null} haben können
+		\item Besitzt 2 Eigenschaften
+		\begin{description}
+			\item[HasValue] Gibt an, ob das Objekt einen Wert hat oder nicht
+			\item[Value] Gibt den Wert des Objektes zurück\\ Wirft eine InvalidOperationException falls HasValue false ist 
+		\end{description}
+		\item Syntax:
+		\begin{itemize}
+			\item \alert{\texttt{<Werttyp>? <Variablenname>;}} oder
+			\item \alert{\texttt{Nullable< <Datentyp> > <Variablenname>;}}
+			\begin{itemize}
+				\item Das ist ein Generic
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Nullable}
+	\lstinputlisting{resources/05_null_exceptions_generics_collections/nullable.cs}	
+\end{frame}
+
+% ----------------------- Exceptions ------------------------------
+\section{Exceptions}
+\begin{frame}{Exceptions}
+
+\end{frame}
+
+% ----------------------- Generics ------------------------------
+\section{Generics}
+\begin{frame}{Generics}
+
+\end{frame}
+
+% ----------------------- Collections ------------------------------
+\section{Collections}
+\begin{frame}{Collections}
+
+\end{frame}
+
+\end{document}
