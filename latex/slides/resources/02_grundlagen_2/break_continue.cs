@@ -6,7 +6,8 @@ for(int zaehler = 0; zaehler < 10; zaehler++)
     if(zaehler % 2 == 0)
         continue;
     erg += zaehler;
-    // Falls ie Variable 16 ist, wird die ganze Schleife beendet.
+    // Falls die Variable erg 16 ist, wird die ganze 
+    // Schleife beendet.
     if(erg == 16)
         break;
 }

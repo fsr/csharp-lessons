@@ -51,26 +51,27 @@
 		\begin{itemize}
 			\item Beispiele: bool-Variable/-Methode, Vergleichsoperation, ...
 		\end{itemize}
-		\item Besitzen immer einen Block, den sie Ausführen, wenn die zugehörige Bedingung erfüllt ist
+		\item Besitzen immer einen Block, den sie ausführen, wenn die zugehörige Bedingung erfüllt ist
 		\begin{itemize}
 			\item Falls der Block nur eine Zeile hat, können die geschweiften Klammern weggelassen werden
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\subsection{Verzweigungen}
-\begin{frame}{Verzweigungen}
-	\textbf{if:}\\
+% ----------------------- Verzweigung ------------------------------
+\section{Verzweigungen}
+\subsection{if}
+\begin{frame}{if}
 	\begin{itemize}
 		\item Prüft die Bedingungen der Köpfe von oben nach unten
-		\item Falls einer zutrifft, wird der zugehörige Block ausgeführt und die anderen Bedingen werden nicht mehr geprüft
-		\item Falls keine der Bedingungen zutrifft wird der else Block gewählt
+		\item Falls eine zutrifft, wird der zugehörige Block ausgeführt und die anderen Bedingen werden nicht mehr geprüft
+		\item Falls keine der Bedingungen zutrifft wird der \alert{else} Block gewählt
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/if.cs}
 \end{frame}
 
-\begin{frame}{Verzweigungen}
-	\textbf{Tertiäre-Verzweigung:}\\
+\subsection{Tertiäre-Verzweigung}
+\begin{frame}{Tertiäre-Verzweigung}
 	\begin{itemize}
 		\item Werden genauso genutzt wie eine if-else-Verzweigung
 		\item Syntax:
@@ -83,35 +84,39 @@
 	\lstinputlisting{resources/02_grundlagen_2/tertiary.cs}
 \end{frame}
 
-\begin{frame}{Verzweigungen}
-	\textbf{switch case:}\\
+\subsection{switch case}
+\begin{frame}{switch case}
 	\begin{itemize}
-		\item Verhält sich wie die if-Verzweigung; default = else
-		\item Jeder case prüft die variable im switch auf Gleichheit und führt den darunterliegenden Code bis zum break aus
+		\item Verhält sich wie die if-Verzweigung
+		\begin{itemize}
+			\item \alert{default} verhält sich wie \alert{else}
+		\end{itemize}
+		\item Jeder \alert{case} prüft die Variable im \alert{switch} auf Gleichheit und führt den darunterliegenden Code bis zum \alert{break} aus
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/switch_case.cs}
 \end{frame}
 
-\subsection{Schleifen}
-\begin{frame}{Schleifen}
-	\textbf{while:} \\
+% ----------------------- Schleifen ------------------------------
+\section{Schleifen}
+\subsection{while}
+\begin{frame}{while}
 	\begin{itemize}
-		\item Die Schleife läuft so lange durch deren Körper wie die Bedingung in den Klammern erfüllt ist
+		\item Die Schleife läuft so lange durch deren Körper, wie die Bedingung in den Klammern erfüllt ist
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/while.cs}	
 \end{frame}
 
-\begin{frame}{Schleifen}
-	\textbf{do while:} \\
+\subsection{do while}
+\begin{frame}{do while}
 	\begin{itemize}
 		\item Selbe Funktion wie die while-Schleife
-		\item Einziger Unterschied ist, dass diese Schleife einmal ihren Körper durchläuft, bevor sie die Bedingung überprüft
+		\item Einziger Unterschied ist, dass diese Schleife auf jeden Fall einmal ihren Körper durchläuft, bevor sie die Bedingung überprüft
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
 \end{frame}
 
-\begin{frame}{Schleifen}
-	\textbf{for:} \\
+\subsection{for}
+\begin{frame}{for}
 	\begin{itemize}
 		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
 		\item Aufbau:
@@ -122,8 +127,8 @@
 	\lstinputlisting{resources/02_grundlagen_2/for.cs}	
 \end{frame}
 
-\begin{frame}{Schleifen}
-	\textbf{foreach:} \\
+\subsection{foreach}
+\begin{frame}{foreach}
 	\begin{itemize}
 		\item Läuft durch ein/e Array/Collection an Elementen eines Typen durch 
 		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu 
@@ -135,16 +140,17 @@
 	\lstinputlisting{resources/02_grundlagen_2/foreach.cs}	
 \end{frame}
 
+\subsection{break \& continue}
 \begin{frame}{Schleifen}
 	\textbf{break}\\
 	\begin{itemize}
 		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
-		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch gegeben hätte
+		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch geben würde
 	\end{itemize}
 	\textbf{continue}\\
 	\begin{itemize}
 		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zum Kopf der Schleife zurück
-		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortgesetzt werden
+		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortsetzen
 	\end{itemize}
 \end{frame}
 
