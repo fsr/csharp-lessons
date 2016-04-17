@@ -1,0 +1,71 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Datenstrukturen}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Enummeration ------------------------------
+\section{Enumeration}
+\begin{frame}{Enumeration}
+	\begin{itemize}
+		\item Zu dt. Aufzählung
+		\item Das Schlüsselwort dafür ist \alert{enum}
+		\item Ist ein eigen erstellter Datentyp mit fester Anzahl konstanter Werte
+		\item Den Werten werden Intern ein \alert{int}-Wert zugeordnet
+		\begin{itemize}
+			\item Diese beginnt Standardmäßig bei 0 und wird mit jedem neuen Element um 1 erhöht
+			\item Diese Ordnung kann man auch selbst mit einem \alert{=} festlegen
+			\item Man kann damit ein \alert{enum}-Wert in einen \alert{int}-Wert casten			
+		\end{itemize}
+		\item Syntax zur Nutzung:
+		\begin{itemize}
+			\item \texttt{\alert{<Enum> <Variablenname>} = \alert{<Enum>}.\alert{<Enumwert>};} oder
+			\item \texttt{\alert{<Enum> <Variablenname>} = \alert{<Int-Wert>};}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Enumeration}
+	\lstinputlisting{resources/06_datenstrukturen/enum_creation.cs}
+	\lstinputlisting{resources/06_datenstrukturen/enum_using.cs}
+\end{frame}
+
+% ----------------------- Structs ------------------------------
+\section{Structs}
+\begin{frame}{Structs}
+
+\end{frame}
+
+% ----------------------- Generics ------------------------------
+\section{Generics}
+\begin{frame}{Generics}
+
+\end{frame}
+
+% ----------------------- Collections ------------------------------
+\section{Collections}
+\begin{frame}{Collections}
+	% List, Dictionary
+\end{frame}
+
+% ----------------------- Indexer ------------------------------
+\section{Indexer}
+\begin{frame}{Indexer}
+
+\end{frame}
+
+\end{document}

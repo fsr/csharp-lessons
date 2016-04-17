@@ -1,0 +1,126 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Awesome Stuff}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- null ------------------------------
+\section{null}
+\begin{frame}{null}
+	\begin{itemize}
+		\item Schlüsselwort für eine Referenz die auf kein Objekt zeigt
+		\item Alle Referenztyp-Variablen können \alert{null} sein
+		\item Mit/auf \alert{null} kann man nicht arbeiten, sonst gibt es eine ArgumentNullException
+		\begin{itemize}
+			\item Außer ein Vergleich ob eine Variable \alert{null} ist
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/null.cs}	
+\end{frame}
+
+\subsection{Nullable}
+\begin{frame}{Nullable}
+	\begin{itemize}
+		\item Werden genutzt, damit Werttyp-Variablen ebenfalls \alert{null} haben können
+		\item Besitzt 2 Eigenschaften
+		\begin{description}
+			\item[HasValue] Gibt an, ob das Objekt einen Wert hat oder nicht
+			\item[Value] Gibt den Wert des Objektes zurück\\ Wirft eine InvalidOperationException falls HasValue false ist 
+		\end{description}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Werttyp>}? \alert{<Variablenname>};} oder
+			\item \texttt{Nullable<\alert{<Datentyp>}> \alert{<Variablenname>};}
+			\begin{itemize}
+				\item Das ist ein Generic
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Nullable}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/nullable.cs}	
+\end{frame}
+
+% ----------------------- Exceptions ------------------------------
+\section{Exceptions}
+\begin{frame}{Exceptions}
+	\begin{itemize}
+		\item Zu dt. Ausnahmen
+		\item Zeigen an wenn im Programm eine Situation aufgetreten ist, die es nicht lösen kann
+		\item Beinhalten Information über Art und Auftreten des Fehlers
+		\item Es gibt verschiedene Arten, wie z.B.:
+		\begin{itemize} 
+			\item ArgumentException
+			\item ArgumentNullException	
+			\item FileNotFoundException
+		\end{itemize}
+		\item Sie bringen das Programm zum Abstürzen, wenn diese nicht vom Code behandelt werden
+	\end{itemize}
+\end{frame}
+
+\subsection{Handling}
+\begin{frame}{Handling}
+	\textbf{try catch finally}\\
+	\begin{itemize}
+		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
+		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
+		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
+		\begin{itemize}
+			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
+			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
+		\end{itemize}
+		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
+		\begin{itemize}
+			\item Wird auch Bereinigungsblock genannt
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Handling}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/exception_handling.cs}	
+\end{frame}
+
+\subsection{Eigene Exceptions}
+\begin{frame}{Eigene Exceptions}
+	\textbf{throw}\\
+	\begin{itemize}
+		\item Schlüsselwort um eine Exception zu werfen/auszulösen
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{throw new \alert{<Exceptionkonstruktor>}(\alert{[Parameter]});}
+		\end{itemize}
+	\end{itemize}
+	\textbf{Eigene Exception}\\
+	\begin{itemize}
+		\item Man kann eine eigene Excpetion-Klasse schreiben, in dem man von der Klasse \alert{System.Exception} erbt
+		\item Dabei ist darauf zu achten, dass man gegeben falls die geerbten Konstruktoren implementiert
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Eigene Exceptions}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/exception_throw.cs}
+\end{frame}
+
+% ----------------------- Schlüsselwörter ------------------------------
+\section{Schlüsselwörter}
+\begin{frame}{Schlüsselwörter}
+	% static, final, param, var, ref
+\end{frame}
+
+\end{document}
