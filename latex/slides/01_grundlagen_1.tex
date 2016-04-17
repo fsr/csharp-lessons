@@ -118,6 +118,24 @@
 	\end{itemize}
 \end{frame}
 
+\subsection{Casting}
+\begin{frame}{Casting}
+	\begin{itemize}
+		\item Ist das Umwandeln von einem Datentyp in einen anderen
+		\item Klappt bei allen Datentypen die es gibt
+		\item Achtung:
+		\begin{itemize}
+			\item Casting zwischen inkompatiblen Datentypen (z.B. string zu float) kann Fehler hervorrufen
+			\item Es kann die Genauigkeiten bei Zahlen verringern
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Variable>} = (\alert{Variablentyp})\alert{Wert};}
+		\end{itemize}
+	\end{itemize}
+		\lstinputlisting{resources/01_grundlagen_1/casting.cs}
+\end{frame}
+
 \subsection{Operatoren}
 \begin{frame}{Operatoren}
 	\begin{description}
