@@ -51,17 +51,31 @@
 		\item Wird dabei vor den Datentyp eines Übergabeparameters
 		\item Und beim Aufruf vor die Variable geschrieben
 	\end{itemize}
-	\textbf{param}\\
+	\textbf{params}\\
 	\begin{itemize}
-		\item 
+		\item Ermöglicht es eine beliebige Anzahl von Übergabeparametern eines Typs einer Methode zu geben
+		\item Diese werden in der Methode dann als Array genutzt
+		\item Die Übergabe kann über eine mit Komma getrennte Liste oder über ein Array passieren
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/ref_param_1.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/ref_param_2.cs}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
 	\textbf{out}\\
 	\begin{itemize}
-		\item 
+		\item Eine Variable wird, wie bei \alert{ref}, als Verweis übergeben
+		\item Jedoch muss diese Variable nun nicht deklariert sein
+		\item Die Methode wird dann gezwungen während ihrer Ausführung der \alert{out}-Variable etwas zuzuweisen
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/out_1.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/out_2.cs}
 \end{frame}
 
 \end{document}
