@@ -118,9 +118,40 @@
 \end{frame}
 
 % ----------------------- Schlüsselwörter ------------------------------
+	% param, var, ref
 \section{Schlüsselwörter}
 \begin{frame}{Schlüsselwörter}
-	% static, final, param, var, ref
+	\textbf{static}\\
+	\begin{itemize}
+		\item Es können Klassen, Methoden, Eigenschaften, Felder und mehr statisch sein
+		\item Damit gehören Felder und co. nicht mehr zu einen Objekt einer Klasse sondern zu dem Typ selbst 
+		\item Werden über die Klasse/Datentyp aufgerufen
+		\item Methoden können nicht auf nicht-statische Felder/Attribute der eigenen Klasse zugreifen
+	\end{itemize}
+	\textbf{readonly}\\
+	\begin{itemize}
+		\item Kann nur auf Felder benutzt werden
+		\item Stellt sicher, dass das Feld im Laufe der Benutzung nicht verändert wird
+		\item Der Wert des Feldes kann nur durch direkte Deklaration oder in einem Konstruktor der zugehörigen Klasse verändert werden
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/static_readonly.cs}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\textbf{var}\\
+	\begin{itemize}
+		\item Kann für Variablen innerhalb von Methoden genutzt werden
+		\item Dabei wird der Datentyp der Variable durch den Compiler bestimmt
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{var \alert{<Variablenname>} = \alert{<Eine Zuweisung>};}
+		\end{itemize}
+		\item Man sollte es nur nutzen, wenn man durch die rechte Seite erkennt, was für ein Typ zugewiesen wird
+	\end{itemize}
+	\lstinputlisting{resources/05_null_exceptions_schluesselwoerter/var.cs}
 \end{frame}
 
 \end{document}

@@ -10,7 +10,8 @@
                 "03_objektorientierung.tex",
                 "04_vererbung_und_polymorphie.tex",
                 "05_null_exceptions_schluesselwoerter.tex",
-                "06_datenstrukturen.tex"
+                "06_datenstrukturen.tex",
+                "07_Methoden_fortgeschritten"
             ]
         },
         "html": {
