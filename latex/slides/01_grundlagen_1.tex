@@ -80,7 +80,7 @@
 \begin{frame}{Grundlagen der Sprache}
 	\begin{itemize}
 		\item C\texttt{\#} ist eine typsichere, objektorientierte Allzweck-Programmiersprache	
-		\item Benutzt auch andere Paradigmen wie:
+		\item Hat auch andere Paradigmen wie:
 		\begin{itemize}
 			\item imperativ
 			\item deklarativ
@@ -149,20 +149,27 @@
 
 \subsection{Methoden/Variablen Deklaration}
 \begin{frame}{Methoden/Variablen Deklaration}
-	\begin{itemize}
-		\item Variablen
-		\lstinputlisting{resources/01_grundlagen_1/variables.cs}
+	\textbf{Variablen}\\
 		\begin{itemize}
-			\item \alert{\texttt{<Datentyp> <Variablenname>};}
 			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen, siehe obere Box)
+			\item Syntax:
+			\begin{itemize}			
+				\item \alert{\texttt{<Datentyp> <Variablenname>};}
+			\end{itemize}
 		\end{itemize}
-		\item Methoden/Funktionen		
-		\lstinputlisting{resources/01_grundlagen_1/methods.cs}
+	\lstinputlisting{resources/01_grundlagen_1/variables.cs}
+\end{frame}
+
+\begin{frame}{Methoden/Variablen Deklaration}
+	\textbf{Methoden}\\
+	\begin{itemize}
+		\item Diese können noch durch Schlüsselwörter modifiziert werden
+		\item Syntax:
 		\begin{itemize}			
 			\item \texttt{\alert{<Rückgabetyp> <Methodenname>}( \alert{[Übergabeparameter]} ) \\ \{ \alert{<Code>} \}}
 		\end{itemize}
-		\item Diese können noch durch Schlüsselwörter modifiziert werden
-	\end{itemize}
+	\end{itemize}		
+	\lstinputlisting{resources/01_grundlagen_1/methods.cs}
 \end{frame}
 
 \end{document}
