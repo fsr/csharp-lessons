@@ -1,56 +1,36 @@
 slides:
   -
     number: 1
-    name: Getting Started
-    url: https://ifsr.de/kurs-materialien/python/01_getting_started.pdf
+    name: Grundlagen 1
+    url: https://ifsr.de/kurs-materialien/csharp/01_grundlagen_1.pdf
     published: True
   -
     number: 2
-    name: Grundlagen
-    url: https://ifsr.de/kurs-materialien/python/02_grundlagen.pdf
+    name: Grundlagen 2
+    url: https://ifsr.de/kurs-materialien/csharp/02_grundlagen_2.pdf
     published: True
   -
     number: 3
-    name: Builtins
-    url: https://ifsr.de/kurs-materialien/python/03_builtins.pdf
+    name: Objektorientierung
+    url: https://ifsr.de/kurs-materialien/csharp/03_objektorientierung.pdf
     published: True
   -
     number: 4
-    name: Module, Packages, PIP
-    url: https://ifsr.de/kurs-materialien/python/04_modules_packages_pip.pdf
+    name: Vererbung und Polymorphie
+    url: https://ifsr.de/kurs-materialien/csharp/04_vererbung_und_polymorphie.pdf
     published: True
   -
     number: 5
-    name: Decorators
-    url: https://ifsr.de/kurs-materialien/python/05_decorators.pdf
-    published: True
+    name: Null Exceptions und Schlüsselwörter
+    url: https://ifsr.de/kurs-materialien/csharp/05_null_exceptions_schluesselwoerter.pdf
+    published: False
   -
     number: 6
-    name: Comprehensions
-    url: https://ifsr.de/kurs-materialien/python/06_comprehensions.pdf
-    published: True
+    name: Datenstrukturen
+    url: https://ifsr.de/kurs-materialien/csharp/06_datenstrukturen.pdf
+    published: False
   -
     number: 7
-    name: Functions (advanced)
-    url: https://ifsr.de/kurs-materialien/python/07_functions_advanced.pdf
-    published: True
-  -
-    number: 8
-    name: Process
-    url: https://ifsr.de/kurs-materialien/python/08_process.pdf
-    published: True
-  -
-    number: 9
-    name: Web client
-    url: https://ifsr.de/kurs-materialien/python/09_web_client.pdf
-    published: True
-  -
-    number: 10
-    name: Regex
-    url: https://ifsr.de/kurs-materialien/python/10_regex.pdf
-    published: True
-  -
-    number: 11
-    name: Mails in Python
-    url: https://ifsr.de/kurs-materialien/python/11_smtplib.pdf
-    published: True
+    name: Methoden (fortgeschritten)
+    url: https://ifsr.de/kurs-materialien/csharp/07_Methoden_fortgeschritten.pdf
+    published: False

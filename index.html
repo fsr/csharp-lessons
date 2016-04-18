@@ -8,13 +8,13 @@ layout: default
 
   <ul class="post-list">
     {% assign exercises = site.exercises | sort: 'number' %}
-    
+
     {% for post in exercises %}
       {% if post.number and post.published != false %}
         {% include index-post.html post=post %}
       {% endif %}
     {% endfor %}
-    
+
     {% if site.show_drafts %}
       <h2>-- Drafts --</h2>
       {% for post in exercises %}
