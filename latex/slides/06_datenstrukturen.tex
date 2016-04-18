@@ -47,13 +47,50 @@
 % ----------------------- Structs ------------------------------
 \section{Structs}
 \begin{frame}{Structs}
+	\begin{itemize}
+		\item Schlüsselwort ist \alert{struct}
+		\item Lass sich genauso schreiben wie Klassen
+		\item Sie sind nicht Referenz-, sondern Werttypen
+		\item Werden genutzt um kleine Gruppen verwandter Variablen zusammen zufassen
+		\item Sie können von Interfaces, aber nicht von anderen Structs erben 
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Structs}
+	\lstinputlisting{resources/06_datenstrukturen/struct_creation.cs}
+	\lstinputlisting{resources/06_datenstrukturen/struct_using.cs}
 \end{frame}
 
 % ----------------------- Generics ------------------------------
 \section{Generics}
 \begin{frame}{Generics}
+	\begin{itemize}
+		\item Auch Typparameter genannt
+		\item Ermöglicht es die Angabe von Typen in einer Klasse oder Methode zu verzögern
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{class \alert{<Klassenname>} <\alert{<Typparameter>}> \{ \}}
+		\end{itemize}
+	\end{itemize}
+	\textbf{Einschränkungen}\\
+	\begin{itemize}
+		\item Man kann den Typparameter auch einschränken
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Klassenkopf>} where \alert{<Typparameter>} : \alert{<Einschränbkung>} \{ \}}
+		\end{itemize}
+		\item Einschränkungen können sein:
+		\begin{itemize}
+			\item Basisklasse, Interfaces
+			\item struct (Werttyp), class (Referenztyp)
+			\item new() (Typparameter muss einen öffentlichen, leeren Konstruktor haben)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Generics}
+	\lstinputlisting{resources/06_datenstrukturen/generics_creation.cs}
+	\lstinputlisting{resources/06_datenstrukturen/generics_using.cs}
 \end{frame}
 
 % ----------------------- Collections ------------------------------
