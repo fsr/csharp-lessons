@@ -96,13 +96,73 @@
 % ----------------------- Collections ------------------------------
 \section{Collections}
 \begin{frame}{Collections}
-	% List, Dictionary
+	\begin{itemize}
+		\item Sind in dem Framework vorhandene Klasse
+		\item Dienen zur Auflistung von beliebigen Elementen
+		\item Bieten Methoden zum Sortieren, Durchsuchen und Bearbeiten
+		\begin{itemize}
+			\item Nutzen dafür Generics
+		\end{itemize}
+		\item Haben eine dynamische Größe, können somit während der Ausführung schrumpfen und wachsen
+		\item Namespace:
+		\begin{itemize}			
+			\item \alert{System.Collection.Generic}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{List}
+\begin{frame}{List}
+	\begin{itemize}
+		\item Eine Liste beliebiger Elemente
+		\item Kann über einen Index angesteuert werden (ähnlich zum Array)
+	\end{itemize}
+	\lstinputlisting{resources/06_datenstrukturen/list.cs}
+\end{frame}
+
+\subsection{Dictionary}
+\begin{frame}{Dictionary}
+	\begin{itemize}
+		\item Ein "Lexikon" von Paaren mit beliebigen Schlüssel und Wert
+		\item Jeder Schlüssel kann nur genau einmal vorkommen
+		\item Kann ebenfalls, ähnlich zum Array, angesprochen werden, aber dieses mal wird ein Schlüssel übergeben
+	\end{itemize}
+	\lstinputlisting{resources/06_datenstrukturen/dictionary.cs}
+\end{frame}
+
+\subsection{Weitere}
+\begin{frame}{Weitere}
+	\textbf{Stack}\\
+	\begin{itemize}
+		\item Ein "Stapel" an Elementen
+		\item Arbeitet nach dem LIFO-Prinzip
+		\item \alert{.Push()} (Hinzufügen eines Elementes), \alert{.Pop()} (Entfernen eines Elementes)
+	\end{itemize}
+	\lstinputlisting{resources/06_datenstrukturen/stack.cs}
+	\textbf{Queue}\\
+	\begin{itemize}
+		\item Eine "Schlange" an Elementen
+		\item Arbeitet nach dem FIFO-Prinzip
+		\item \alert{.Enqueue()} (Hinzufügen eines Elementes), \alert{.Dequeue()} (Entfernen eines Elementes)
+	\end{itemize}
+	\lstinputlisting{resources/06_datenstrukturen/queue.cs}
 \end{frame}
 
 % ----------------------- Indexer ------------------------------
 \section{Indexer}
 \begin{frame}{Indexer}
+	\begin{itemize}
+		\item Sind Member einer Klasse
+		\item Geben die Möglichkeit wie ein/e Array/Collection über \alert{[ ]} angesprochen zu werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Typ>} this[\alert{<Indextyp> <Indexname>}]\\ \{ get \{ \alert{<Code>} \} set \{ \alert{<Code>}\} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Indexer}
+	\lstinputlisting{resources/06_datenstrukturen/indexer.cs}
 \end{frame}
 
 \end{document}
