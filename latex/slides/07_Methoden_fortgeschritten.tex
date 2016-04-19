@@ -21,7 +21,20 @@
 % ----------------------- Extensions ------------------------------
 \section{Extensions}
 \begin{frame}{Extensions}
+	\begin{itemize}
+		\item Ermöglichen es vorhandenen Typen eigene Methoden hinzuzufügen
+		\item Ohne eine abgeleitete Klasse zu erstellen oder den originalen Typen neu zu erstellen
+		\item Sind statische Methoden, welche aber als Instanzmethoden auf den erweiterten Typ agieren
+		\item Befinden sich selbst in einer extra statischen Klasse
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Rückgabetyp> <Name>}( this \alert{<Erweiterter Typ> <Variablenname>}, \alert{[Übergabeparameter]} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Extensions}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/extensions.cs}
 \end{frame}
 
 % ----------------------- Opertatoren Überladung ------------------------------
