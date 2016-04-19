@@ -1,6 +1,6 @@
 ---
 title: Objects and Classes
-number: 1
+number: 
 status: reviewed
 authors: [marc, sascha]
 lesson: 1

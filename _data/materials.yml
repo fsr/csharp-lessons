@@ -23,12 +23,12 @@ slides:
     number: 5
     name: Null Exceptions und Schlüsselwörter
     url: https://ifsr.de/kurs-materialien/csharp/05_null_exceptions_schluesselwoerter.pdf
-    published: False
+    published: True
   -
     number: 6
     name: Datenstrukturen
     url: https://ifsr.de/kurs-materialien/csharp/06_datenstrukturen.pdf
-    published: False
+    published: True
   -
     number: 7
     name: Methoden (fortgeschritten)

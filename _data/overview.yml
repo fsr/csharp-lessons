@@ -1,5 +1,14 @@
 targets:
-    - Hier
-    - Themen
-    - eintragen
-    - \o/
+    - data typs
+    - controll structures
+    - object orientation
+    - members (methods / properties / fields / events / indexer )
+    - null
+    - exceptions
+    - generics
+    - collections
+    - operation overload
+    - delegates
+    - lamda
+    - extensions
+    - LINQ
