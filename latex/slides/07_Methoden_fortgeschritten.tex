@@ -40,17 +40,67 @@
 % ----------------------- Opertatoren Überladung ------------------------------
 \section{Opertatoren Überladung}
 \begin{frame}{Opertatoren Überladung}
+	\begin{itemize}
+		\item Alle Typen können statische Methoden haben, welche Operatoren überschreiben und neu definieren können
+		\item Nicht alle Operatoren können überschrieben werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Datentyp>} operator \alert{<Operator>}\\( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \}}
+		\end{itemize}
+		\item Verschiedene Operatoren brauchen verschiedene Übergabeparameter und Rückgabeparameter
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Opertatoren Überladung}
+	\textbf{Operatoren}\\
+	\begin{description}
+		\item[unäre] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{!}}, \alert{\texttt{\~}}, \alert{\texttt{++}}, \alert{\texttt{--}}, \alert{\texttt{true}}, \alert{\texttt{false}}
+		\item[binär] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, \alert{\texttt{\%}}, \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{\^}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}
+		\item[vergleich]  \alert{\texttt{==}}, \alert{\texttt{!=}}, \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}
+	\end{description}
+	\begin{itemize}
+		\item Andere Operatoren können nicht überschrieben werden
+		\item Operatoren wie \alert{+=} und \alert{\&\&} werden durch \alert{+} und \alert{\&} beschrieben
+		\item \alert{true} und \alert{false} geben dem Objekt die Möglichkeit wie bool behandelt zu werden
+		\item Bei Vergleichoperatoren muss der jeweilige Gegensatz auch überschrieben werden (z.B. bei \alert{==} auch \alert{!=} überschreiben)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Opertatoren Überladung}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/operation_overload_creation.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/operation_overload_using.cs}
 \end{frame}
 
 % ----------------------- delegate ------------------------------
 \section{delegate}
 \begin{frame}{delegate}
+	\begin{itemize}
+		\item Schlüsselwort zur Erstellung eines Datentypes zur Speicherung von Methoden
+		\item Es weiß, welche Rückgabetype und Übergabeparameter die Methoden brauchen
+		\item In einer Variable eines Delegate können verschiedene Methoden gespeichert und gleichzeitig aufgerufen werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{delegate \alert{<Rückgabetyp> <Variablenname>}\\( \alert{[Übergabeparameter]} );}
+		\end{itemize}
+		\item Variable wird genauso genutzt wie eine normale Methode
+		\begin{itemize}
+			\item Falls diese Variable leer ist, wird ein Fehler geworfen
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{delegate}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/delegate_creation.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/delegate_using.cs}
+\end{frame}
+
+% ----------------------- Anonyme Methoden ------------------------------
+\section{Anonyme Methoden}
+\begin{frame}{Anonyme Methoden}
 
 \end{frame}
 
-% ----------------------- Lamda ------------------------------
-\section{Lamda}
+\subsection{Lamda}
 \begin{frame}{Lamda}
 
 \end{frame}
