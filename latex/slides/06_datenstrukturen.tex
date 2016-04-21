@@ -49,10 +49,10 @@
 \begin{frame}{Structs}
 	\begin{itemize}
 		\item Schlüsselwort ist \alert{struct}
-		\item Lass sich genauso schreiben wie Klassen
+		\item Lässt sich genauso schreiben wie Klassen
 		\item Sie sind nicht Referenz-, sondern Werttypen
 		\item Werden genutzt um kleine Gruppen verwandter Variablen zusammen zufassen
-		\item Sie können von Interfaces, aber nicht von anderen Structs erben 
+		\item Sie können von Interfaces, aber nicht von anderen Structs oder Klassen erben 
 	\end{itemize}
 \end{frame}
 
@@ -77,13 +77,13 @@
 		\item Man kann den Typparameter auch einschränken
 		\item Syntax:
 		\begin{itemize}
-			\item \texttt{\alert{<Klassenkopf>} where \alert{<Typparameter>} : \alert{<Einschränbkung>} \{ \}}
+			\item \texttt{\alert{<Klassenkopf>} where \alert{<Typparameter>} : \alert{<Einschränbkung>}\\ \{ \}}
 		\end{itemize}
 		\item Einschränkungen können sein:
 		\begin{itemize}
 			\item Basisklasse, Interfaces
-			\item struct (Werttyp), class (Referenztyp)
-			\item new() (Typparameter muss einen öffentlichen, leeren Konstruktor haben)
+			\item \alert{struct} (Werttyp), \alert{class} (Referenztyp)
+			\item \alert{new()} (Typparameter muss einen öffentlichen, leeren Konstruktor haben)
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -134,14 +134,14 @@
 \begin{frame}{Weitere}
 	\textbf{Stack}\\
 	\begin{itemize}
-		\item Ein "Stapel" an Elementen
+		\item Ein ''Stapel'' an Elementen
 		\item Arbeitet nach dem LIFO-Prinzip
 		\item \alert{.Push()} (Hinzufügen eines Elementes), \alert{.Pop()} (Entfernen eines Elementes)
 	\end{itemize}
 	\lstinputlisting{resources/06_datenstrukturen/stack.cs}
 	\textbf{Queue}\\
 	\begin{itemize}
-		\item Eine "Schlange" an Elementen
+		\item Eine ''Schlange'' an Elementen
 		\item Arbeitet nach dem FIFO-Prinzip
 		\item \alert{.Enqueue()} (Hinzufügen eines Elementes), \alert{.Dequeue()} (Entfernen eines Elementes)
 	\end{itemize}

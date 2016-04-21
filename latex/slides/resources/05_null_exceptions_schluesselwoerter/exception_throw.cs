@@ -13,6 +13,6 @@ public class EineKlasse
 {
     public void EineMethode() 
     {
-        throw new MeineException("Dies ist meine Exception");
+        throw new MeineException("Das ist meine Exception");
     }
 }

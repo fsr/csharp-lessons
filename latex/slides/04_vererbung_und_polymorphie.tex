@@ -33,12 +33,8 @@
 \section{Vererbung}
 \begin{frame}{Vererbung}
 	\begin{itemize}
-		\item Ermöglicht es einer Klasse definiertes Verhalten einer anderen Klasse (Methoden, Variablen, Eigenschaften) zu
-		\begin{itemize}
-			\item überschreiben
-			\item erweitern
-			\item benutzen
-		\end{itemize}
+		\item Ermöglicht es einer Klasse definiertes Verhalten einer anderen Klasse (Methoden, Variablen, Eigenschaften) zu überschreiben, erweitern und benutzen
+		\item Es können bloss Member vererbt werden, die \alert{public} oder \alert{protected} sind
 		\item Alle Klassen erben von der Klasse \alert{Object}
 		\item Klassen können maximal von einer Klasse erben
 		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
@@ -60,7 +56,7 @@
 		\end{itemize}
 		\item Basisklassen können Methoden und Eigenschaften besitzen, die von den abgeleiteten Klassen überschrieben werden können
 		\item Während der Nutzung eines Objekts als Basisklasse wird der Laufzeittyp ermittelt und die überschrieben/veränderten Methoden und Eigenschaften genutzt
-		\item Falls es keine Überschreibungen gibt, wir die Methode aus der Basisklasse genutzt
+		\item Falls es keine Überschreibungen gibt, wird die Methode aus der Basisklasse genutzt
 	\end{itemize} 
 \end{frame}
 
@@ -119,7 +115,7 @@
 		\begin{itemize}
 			\item \texttt{(\alert{<Variable>} as \alert{<Datentyp/Klasse>})}
 		\end{itemize}
-		\item Nach der Klammer kann auf die Variable als der neue Typ darauf zugegriffen werden
+		\item Nach der Klammer kann auf die Variable als der neue Typ zugegriffen werden
 		\item Falls die Umwandlung nicht möglich ist, wird die Operation als \alert{null} ausgewertet
 	\end{itemize}	
 	\lstinputlisting{resources/04_vererbung_und_polymorphie/as.cs}
