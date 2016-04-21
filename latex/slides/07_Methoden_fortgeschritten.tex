@@ -97,12 +97,74 @@
 % ----------------------- Anonyme Methoden ------------------------------
 \section{Anonyme Methoden}
 \begin{frame}{Anonyme Methoden}
+	\begin{itemize}
+		\item Haben keinen eigenen Methodenkopf
+		\item Können nur durch Delegate-Variablen aufgerufen und genutzt werden
+		\item Es gibt 2 Artern der Erstellung
+		\begin{itemize}
+			\item Durch Schlüsselwort \alert{delegate}
+			\item Über Lamda-Terme
+		\end{itemize}	
+	\end{itemize}
+\end{frame}
 
+\subsection{delegate}
+\begin{frame}{delegate}
+	\begin{itemize}
+		\item \alert{delegate} kann auch als Methodendefinition genutzt werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Delegate-Variable>} = \\delegate( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \};}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_using.cs}	
 \end{frame}
 
 \subsection{Lamda}
 \begin{frame}{Lamda}
+	\begin{itemize}
+		\item Benutzt den Lamda-Operator \alert{=\textgreater}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{( \alert{[Übergabeparameter]} ) => \{ \alert{<Code>} \};}
+			\item Es gibt Unterschiede in der Syntax zwischen den einzelnen Lamda Arten
+			\item Übergabeparameter brauchen nicht immer einen Typ, da dieser hergeleitet werden kann
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
+\subsubsection{Ausdruck-Lamdas}
+\begin{frame}{Ausdruck-Lamdas}
+	\begin{itemize}
+		\item Besitzt im Körper nur einen Ausdruck und braucht somit keine geschweiften Klammern
+		\item Gibt als Ergebnis das Ergebnis des einen Ausdrucks zurück
+	\end{itemize}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation_2.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/expression_lamda.cs}	
+\end{frame}
+
+\subsubsection{Anweisung-Lamdas}
+\begin{frame}{Anweisung-Lamdas}
+	\begin{itemize}
+		\item Haben mehrere Ausdrücke (meist höchstens 2 oder 3) und haben geschweifte Klammern		
+	\end{itemize}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation_3.cs}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/statement_lamda.cs}
+\end{frame}
+
+\subsubsection{Variablenbereich für Lamdas}
+\begin{frame}{Variablenbereich für Lamdas}
+	\begin{itemize}
+		\item Lamdas können auf Variablen außerhalb verweisen und diese nutzen
+		\item Diese werden zur Verwendung im Lamda gespeichert
+		\item So eine aüßere Variable muss definitiv vorher zugewiesen sein
+	\end{itemize}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation_3.cs}
+\end{frame}
+
+\begin{frame}{Variablenbereich für Lamdas}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/variable_scope_lamda.cs}
 \end{frame}
 
 % ----------------------- Schlüsselwörter ------------------------------
