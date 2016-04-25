@@ -2,7 +2,7 @@
 title: Polyon Area - 1
 number: 2
 status: finished
-authors: [marc]
+authors: marc
 lesson: 2
 ---
 
