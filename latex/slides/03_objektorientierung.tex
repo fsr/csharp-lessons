@@ -23,7 +23,7 @@
 \begin{frame}{Objektorientierung}
 	\begin{itemize}
 		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. int oder bool
-		\item Damit kann alles in C\texttt{\#} Attribute und Methoden besitzen		
+		\item Damit kann alles in C\texttt{\#} Felder und Methoden besitzen		
 	\end{itemize}
 \end{frame}
 
@@ -40,11 +40,11 @@
 \subsection{Objekte}
 \begin{frame}{Objekte}
 	\begin{itemize}
-		\item Werden nach Klassen erstellt und sind somit Instanzen einer Klasse
+		\item Werden anhand von Klassen erstellt und sind somit Instanzen einer Klasse
 		\begin{itemize}
 			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
 		\end{itemize}
-		\item Haben in den von der Klasse vorgeschriebenen Attributen konkrete Werte
+		\item Befüllen die Felder einer Klasse mit konkreten Werten
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
 \end{frame}
@@ -52,10 +52,10 @@
 \subsection{Konstruktor}
 \begin{frame}{Konstruktor}
 	\begin{itemize}
-		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden müssen
-		\item Stellen Basis für das Existieren und Funktionieren des Objektes her 
+		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden
 		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
-		\item Falls kein eigener Konstruktor erstellt wurde, existiert immer der leere Konstruktor (der ohne Übergabeparameter)
+		\item Sollte sicherstellen, dass eine gültige Instanz einer Klasse erzeugt wird
+		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weißt allen Feldern Standardwerte zu)
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/constructor.cs}	
 \end{frame}
@@ -64,7 +64,7 @@
 	\textbf{Schlüsselwort new}\\
 	\begin{itemize}
 		\item Zur Erstellung einer Instanz einer Klasse
-		\item Wird immer mit einem Konstruktor zusammen genutzt
+		\item Ruft immer einen Konstruktor der jeweiligen Klasse auf
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/new.cs}
 \end{frame}
@@ -74,18 +74,17 @@
 	\textbf{Felder}\\
 	\begin{itemize}
 		\item Werden auch Attribute genannt
-		\item Sind Variablen eines Typs, welche direkt in einer Klasse deklariert wurden
+		\item Sind Variablen eines beliebigen Typs, welche direkt in einer Klasse deklariert wurden und damit dieser Klasse zugehörig sind
 	\end{itemize}
 	\textbf{Eigenschaften}\\
 	\begin{itemize}
 		\item Bietet flexible Mechanismen zum Lesen, Schreiben und Berechnen der Werte eines Feldes
-		\item Besitzen nach dem Namen einen Block in denen ein \alert{get} und \alert{set} definiert werden kann
+		\item Es muss aber nicht zwangsläufig ein Feld abbilden
+		\item Besitzen nach dem Namen einen Block in denen ein \alert{get} und/oder \alert{set} definiert werden kann
 		\begin{itemize}
 			\item Diese agieren wie Methoden und haben somit einen Körper
 			\item \alert{set} hat dabei einen Übergabeparameter, und zwar \alert{value}
-			\begin{itemize}
-				\item Dieser ist vom selben Typ, wie die Eigenschaft
-			\end{itemize}
+			\item Dieser ist vom selben Typ, wie die Eigenschaft
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -98,7 +97,7 @@
 \begin{frame}{Zugriff}
 	\textbf{Zugriff mit .}\\
 	\begin{itemize}
-		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{.}
+		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{\textbf{.}}
 		\item Dahinter kommt der Member den man nutzen möchte
 	\end{itemize}
 	\textbf{this}\\
@@ -111,6 +110,16 @@
 			\item Und andere (wird später erläutert)
 		\end{itemize}
 	\end{itemize}
+\end{frame}
+
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
+\section{Gültigkeit (Scope)}
+\begin{frame}{Gültigkeit (Scope)}
+	\begin{itemize}
+		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden
+		\item Methoden und Felder nur in deren Klassen, Parameter nur in deren Methoden, lokale Variablen innerhalb ihrer Blöcke
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/scope.cs}
 \end{frame}
 
 % ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
@@ -137,7 +146,13 @@
 \begin{frame}{namespace \& using}
 	\textbf{namespace}\\
 	\begin{itemize}
-		\item Werden zur Organisation von Klassen und anderem Code genutzt
+		\item Werden zur Organisation von Klassen und anderem Code genutzt 
+		\item Können beliebig verschachtelt werden
+		\item der volle Name einer Klasse beinhaltet die Namen aller Namespaces, in denen die Klasse liegt
+		\item Vermeiden von Mehrdeutigen Bezeichnen 
+		\begin{itemize}
+			\item Zwei Klassen dürfen den selben Namen haben, wenn diese in unterschiedlichen Namespaces liegen		
+		\end{itemize}
 	\end{itemize}	
 	\lstinputlisting{resources/03_objektorientierung/namespace.cs}
 \end{frame}
@@ -147,6 +162,7 @@
 	\begin{itemize}
 		\item Ein Schlüsselwort zur Nutzung eines bestimmten namespace
 		\item Dies erspart die Eingabe des gesamten namespace bei Nutzung einer Klasse
+		\item Kann zu merhdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/using.cs}
 \end{frame}
