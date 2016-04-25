@@ -25,17 +25,16 @@
 		\item Sind Auflistung einer beliebigen (aber nach Initalisierung festen) Anzahl von Variablen gleichen Typs
 		\item Können über eine Index aufgerufen werden
 		\begin{itemize}
-			\item Dieser geht von 0 bis Größe - 1
+			\item Dieser geht von 0 bis (n - 1), wobei n die Anzahl der Elemente des Arrays ist
 		\end{itemize}
 		\item Können ein- oder mehrdimensional sein
-		\item Ermöglicht schnellen Zugriff
 	\end{itemize}
 	\textbf{Eindimensionales Array:}\\
 	\lstinputlisting{resources/02_grundlagen_2/array.cs}	
 \end{frame}
 
 \begin{frame}{Arrays}
-	\textbf{Array von einem Array:}\\
+	\textbf{Verzweigtes Array:}\\
 	\lstinputlisting{resources/02_grundlagen_2/array_of_array.cs}
 	\textbf{Mehrdimensionales Array:}\\
 	\lstinputlisting{resources/02_grundlagen_2/multi_array.cs}	
@@ -60,12 +59,18 @@
 
 % ----------------------- Verzweigung ------------------------------
 \section{Verzweigungen}
-\subsection{if}
-\begin{frame}{if}
+\subsection{Bedingte Verzweigung (if else)}
+\begin{frame}{Bedingte Verzweigung (if else)}
 	\begin{itemize}
-		\item Prüft die Bedingungen der Köpfe von oben nach unten
-		\item Falls eine zutrifft, wird der zugehörige Block ausgeführt und die anderen Bedingen werden nicht mehr geprüft
-		\item Falls keine der Bedingungen zutrifft wird der \alert{else} Block gewählt
+		\item Prüft die Bedingung des jeweiligen Kopfes
+		\begin{itemize}
+			\item Die Köpfe werden von oben nach unten durchgegangen
+		\end{itemize}
+		\item Falls ein Kopf zutrifft, wird der zugehörige Block ausgeführt und die anderen Köpfe werden nicht mehr geprüft
+		\item Falls keine der Köpfe zutrifft wird der \alert{else} Block gewählt
+		\begin{itemize}
+			\item Dieser ist optional
+		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/if.cs}
 \end{frame}
@@ -87,7 +92,7 @@
 \subsection{switch case}
 \begin{frame}{switch case}
 	\begin{itemize}
-		\item Verhält sich wie die if-Verzweigung
+		\item Hat ähnliches Verhalten wie die bedingte Verzweigung
 		\begin{itemize}
 			\item \alert{default} verhält sich wie \alert{else}
 		\end{itemize}
@@ -98,25 +103,27 @@
 
 % ----------------------- Schleifen ------------------------------
 \section{Schleifen}
-\subsection{while}
-\begin{frame}{while}
+\subsection{Kopfgesteuerte Schleife (while)}
+\begin{frame}{Kopfgesteuerte Schleife (while)}
 	\begin{itemize}
 		\item Die Schleife läuft so lange durch deren Körper, wie die Bedingung in den Klammern erfüllt ist
+		\item Die Bedingung wird am Anfang geprüft, und falls diese nicht \alert{true} ist, wird der Körper nie ausgeführt
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/while.cs}	
 \end{frame}
 
-\subsection{do while}
-\begin{frame}{do while}
+\subsection{Fußgesteuerte Schleife (do while)}
+\begin{frame}{Fußgesteuerte Schleife (do while)}
 	\begin{itemize}
 		\item Selbe Funktion wie die while-Schleife
-		\item Einziger Unterschied ist, dass diese Schleife auf jeden Fall einmal ihren Körper durchläuft, bevor sie die Bedingung überprüft
+		\item Die Bedingung wird hier aber erst am Ende evaluiert
+		\item Dementsprechend wird der Körper mindestens einmal ausgeführt, selbst wenn die Bedingung beim ersten Durchlauf falsch sein sollte
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
 \end{frame}
 
-\subsection{for}
-\begin{frame}{for}
+\subsection{Zählschleife (for)}
+\begin{frame}{Zählschleife (for)}
 	\begin{itemize}
 		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
 		\item Syntax:
@@ -127,21 +134,8 @@
 	\lstinputlisting{resources/02_grundlagen_2/for.cs}	
 \end{frame}
 
-\subsection{foreach}
-\begin{frame}{foreach}
-	\begin{itemize}
-		\item Läuft durch ein/e Array/Collection an Elementen eines Typen durch 
-		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu 
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{foreach( \alert{<Datentyp> <Variablenname>} in \alert{<Aufzählung>} )\\ \{ \alert{<Code>} \}}
-		\end{itemize}
-	\end{itemize}
-	\lstinputlisting{resources/02_grundlagen_2/foreach.cs}	
-\end{frame}
-
 \subsection{break \& continue}
-\begin{frame}{Schleifen}
+\begin{frame}{break \& continue}
 	\textbf{break}\\
 	\begin{itemize}
 		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
@@ -154,7 +148,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Schleifen}
+\begin{frame}{break \& continue}
 	\textbf{break \& continue:}\\
 	\begin{itemize}
 		\item Beide können und sollten mit Verzweigungen benutzt werden

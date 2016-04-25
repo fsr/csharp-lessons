@@ -1,0 +1,37 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Cool Topic}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+
+\subsection{foreach}
+\begin{frame}{foreach}
+	\begin{itemize}
+		\item Läuft durch ein/e Array/Collection an Elementen eines Typen durch 
+		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu 
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{foreach( \alert{<Datentyp> <Variablenname>} in \alert{<Aufzählung>} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/foreach.cs}	
+\end{frame}
+
+
+
+\end{document}

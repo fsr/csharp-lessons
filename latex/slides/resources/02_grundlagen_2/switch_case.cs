@@ -1,14 +1,16 @@
-int zahl = 8;
+int note = 2;
+string noteStr = "";
 // Hier beginnt die switch-case-Verzweigung.
 switch (zahl)
 {
-    case 5:
-        zahl = 0;
+    case 1:
+        noteStr = "Sehr gut";
         break;
-    case 8:
-        zahl = 9;   
+    case 2:
+        noteStr = "gut";   
         break;
+    // ...
     default:
-        zahl = -1;
+        noteStr = "Diese Note gibt es nicht.";
         break;
 }
