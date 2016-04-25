@@ -1,5 +1,5 @@
 ---
-title: Polyon Area - 1
+title: Polygon Area - 1
 number: 2
 status: finished
 authors: marc
@@ -18,7 +18,7 @@ Create an method that take two arrays as input parameter und calculate an double
 
 ### Step 3
 
-Go through all points in the two input arrays and calculate the area of the polygon[^polygon_area]. 
+Go through all points in the two input arrays and calculate the area of the polygon[^polygon_area].
 
 [^polygon_area]:
     [Wikipedia site](https://de.wikipedia.org/wiki/Polygon#Fl.C3.A4che)

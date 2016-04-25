@@ -1,5 +1,5 @@
 ---
-title: Polyon Area - 2
+title: Polygon Area - 2
 number: 3
 status: finished
 authors: marc
@@ -24,7 +24,7 @@ Split the string[^string_split] and use both coordinates separately.
 [^string_split]:
     [MSDN site](https://msdn.microsoft.com/de-de/library/tabh47cf%28v=vs.110%29.aspx)
 
-Parse all the the input strings to numbers and save them in the array. 
+Parse all the the input strings to numbers and save them in the array.
 
 We assume that the user only enters correct input strings.
 

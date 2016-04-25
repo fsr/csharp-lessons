@@ -1,9 +1,9 @@
 targets:
-    - data typs
+    - data types
     - controll structures
     - object orientation
     - members (methods / properties / fields / events / indexer )
-    - "null" / nullable
+    - null / nullable
     - exceptions
     - generics
     - collections
