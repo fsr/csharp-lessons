@@ -1,6 +1,6 @@
 ---
 title: Polyon Area - 2
-number: 2
+number: 3
 status: finished
 authors: [marc]
 lesson: 2
