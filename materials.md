@@ -13,4 +13,4 @@ The slides for the lessons can be found here:
 {% endif %}
 {% endfor %}
 
- **The solutions of the exercises can be found at [GitHub](https://github.com/satkowski/csharp-soultions)**
+ **The solutions of the exercises can be found at [GitHub](https://github.com/satkowski/csharp-solutions)**
