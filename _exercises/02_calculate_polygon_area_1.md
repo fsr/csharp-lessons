@@ -22,6 +22,13 @@ Go through all points in the two input arrays and calculate the area of the poly
 
 [^polygon_area]:
     [Wikipedia site](https://de.wikipedia.org/wiki/Polygon#Fl.C3.A4che)
+    
+If you need to make the solution absolut use the Abs-Method[^abs]
+
+[^abs]:
+    [MSDN site](https://msdn.microsoft.com/de-de/library/system.math.abs%28v=vs.110%29.aspx)
+    
+*Hint: That calculation uses pairs of points (with the left or right neighbour). So you need to use the pair from the first to the last point too.*
 
 ### Step 4
 
