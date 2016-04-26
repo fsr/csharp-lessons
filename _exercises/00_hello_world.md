@@ -19,7 +19,7 @@ Write on the console[^write_console] `Hello World`.
 [^write_console]:
     [MSDN site](https://msdn.microsoft.com/de-de/library/system.console.writeline%28v=vs.110%29.aspx)
 
-*Hint: Often the console window closes instanly. So we add an `Console.RaedLine()`[^read_console] to let the console wait until we created any input.*
+*Hint: Often the console window closes instanly. So we add an `Console.RaedLine()`*[^read_console]* to let the console wait until we created any input.*
 
 [^read_console]
     [MSDN site](https://msdn.microsoft.com/de-de/library/system.console.readline%28v=vs.110%29.aspx)
