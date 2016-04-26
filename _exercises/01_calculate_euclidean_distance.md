@@ -17,12 +17,12 @@ Create variables to hold your values for the different coordinates of two points
 Calculate the euclidean distance[^euclidian_distance] from the given variables.
 
 [^euclidian_distance]:
-    [Wikipedia site](https://de.wikipedia.org/wiki/Euklidischer_Abstand)
+    [Wikipedia site](https://de.wikipedia.org/wiki/Euklidischer_Abstand) for euclidean distance calculation
     
 *Hint: We need to use the square root function.*[^sqrt]
 
 [^sqrt]:
-    [MSDN site](https://msdn.microsoft.com/de-de/library/system.math.sqrt%28v=vs.90%29.aspx)
+    [MSDN site](https://msdn.microsoft.com/de-de/library/system.math.sqrt%28v=vs.90%29.aspx) for `Math.Sqrt()`
 
 ### Step 3
 

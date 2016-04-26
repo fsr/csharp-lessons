@@ -13,7 +13,7 @@ Extension of the polygon area calculation by user input. There can be arbitrary 
 Read the user input [^user_input] the user input. The user input for a new vertex should be look like `x:y`.
 
 [^user_input]:
-    [MSDN site](https://msdn.microsoft.com/de-de/library/system.console.readline%28v=vs.110%29.aspx)
+    [MSDN site](https://msdn.microsoft.com/de-de/library/system.console.readline%28v=vs.110%29.aspx) for `Console.WriteLine()`
 
 If the user don't want to enter more vertex he can enter an empty string. The programm should notify the user that the input has ended.
 
@@ -22,9 +22,12 @@ If the user don't want to enter more vertex he can enter an empty string. The pr
 Split the string[^string_split] and use both coordinates separately.
 
 [^string_split]:
-    [MSDN site](https://msdn.microsoft.com/de-de/library/tabh47cf%28v=vs.110%29.aspx)
+    [MSDN site](https://msdn.microsoft.com/de-de/library/tabh47cf%28v=vs.110%29.aspx) for `String.Split()`
 
-Parse all the the input strings to numbers and save them in the array.
+Parse[^parse] all the the input strings to numbers and save them in the array.
+
+[^parse]:
+    [MSDN site](https://msdn.microsoft.com/de-de/library/b3h1hf19%28v=vs.110%29.aspx) for `int.Parse()`
 
 We assume that the user only enters correct input strings.
 
