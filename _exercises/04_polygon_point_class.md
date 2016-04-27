@@ -17,11 +17,13 @@ But keep the `Programm` class with the main method.
 ### Step 2
 
 The `Point2D` class needs the following members: 
+
 - fields for both coordinates
 - two constructors - one for empty parameters and one for the coordinates as parameters
 - one methode to calculate the distance between two points (the point itself and another point as parameter)
 
 The `Polygon` class needs the following members:
+
 - an field and property for the array of vertices
   - if the vertices changed (per set) it should recalculate the area
 - an property for the area
