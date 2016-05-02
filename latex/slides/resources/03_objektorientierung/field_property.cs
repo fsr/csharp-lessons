@@ -7,7 +7,7 @@ class EineKlasse
         { 
             return EinFeld; 
         }
-        set 
+        private set 
         { 
             // Moegliche Berechnungen
             EinFeld = value; 

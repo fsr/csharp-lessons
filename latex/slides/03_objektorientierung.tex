@@ -55,7 +55,7 @@
 		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden
 		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
 		\item Sollte sicherstellen, dass eine gültige Instanz einer Klasse erzeugt wird
-		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weißt allen Feldern Standardwerte zu)
+		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weist allen Feldern Standardwerte zu)
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/constructor.cs}	
 \end{frame}
@@ -81,11 +81,23 @@
 		\item Bietet flexible Mechanismen zum Lesen, Schreiben und Berechnen der Werte eines Feldes
 		\item Es muss aber nicht zwangsläufig ein Feld abbilden
 		\item Besitzen nach dem Namen einen Block in denen ein \alert{get} und/oder \alert{set} definiert werden kann
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Felder \& Eigenschaften}
+	\textbf{Eigenschaften: get \& set}
+	\begin{itemize}
+		\item Diese agieren wie Methoden
+		\item Sie können einen Körper haben, müssen es aber nicht
 		\begin{itemize}
-			\item Diese agieren wie Methoden und haben somit einen Körper
-			\item \alert{set} hat dabei einen Übergabeparameter, und zwar \alert{value}
-			\item Dieser ist vom selben Typ, wie die Eigenschaft
+			\item Sobald einer der beiden einen Körper hat, muss der andere auch einen haben (wenn sowohl \alert{get} als auch \alert{set} implementiert werden sollen)
+			\item Falls kein eigener Körper definiert wurde, wird die Variable wie ein Feld benutzt
 		\end{itemize}
+		\item Besitzen eigene Sichtbarkeiten (unterschiedlich vom Feld selbst)
+		\item \alert{set} hat dabei einen Übergabeparameter, und zwar \alert{value}
+		\begin{itemize}
+			\item Dieser ist vom selben Typ, wie die Eigenschaft		
+		\end{itemize}		
 	\end{itemize}
 \end{frame}
 
@@ -160,7 +172,7 @@
 \begin{frame}{namespace \& using}
 	\textbf{using}\\
 	\begin{itemize}
-		\item Ein Schlüsselwort zur Nutzung eines bestimmten namespace
+		\item Ein Schlüsselwort zur Nutzung eines bestimmten \alert{namespace}
 		\item Dies erspart die Eingabe des gesamten namespace bei Nutzung einer Klasse
 		\item Kann zu merhdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
 	\end{itemize}
