@@ -33,8 +33,9 @@
 \section{Vererbung}
 \begin{frame}{Vererbung}
 	\begin{itemize}
-		\item Ermöglicht es einer Klasse definiertes Verhalten einer anderen Klasse (Methoden, Variablen, Eigenschaften) zu überschreiben, erweitern und benutzen
-		\item Es können bloss Member vererbt werden, die \alert{public} oder \alert{protected} sind
+		\item Ermöglicht das definieren von Klassen die auf anderen basieren
+		\item Diese erben die Funktionalitäten der Basisklasse und können diese benutzen oder erweitern
+		\item Es wird alles vererbt, doch einige Member sind von dem Erben nicht sichtbar 
 		\item Alle Klassen erben von der Klasse \alert{Object}
 		\item Klassen können maximal von einer Klasse erben
 		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
@@ -50,13 +51,10 @@
 \begin{frame}{Polymorphie}
 	\begin{itemize}
 		\item Zu dt. Vielgestaltigkeit
-		\item Bedeutet das abgeleitete Klassen zur Laufzeit als ihre Basisklassen behandelt werden können
-		\begin{itemize}
-			\item Somit stimmt der Typ des Objekts nicht mehr mit dem Laufzeittyp überein
-		\end{itemize}
+		\item Instanzen abgeleitete Klassen können auch immer als Instanzen einer ihrer Basisklassen betrachtet werden
 		\item Basisklassen können Methoden und Eigenschaften besitzen, die von den abgeleiteten Klassen überschrieben werden können
 		\item Während der Nutzung eines Objekts als Basisklasse wird der Laufzeittyp ermittelt und die überschrieben/veränderten Methoden und Eigenschaften genutzt
-		\item Falls es keine Überschreibungen gibt, wird die Methode aus der Basisklasse genutzt
+		\item Alle nicht überschriebenen Methoden oder Eigenschaften sind identisch mit denen der Basisklasse
 	\end{itemize} 
 \end{frame}
 
@@ -81,19 +79,15 @@
 	\end{itemize}
 	\textbf{new}\\
 	\begin{itemize}
-		\item Gibt an ob eine bekannte Methode aus der Basisklasse überschrieben werden soll, obwohl diese es nicht erlaubt
+		\item Gibt an ob eine neue Methode mit selber Signatur wie in einer Basisklasse erzeugt wird
 		\begin{itemize}
-			\item Diese Methode hat also kein \alert{virtual} in der Basisklasse
+			\item Die ursprüngliche Methode wird bei der Nutzung der abgeleiteten Klasse ausgeblendet
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Methoden- \& Eigenschaftsüberschreibung}
-	\lstinputlisting{resources/04_vererbung_und_polymorphie/override_new.cs}	
-	\textbf{Hinweis:}
-	\begin{itemize}
-		\item Die Überschreibung von Eigenschaften geht nur, wenn diese schon einen Körper zu ihrem \alert{get} und/oder \alert{set} haben
-	\end{itemize}
+	\lstinputlisting{resources/04_vererbung_und_polymorphie/override_new.cs}
 \end{frame}
 
 \subsection{Weitere Schlüsselwörter}
@@ -101,7 +95,7 @@
 	\textbf{sealed}\\
 	\begin{itemize}
 		\item Modifikator für Klassen und Methoden
-		\item Verhindert das diese Klasse als Basisklasse genutzt werden kann
+		\item Verhindert das von einer Klasse geerbt werden kann
 		\item Bei Methoden wird verhindert, dass diese weiter überschrieben werden können
 	\end{itemize}
 	\lstinputlisting{resources/04_vererbung_und_polymorphie/sealed.cs}
@@ -124,15 +118,13 @@
 \begin{frame}{Weitere Schlüsselwörter}
 	\textbf{base}\\
 	\begin{itemize}
-		\item Es ist das Objekt der Basisklasse
+		\item Ist eine Referenz auf die Member der Basisklasse
 		\item Ermöglicht es auf die Methoden- und Eigenschaftsimplementationen der Basisklasse zuzugreifen
-		\item Dies geht auch, wenn man diese in seiner Klasse schon überschrieben hat
 	\end{itemize}
 	\begin{itemize}
 		\item Muss genutzt werden, wenn die Basisklasse einen Konstruktor mit Übergabeparametern hat
 		\begin{itemize}
 			\item Dabei wird der Konstruktor der Basisklasse vor dem eigenen aufgerufen
-			\item Es müssen auch die "Bedingungen" des Basisklasse erfüllt sein
 		\end{itemize}
 		\item Syntax:
 		\begin{itemize}
@@ -153,14 +145,15 @@
 		\begin{itemize}
 			\item Kann für Klassen, Methoden und Eigenschaften genutzt werden		
 		\end{itemize}
-		\item Gibt an ob eine Implementierung existiert
+		\item Gibt an ob keine Implementierung existieren darf
 		\item Von Klassen die \alert{abstract} sind, können keine Objekte initialisiert werden
 		\begin{itemize}
-			\item Dementsprechend muss von diesen geerbt werden um diese zu Nutzen
+			\item Dementsprechend muss von diesen geerbt werden um sie zu nutzen
 		\end{itemize}
 		\item Methoden und Eigenschaften besitzen keinen Körper wenn diese \alert{abstract} sind
 		\begin{itemize}
 			\item Dementsprechend wird eine Klasse, die davon erbt, gezwungen diese Methoden und Eigenschaften zu überschreiben und zu implementieren
+			\item Eigenschaften können dennoch entscheiden ob sie ein \alert{get} oder \alert{set} brauchen und die abgeleitete Klasse darf nur die vorgegebenen implementieren
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -179,7 +172,7 @@
 			\item Das heißt diese haben alle keinen Körper
 		\end{itemize}
 		\item Interfaces und Klassen können von beliebig vielen Interfaces erben
-		\item Die Klassen, die von Interfaces erben, werden gezwungen zu allen Signaturen Implementationen zu haben
+		\item Die Klassen, die von Interfaces erben, müssen alle in den Interfaces definierten Methoden und Eigenschaften implementieren
 	\end{itemize}
 \end{frame}
 

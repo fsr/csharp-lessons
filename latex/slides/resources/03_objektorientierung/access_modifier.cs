@@ -1,5 +1,5 @@
 // Es kann jeder diese Klasse benutzen.
-public EineKlasse
+public class EineKlasse
 {
     // Diese beiden koennen nur innerhalb der Klasse benutzt 
     // werden.
