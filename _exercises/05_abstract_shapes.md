@@ -6,7 +6,10 @@ authors: marc
 lesson: 4
 ---
 
-Now we want to extend our Polygon example a bit more. This time we will use abstrac class and more.
+Now we want to extend our Polygon example a bit more. This time we will use abstrac class and more.[^solution]
+
+[^solution]:
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/04_vererbung_und_polymorphie/01_abstract_shapes).
 
 ### Step 1
 
@@ -40,6 +43,3 @@ Create a new `static` method in the `Program` class to create a `Circle` with us
 The radius should never be less or equal 0.
 
 *Hint: For the time being will use the (0, 0) point for the position of the shapes.*
-
-# 
-You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/04_vererbung_und_polymorphie/01_abstract_shapes).
