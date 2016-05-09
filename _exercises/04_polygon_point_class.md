@@ -6,7 +6,10 @@ authors: marc
 lesson: 3
 ---
 
-We want to put the polygon and the euclidean distance exercise in own classes. 
+We want to put the polygon and the euclidean distance exercise in own classes.[^solution]
+
+[^solution]:
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/01_polygon_point_class).
 
 ### Step 1
 
@@ -47,6 +50,3 @@ Give both classes all possible documentation commentaries.
 ### Step 5 (Optional)
 
 Put the whole process of the polygon creation in an own (`static`) method in the `Programm` class.
-
-# 
-You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/01_polygon_point_class).

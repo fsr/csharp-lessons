@@ -6,7 +6,10 @@ authors: marc
 lesson: 2
 ---
 
-Extension of the polygon area calculation by user input. There can be arbitrary many vertices of the polygon.
+Extension of the polygon area calculation by user input. There can be arbitrary many vertices of the polygon.[^solution]
+
+[^solution]:
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/polygon_area_2.cs).
 
 *We assume that the user only enters correct input strings.*
 
@@ -44,6 +47,3 @@ Parse all the the input strings to numbers and save them in the array.
 ### Step 5
 
 Calculate the polygon area and print the soultion on the console.
-
-# 
-You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/polygon_area_2.cs).
