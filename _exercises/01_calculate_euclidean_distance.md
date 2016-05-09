@@ -27,3 +27,6 @@ Calculate the euclidean distance[^euclidian_distance] from the given variables.
 ### Step 3
 
 Write your solution on the console.
+
+# 
+You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/01_grundlagen_1/euclidean_distance.cs).

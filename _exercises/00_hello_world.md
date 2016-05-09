@@ -23,3 +23,6 @@ Write on the console[^write_console] `Hello World`.
 
 [^read_console]:
     [MSDN site](https://msdn.microsoft.com/de-de/library/system.console.readline%28v=vs.110%29.aspx) for `Console.ReadLine()`
+
+# 
+You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/01_grundlagen_1/hello_world.cs).

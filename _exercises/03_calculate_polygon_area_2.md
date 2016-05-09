@@ -44,3 +44,6 @@ Parse all the the input strings to numbers and save them in the array.
 ### Step 5
 
 Calculate the polygon area and print the soultion on the console.
+
+# 
+You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/polygon_area_2.cs).

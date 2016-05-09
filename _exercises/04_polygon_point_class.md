@@ -27,14 +27,14 @@ The `Point2D` class needs the following members:
 
 The `Polygon` class needs the following members:
 
-- an field and property for the array of vertices
+- a `private` field and `public` property for the array of vertices
   - if the vertices changed (per `set`) it should recalculate the area
-- an property for the area
+- a property for the area
   - with `get` and `private set`
-- an property for the vertex count
+- a property for the vertex count
   - only a `get` (it can get the count from the array)
 - two constructors - one for epmty parameters and one for an array of points as parameter
-- an private method that calculates the area of the polygon
+- a `private` method that calculates the area of the polygon
 
 ### Step 3
 
@@ -48,3 +48,5 @@ Give both classes all possible documentation commentaries.
 
 Put the whole process of the polygon creation in an own (`static`) method in the `Programm` class.
 
+# 
+You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/01_polygon_point_class).

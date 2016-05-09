@@ -33,3 +33,6 @@ If you need to make the solution absolut use the Abs-Method[^abs]
 ### Step 4
 
 Show the solution in the console.
+
+# 
+You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/polygon_area_1.cs).
