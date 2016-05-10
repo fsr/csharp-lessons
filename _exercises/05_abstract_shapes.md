@@ -15,7 +15,7 @@ Now we want to extend our Polygon example a bit more. This time we will use abst
 
 Create an abstract class `Shape`. This class needs the following member:
 
-- a field for the position of the `Shape`
+- a field for the position (`Point2D`) of the `Shape`
 - a property with `get` and `protected set` for the area
 - a constructor that take the position of that `Shape` as a parameter
 - a `protected abstract` method for the calculation of the area
@@ -28,7 +28,7 @@ Let your `Polygon` class derive from `Shape`. Change the internal structure of `
 
 ### Step 3
 
-Create a new class `Circle` that also derive from Shape. This class needs also the following member:
+Create a new class `Circle` that also derive from `Shape`. This class needs also the following member:
 
 - a `private` field and `public` for the radius
   - if the radius changed (per `set`) it should recalculate the area
