@@ -1,6 +1,6 @@
 ---
-title: Exception for Shapes
-number: 7
+title: A07 - Exception for Shapes
+number: 8
 status: drafty
 authors: marc
 lesson: 5
@@ -9,7 +9,7 @@ lesson: 5
 This time we want to handle the exception of the user inputs.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/05_null_exceptions_schluesselwoerter/02_exception_for_shapes).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/A07_null_exceptions_schluesselwoerter/02_exception_for_shapes).
 
 ### Step 1
 

@@ -1,6 +1,6 @@
 ---
-title: Class for Polygon and Point
-number: 4
+title: A04 - Class for Polygon and Point
+number: 5
 status: finished
 authors: marc
 lesson: 3
@@ -9,7 +9,7 @@ lesson: 3
 We want to put the polygon and the euclidean distance exercise in own classes.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/01_polygon_point_class).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/A04_polygon_point_class).
 
 ### Step 1
 
