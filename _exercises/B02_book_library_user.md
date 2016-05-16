@@ -1,5 +1,5 @@
 ---
-title: Book, Library and User
+title: B02 - Book, Library and User
 number: 6
 status: drafty
 authors: marc
