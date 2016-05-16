@@ -2,7 +2,7 @@
 title: B03 - Abstract Media class and derivation
 number: 8
 status: drafty
-authors: [marc, sascha]
+authors: marc
 lesson: 4
 ---
 

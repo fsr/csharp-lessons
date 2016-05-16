@@ -1,6 +1,6 @@
 ---
 title: A07 - Exception for Shapes
-number: 10
+number: 11
 status: drafty
 authors: marc
 lesson: 5
