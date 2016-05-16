@@ -1,6 +1,6 @@
 ---
 title: A05 - Abstract Shape class and derivation
-number: 6
+number: 7
 status: drafty
 authors: marc
 lesson: 4
