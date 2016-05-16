@@ -6,7 +6,7 @@ authors: marc
 lesson: 4
 ---
 
-Now we want to extend our Polygon example a bit more. This time we will use abstrac class and more.[^solution]
+Now we want to extend our Polygon example a bit more. This time we will use abstract class and more.[^solution]
 
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/04_vererbung_und_polymorphie/A05_abstract_shapes).
