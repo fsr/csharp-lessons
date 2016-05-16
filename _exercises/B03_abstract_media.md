@@ -38,7 +38,7 @@ Adjust your "Search" method in `Book` so that it will use its derived code.
 
 ### Step 4
 
-Adjust your Library class. 
+Adjust your `Library` and `UserAccount` class.
 Especially change your "Search" method in `Library` so, that it will now give a array of `Medium`
 
 *Hint: Maybe your member needs a new typ and also a new name.*
