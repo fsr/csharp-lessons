@@ -3,7 +3,7 @@ try
     // Dieser Code wird "ausprobiert", bei einem
     // Fehler werden die catch-Bloecke genutzt.    
 }
-catch(ArgumentNullException e)
+catch(NullReferenceException e)
 {
     // Block fuer Fehler mit einem null-Objekt
 }
