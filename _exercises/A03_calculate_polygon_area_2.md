@@ -9,7 +9,7 @@ lesson: 2
 Extension of the polygon area calculation by user input. There can be arbitrary many vertices of the polygon.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/a03_polygon_area_2.cs).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/a03_polygon_area_2/ExerciseSolution/).
 
 *We assume that the user only enters correct input strings.*
 

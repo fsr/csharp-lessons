@@ -9,7 +9,7 @@ lesson: 3
 This time we want to create three classes and fill them with some code.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/03_objektorientierung/B02_book_library_user/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/03_objektorientierung/B02_book_library_user/ExerciseSolution/).
 
 ### Step 1
 

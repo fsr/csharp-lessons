@@ -9,7 +9,7 @@ lesson: 2
 Calculate the area of a polyon given with a set of points to represent his vertices.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/a02_polygon_area_1.cs).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/02_grundlagen_2/a02_polygon_area_1/ExerciseSolution/).
 
 ### Step 1
 

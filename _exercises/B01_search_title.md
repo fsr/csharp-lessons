@@ -9,7 +9,7 @@ lesson: 2
 We have a arbitrary array of title and want to get the first title from our own search query.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/02_grundlagen_2/b01_title_search.cs).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/02_grundlagen_2/b01_title_search/ExerciseSolution/).
     
 ### Step 1
 
