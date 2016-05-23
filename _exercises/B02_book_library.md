@@ -1,7 +1,7 @@
 ---
 title: B02 - Book and Library
 number: 6
-status: drafty
+status: reviewed
 authors: marc, sascha
 lesson: 3
 ---
