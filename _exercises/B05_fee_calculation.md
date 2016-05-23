@@ -1,5 +1,5 @@
 ---
-title: B04 - Fee calculation with DateTime
+title: B05 - Fee calculation with DateTime
 number: 10
 status: drafty
 authors: marc

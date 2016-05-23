@@ -1,5 +1,5 @@
 ---
-title: B03 - Abstract Media class and derivation
+title: B04 - Abstract Media class and derivation
 number: 9
 status: drafty
 authors: marc
