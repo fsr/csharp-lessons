@@ -2,11 +2,15 @@
 title: B02 - Book and Library
 number: 6
 status: drafty
-authors: marc
+authors: marc, sascha
 lesson: 3
 ---
 
-This time we want to create three classes and fill them with some code.[^solution]
+This time we want to create three classes and fill them with some code.[^test] [^solution]
+
+[^test]:
+    You can find a test project for this task 
+    [Here](https://github.com/satkowski/csharp-solutions/tree/master/03_objektorientierung/B02_book_library/Tests)
 
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/03_objektorientierung/B02_book_library/ExerciseSolution/).
