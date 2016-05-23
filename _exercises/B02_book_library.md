@@ -2,7 +2,7 @@
 title: B02 - Book and Library
 number: 6
 status: reviewed
-authors: marc, sascha
+authors: [marc, sascha]
 lesson: 3
 ---
 
