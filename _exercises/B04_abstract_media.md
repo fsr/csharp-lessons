@@ -1,6 +1,6 @@
 ---
 title: B03 - Abstract Media class and derivation
-number: 8
+number: 9
 status: drafty
 authors: marc
 lesson: 4
@@ -9,7 +9,7 @@ lesson: 4
 Now we want to extend our Library example a bit more. This time we will use abstract class and more.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/04_vererbung_und_polymorphie/B03_abstract_media/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/04_vererbung_und_polymorphie/B04_abstract_media/ExerciseSolution/).
 
 ### Step 1
 

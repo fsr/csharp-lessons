@@ -28,6 +28,7 @@ Fill the `Book` class with the following members:
 - a method "Search" that searches in its members with a given search query and returns `true` if a member match with the query
 
 Fill the `Library` class with the following members:
+
 - a `private` array field of `Book` "books"
   - the library can only manage 500 books at a time
 - a `private int` field "bookCount" that contains the number of books already in the stock
@@ -56,4 +57,4 @@ Finally we implement the "AddNewBook" method. It should add the new book to the 
 
 ### Step 6
 
-Create for all created classes, methode, properties and field documentation comments.
+Create for all created classes, methodes, properties and fields documentation comments.
