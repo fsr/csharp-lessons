@@ -1,5 +1,5 @@
 ---
-title: B02 - Book, Library and User
+title: B02 - Book and Library
 number: 6
 status: drafty
 authors: marc
@@ -9,7 +9,7 @@ lesson: 3
 This time we want to create three classes and fill them with some code.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/03_objektorientierung/B02_book_library_user/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/03_objektorientierung/B02_book_library/ExerciseSolution/).
 
 ### Step 1
 
@@ -17,7 +17,6 @@ Create the following classes:
 
 - `Library` in the solution folder
 - `Book` in the "Media" folder
-- `UserAccount` in the "User" folder
 
 ### Step 2
 
@@ -25,27 +24,16 @@ Fill the `Book` class with the following members:
 
 - three `string` properties: "Title", "Autor" and "ISBN"
   - they have a `get` and a `private set`
-- a `private UserAccount` field "borrowedTo"
 - a constructor with three parameters: title, autor and isbn
 - a method "Search" that searches in its members with a given search query and returns `true` if a member match with the query
 
-Fill the `UserAccount` class with the following members:
-
-- two `string` properties: "Name" and "EMail"
-- a `long` property "ID"
-  - all of them have a `get` and a `private set`
-- a `private` array of `Book` as field "borrowedBooks"
-  - the user can only borrow 5 books at a time
-- a constructor with three parameters: name, email and id
-
 Fill the `Library` class with the following members:
-
-- a `private` array field of `UserAccount` "users"
-  - the library can only have 100 users at a time
 - a `private` array field of `Book` "books"
   - the library can only manage 500 books at a time
+- a `private int` field "bookCount" that contains the number of books already in the stock
 - a standard constructor
 - a method "Search" that serches through all books with a given search query and returns an array of `Book`
+- a method "AddNewBook" that adds a given book (as parameter) to the stock of all books of the library
 
 ### Step 3
 
@@ -63,5 +51,9 @@ The result array should have the size[^length] of the numbers of results and not
 *Hint: Maybe you need a temporary array to solve this.*
 
 ### Step 5
+
+Finally we implement the "AddNewBook" method. It should add the new book to the stock of books and save the new book count.
+
+### Step 6
 
 Create for all created classes, methode, properties and field documentation comments.
