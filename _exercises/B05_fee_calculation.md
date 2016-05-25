@@ -2,11 +2,15 @@
 title: B05 - Fee calculation with DateTime
 number: 10
 status: drafty
-authors: marc
+authors: [marc,sascha]
 lesson: [3, 4]
 ---
 
-This time we want to calculate overdraft fees for the media.[^solution]
+This time we want to calculate overdraft fees for the media.[^tests] [^solution]
+    
+[^tests]:
+    You can find the tests for this task
+    [Here](https://github.com/satkowski/csharp-solutions/tree/master/04_vererbung_und_polymorphie/B05_fee_calculation/Tests)
 
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/04_vererbung_und_polymorphie/B05_fee_calculation/ExerciseSolution/).
