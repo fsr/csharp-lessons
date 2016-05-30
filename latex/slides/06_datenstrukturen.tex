@@ -105,6 +105,23 @@
 	\lstinputlisting{resources/06_datenstrukturen/queue.cs}
 \end{frame}
 
+\subsection{foreach}
+\begin{frame}{foreach}
+	\begin{itemize}
+		\item Läuft durch ein/e Array/Collection an Elementen eines Typen durch 
+		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu
+		\begin{itemize}
+			\item Der Typ stimmt mit dem Generic der Collection überein
+			\item Bei Dictionarys ist der Typ ein \alert{KeyValuePair}		
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{foreach( \alert{<Datentyp> <Variablenname>} in \alert{<Aufzählung>} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/06_datenstrukturen/foreach.cs}	
+\end{frame}
+
 % ----------------------- Indexer ------------------------------
 \section{Indexer}
 \begin{frame}{Indexer}
