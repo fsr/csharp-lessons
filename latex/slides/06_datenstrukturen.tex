@@ -23,7 +23,7 @@
 \begin{frame}{Generics}
 	\begin{itemize}
 		\item Auch Typparameter genannt
-		\item Ermöglicht es die Angabe von Typen in einer Klasse oder Methode zu verzögern
+		\item Ermöglicht Typsicherheit ohne Angabe eines expliziten Types
 		\item Syntax:
 		\begin{itemize}
 			\item \texttt{class \alert{<Klassenname>} <\alert{<Typparameter>}> \{ \}}
@@ -54,8 +54,8 @@
 \section{Collections}
 \begin{frame}{Collections}
 	\begin{itemize}
-		\item Sind in dem Framework vorhandene Klassen
-		\item Dienen zur Auflistung von beliebigen Elementen
+		\item Ermöglicht die Gruppierung von Objekte gleichen Types
+		\item Bieten verschiedene Datentypen wie verkettete Listen, Hash-Maps, ...
 		\item Bieten Methoden zum Sortieren, Durchsuchen und Bearbeiten
 		\begin{itemize}
 			\item Nutzen dafür Generics
@@ -146,12 +146,13 @@
 	\begin{itemize}
 		\item Zu dt. Aufzählung
 		\item Das Schlüsselwort dafür ist \alert{enum}
-		\item Ist ein eigen erstellter Datentyp mit fester Anzahl konstanter Werte
-		\item Den Werten werden Intern ein \alert{int}-Wert zugeordnet
+		\item Ist ein eigens erstellter Datentyp mit fester Anzahl von Konstanten
+		\item Der Konstante werden Intern ein \alert{int}-Wert zugeordnet
 		\begin{itemize}
+			\item Man kann auch andere Typen angeben (wie z.B. \alert{byte}, \alert{short} ...)
 			\item Diese beginnt Standardmäßig bei 0 und wird mit jedem neuen Element um 1 erhöht
-			\item Diese Ordnung kann man auch selbst mit einem \alert{=} festlegen
-			\item Man kann damit ein \alert{enum}-Wert in einen \alert{int}-Wert casten			
+			\item Man kann den Konstanten Werte zuweisen und Werte können mehrmals vergeben werden
+			\item Man kann damit ein \alert{enum}-Wert in einen zugehörigen Typ Wert casten			
 		\end{itemize}
 		\item Syntax zur Nutzung:
 		\begin{itemize}
@@ -171,10 +172,13 @@
 \begin{frame}{Structs}
 	\begin{itemize}
 		\item Schlüsselwort ist \alert{struct}
-		\item Lässt sich genauso schreiben wie Klassen
+		\item Ist nahezu identisch mit einer Klasse
 		\item Sie sind nicht Referenz-, sondern Werttypen
 		\item Werden genutzt um kleine Gruppen verwandter Variablen zusammen zufassen
 		\item Sie können von Interfaces, aber nicht von anderen Structs oder Klassen erben 
+		\begin{itemize}
+			\item \alert{struct} sind automatisch \alert{sealed}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
