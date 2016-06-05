@@ -1,10 +1,10 @@
 // Ein Delegate-Typ erstellt.
-public delegate int EinDelegate(float param);
+public delegate int EinDelegate(int param);
 
 public class EineKlasse 
 {
-    public int EineMethode(float einParam)
-    {   /*Code*/   }
-    public int AndereMethode(float einParam)
-    {   /*Code*/   }
+    public int EineMethode(int einParam)
+    {   
+        return 42 + einParam;
+    }
 }

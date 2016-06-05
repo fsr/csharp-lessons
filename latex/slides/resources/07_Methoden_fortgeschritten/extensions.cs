@@ -7,7 +7,7 @@ public static class StringExt
     }
     public static int CountWords(this string s)
     {
-        char[] split = new char[] { ' ', '.', '?' };
+        char[] split = new char[] { ' ', , ',', '.', '?' };
         // Der eigene String wird gesplittet und ausgezaehlt
         string[] words = s.Split(split, 
                       StringSplitOptions.RemoveEmptyEntries)

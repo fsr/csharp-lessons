@@ -1,4 +1,4 @@
-EinDelegate variable = delegate(float a) 
+EinDelegate variable = delegate(int a) 
     {
         // Code
     };

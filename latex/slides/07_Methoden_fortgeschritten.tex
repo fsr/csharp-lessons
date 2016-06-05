@@ -18,25 +18,6 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Extensions ------------------------------
-\section{Extensions}
-\begin{frame}{Extensions}
-	\begin{itemize}
-		\item Ermöglichen es vorhandenen Typen eigene Methoden hinzuzufügen
-		\item Ohne eine abgeleitete Klasse zu erstellen oder den originalen Typen neu zu erstellen
-		\item Sind statische Methoden, welche aber als Instanzmethoden auf den erweiterten Typ agieren
-		\item Befinden sich selbst in einer extra statischen Klasse
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{public static \alert{<Rückgabetyp> <Name>}( this \alert{<Erweiterter Typ> <Variablenname>}, \alert{[Übergabeparameter]} )\\ \{ \alert{<Code>} \}}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Extensions}
-	\lstinputlisting{resources/07_Methoden_fortgeschritten/extensions.cs}
-\end{frame}
-
 % ----------------------- Opertatoren Überladung ------------------------------
 \section{Opertatoren Überladung}
 \begin{frame}{Opertatoren Überladung}
@@ -48,6 +29,9 @@
 			\item \texttt{public static \alert{<Datentyp>} operator \alert{<Operator>}\\( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \}}
 		\end{itemize}
 		\item Verschiedene Operatoren brauchen verschiedene Übergabeparameter und Rückgabeparameter
+		\begin{itemize}
+			 \item Man kann den selben Operator mit verschiedenen Übergabetypen überladen
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -75,17 +59,22 @@
 \section{delegate}
 \begin{frame}{delegate}
 	\begin{itemize}
-		\item Schlüsselwort zur Erstellung eines Datentypes zur Speicherung von Methoden
-		\item Es weiß, welche Rückgabetype und Übergabeparameter die Methoden brauchen
-		\item In einer Variable eines Delegate können verschiedene Methoden gespeichert und gleichzeitig aufgerufen werden
-		\item Syntax:
+		\item Auch Funktionspointer gennant
+		\item Schlüsselwort zur Kapselung der Signatur von Methoden, um Referenzen auf diese abbilden zu können
+		\item Es wird für diese (wie bei den Methoden) Übergabeparameter und Rückgabetyp deklariert
+			\begin{itemize}
+				\item Alle Methoden mit dieser Signatur können durch den Delegate dargestellt werden
+			\end{itemize}
+		\item Wird genutzt um eine Methode aufzurufen ohne auf dessen Objekt eine Referenz zuhaben
+		\item Syntax (zur Deklarierung):
 		\begin{itemize}
-			\item \texttt{delegate \alert{<Rückgabetyp> <Variablenname>}\\( \alert{[Übergabeparameter]} );}
+			\item \texttt{delegate \alert{<Rückgabetyp> <Delegatename>}\\( \alert{[Übergabeparameter]} );}
+		\end{itemize}
+		\item Syntax (zur Instanziierung):
+		\begin{itemize}
+			\item \texttt{\alert{<Delegantename> <Variablenname>} = \alert{<Methodenname>};}
 		\end{itemize}
 		\item Variable wird genauso genutzt wie eine normale Methode
-		\begin{itemize}
-			\item Falls diese Variable leer ist, wird ein Fehler geworfen
-		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -100,7 +89,7 @@
 	\begin{itemize}
 		\item Haben keinen eigenen Methodenkopf
 		\item Können nur durch Delegate-Variablen aufgerufen und genutzt werden
-		\item Es gibt 2 Artern der Erstellung:
+		\item Es gibt 2 Arten der Erstellung:
 		\begin{itemize}
 			\item Durch Schlüsselwort \alert{delegate}
 			\item Über Lamda-Terme
@@ -147,7 +136,8 @@
 \subsubsection{Anweisung-Lamdas}
 \begin{frame}{Anweisung-Lamdas}
 	\begin{itemize}
-		\item Haben mehrere Ausdrücke (meist höchstens 2 oder 3) und haben geschweifte Klammern		
+		\item Besitzen zur Eingrenzung des Körpers geschweifte Klammern
+		\item Müssen nun (wenn kein \alert{void} als Rückgabetyp) ein \alert{return} besitzen	
 	\end{itemize}
 	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation_3.cs}
 	\lstinputlisting{resources/07_Methoden_fortgeschritten/statement_lamda.cs}
@@ -156,8 +146,9 @@
 \subsubsection{Variablenbereich für Lamdas}
 \begin{frame}{Variablenbereich für Lamdas}
 	\begin{itemize}
-		\item Lamdas können auf Variablen außerhalb verweisen und diese nutzen
+		\item Lamdas können auf Variablen außerhalb ihres eigenen Gültigkeitsbereichs/Scopes verweisen und diese nutzen
 		\item Diese werden zur Verwendung im Lamda gespeichert
+		\item In diesem Fall werden lokale Referenzen zu den Objekten im Lamda gespeichert
 		\item So eine aüßere Variable muss definitiv vorher zugewiesen sein
 	\end{itemize}
 	\lstinputlisting{resources/07_Methoden_fortgeschritten/anonym_method_delegate_creation_3.cs}
@@ -165,6 +156,25 @@
 
 \begin{frame}{Variablenbereich für Lamdas}
 	\lstinputlisting{resources/07_Methoden_fortgeschritten/variable_scope_lamda.cs}
+\end{frame}
+
+% ----------------------- Extensions ------------------------------
+\section{Extensions}
+\begin{frame}{Extensions}
+	\begin{itemize}
+		\item Ermöglichen es vorhandenen Typen eigene Methoden hinzuzufügen
+		\item Ohne eine abgeleitete Klasse zu erstellen oder den originalen Typen neu zu erstellen
+		\item Sind statische Methoden, welche aber als Instanzmethoden auf den erweiterten Typ agieren
+		\item Befinden sich selbst in einer extra statischen Klasse
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Rückgabetyp> <Name>}( this \alert{<Erweiterter Typ> <Variablenname>}, \alert{[Übergabeparameter]} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Extensions}
+	\lstinputlisting{resources/07_Methoden_fortgeschritten/extensions.cs}
 \end{frame}
 
 % ----------------------- Schlüsselwörter ------------------------------
@@ -194,7 +204,8 @@
 	\begin{itemize}
 		\item Eine Variable wird, wie bei \alert{ref}, als Verweis übergeben
 		\item Jedoch muss diese Variable nun nicht deklariert sein
-		\item Die Methode wird dann gezwungen während ihrer Ausführung der \alert{out}-Variable etwas zuzuweisen
+		\item Die Variable enthält zum Ende der Methode den zuletzt zugewiesenen Wert, es muss innerhalb der Methode mindestens eine Zuweisung erfolgen
+		\item kann verwendet werden, wenn eine Methode mehr als einen Wert zurückgeben soll
 	\end{itemize}
 \end{frame}
 

@@ -1,6 +1,7 @@
 EineKlasse obj = new EineKlasse();
 // Delegate-Variable erstellen und befuellen.
 EinDelegate variable = obj.EineMethode;
-variable += obj.AndereMethode;
 // Aufruf des Delegates.
-variable(7.21314);
+int erg = variable(24);
+if(erg == 76)
+{   /* Code */   }
