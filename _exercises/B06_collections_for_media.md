@@ -1,12 +1,16 @@
 ---
 title: B06 - Collections for Media
 number: 14
-status: drafty
-authors: marc
+status: reviewed
+authors: [marc, sascha]
 lesson: 6
 ---
 
-After we learned something about the collections we want to use them in our project.[^solution]
+After we learned something about the collections we want to use them in our project.[^tests] [^solution]
+
+[^tests]:
+    You can find the tests for this task
+    [Here](https://github.com/satkowski/csharp-solutions/tree/master/06_datenstrukturen/B06_collections_for_media/Tests)
 
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/06_datenstrukturen/B06_collections_for_media/ExerciseSolution/).
