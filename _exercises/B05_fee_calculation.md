@@ -1,7 +1,7 @@
 ---
 title: B05 - Fee calculation with DateTime
 number: 10
-status: drafty
+status: reviewed
 authors: [marc,sascha]
 lesson: [3, 4]
 ---
