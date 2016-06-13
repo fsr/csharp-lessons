@@ -1,12 +1,12 @@
 ---
 title: B07 - Advancing the Library
 number: 15
-status: drafty
+status: reviewed
 authors: [sascha]
 lesson: 6
 ---
 
-Lets add some useful functionality to our library project.[^tests] [^solution]
+Lets add some useful functionality to our library project[^solution]. The **tests** [^tests] for this exercise will help you work out the correct implementation. **Use them!**
 
 [^tests]:
     You can find the tests for this task
@@ -15,14 +15,13 @@ Lets add some useful functionality to our library project.[^tests] [^solution]
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/06_datenstrukturen/B07_advanced_example/ExerciseSolution/).
 
-### Step 1
+### What's to do
 
-TODO
-* Add (readonly) static limit MAX_MEDIA_COUNT to UserAccount
-* Add Borrow and ReturnMedia methods to UserAccount (return bool)
-* ReturnMedia should also update the Fees
-* You can only return what you have borrowed. 
-* You can only borrow if MAX_MEDIA_COUNT is not reached
-* Add a Property BorrowedCount to UserAccount that gives the curred number of borrowed items of this account
-* Add Borrow and ReturnMe Methods to Medium that marks/unmarks the borrower (UserAccount) and sets the returnDate/calculates the fees if late
-
+- Add (readonly) static limit `MAX_MEDIA_COUNT` to `UserAccount` to express that a user can only borrow 10 items
+- Add `Borrow` and `ReturnMedia` methods to `UserAccount` (return bool)
+- `ReturnMedia` should also update the Fees
+- You can only return what you have borrowed. 
+- You can only borrow if `MAX_MEDIA_COUNT` is not reached
+- Add a property `BorrowedCount` to `UserAccount` that gives the curred number of borrowed items of this account
+- Add `Borrow` and `ReturnMe` methods to `Medium` that marks/unmarks the borrower (`UserAccount`) and sets the returnDate/calculates the fees if late
+- Add a method `Authentificate` to `Library` to identify a user. It shall take an long id and return a `UserAccount` object or null if this id is not connect to any account
