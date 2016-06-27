@@ -1,9 +1,9 @@
 public class OwnEventArgs : EventArgs
 {
     public string Output;
-    public OwnEventArgs(string out)
+    public OwnEventArgs(string output)
     {
-        Output = out;
+        Output = output;
     }
 }
 

@@ -1,9 +1,9 @@
 public class AndereKlasse
 {
-    public AndereKlasse(EineKlasse var)
+    public AndereKlasse(EineKlasse einObject)
     {
-        var.EinEvent += eineMethode;
-        var.EinEvent += zweiteMethode;
+        einObject.EinEvent += eineMethode;
+        einObject.EinEvent += zweiteMethode;
     }
 
     private eineMethode(object sender, OwnEventArgs args)
