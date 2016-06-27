@@ -6,6 +6,6 @@ public class EineKlasse
     {
         // ..
         if(EinEvent != null)
-            EinEvent("Hallo Welt");
+            EinEvent(this, new OwnEventHandler("Hallo Welt"));
     }
 }

@@ -6,7 +6,7 @@ public class AndereKlasse
         var.EinEvent += zweiteMethode;
     }
 
-    private eineMethode(object sender, EventArgs args)
+    private eineMethode(object sender, OwnEventArgs args)
     {   /*Code*/   }
     private zweiteMethode(object sender, OwnEventArgs args)
     {   /*Code*/   }
