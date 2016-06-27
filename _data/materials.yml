@@ -34,3 +34,9 @@ slides:
     name: Methoden (fortgeschritten)
     url: https://ifsr.de/kurs-materialien/csharp/07_Methoden_fortgeschritten.pdf
     published: True
+  -
+    number: 8
+    name: Windows Forms and Event Handling
+    url: https://www.ifsr.de/kurs-materialien/csharp/08_windows_forms_und_event_handling.pdf
+    published: True
+
