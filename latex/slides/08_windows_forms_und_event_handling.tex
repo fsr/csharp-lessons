@@ -1,0 +1,93 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Windows Forms \& Event Handling}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+\section{Event Handling}
+\subsection{Event Handler}
+\begin{frame}{EventHandler}
+	\begin{itemize}
+		\item Ein vordefinierter Delegate
+		\item Wird genutzt um Event handling zu betreiben
+		\begin{itemize}
+			\item Man kann auch einen eigenen nehmen
+		\end{itemize}
+		\item Gibt \alert{void} zurück
+		\item Hat 2 Übergabeparameter:
+		\begin{itemize}
+			\item \alert{object} (als Sender)
+			\item \alert{TEventArgs}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event_handler.cs}	
+\end{frame}
+
+\begin{frame}{EventArgs}
+	\begin{itemize}
+		\item Gibt dem Event die Möglichkeit zusätzliche Informationen an Empfänger zu übergeben
+		\begin{itemize}
+			\item Falls keine Informationen zum Event zur Verfügung stehen kann man \alert{EventArgs.Empty} übergeben
+		\end{itemize}
+		\item Da der EventHanlder generisch ist, kann man seine eigenen \alert{EventArgs} übergeben
+	\end{itemize}
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event_args.cs}
+\end{frame}
+
+\subsection{event}
+\begin{frame}{event}
+	\begin{itemize}
+		\item Wird genutzt um bei einem Publisher ein Event zu deklarieren
+		\item Zusammen mit Attributen von einem Delegatetype genutzt
+		\item Kann ebenfalls alle Modifikatoren (wie \alert{virtual} oder \alert{override} nutzen)
+		\begin{itemize}
+			\item Bei \alert{abstract} muss ein eigener add/remove-Ereignisaccessorblock erstellt werden
+		\end{itemize}
+	\end{itemize}				
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event.cs}
+\end{frame}
+
+\subsection{Mehrere Events}
+\begin{frame}{Mehrere Events}
+	\begin{itemize}
+		\item Man kann verschiedene Methoden einen EventHandler (oder anderen \alert{Delegate}) mit dem add-Ereignisaccessorblock
+			\begin{itemize}
+				\item \texttt{\alert{+=}}
+			\end{itemize}
+		\item Entfernt können diese wieder mit dem remove-Ereignisaccessorblock
+			\begin{itemize}
+				\item \texttt{\alert{-=}}
+			\end{itemize}		
+		\item Die Methoden werden dann nach einander ausgeführt
+	\end{itemize}
+\end{frame}
+
+\subsection{Beispiel}
+\begin{frame}{Beispiel}
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event_handling_creation.cs}
+\end{frame}
+
+\begin{frame}{Beispiel}
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event_handling_usage_1.cs}
+\end{frame}
+
+\begin{frame}{Beispiel}
+	\lstinputlisting{resources/08_windows_forms_und_event_handling/event_handling_usage_2.cs}
+\end{frame}
+
+
+\end{document}
