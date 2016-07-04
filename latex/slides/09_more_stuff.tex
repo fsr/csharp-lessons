@@ -1,0 +1,78 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{More Stuff}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+
+\section{yield}
+\begin{frame}{yield}
+	\begin{itemize}
+		\item Schlüsselwort
+		\item Macht aus einer Methode, Operator oder get-Accessor einen Iterator
+		\begin{itemize}
+			\item Der Rückgabetyp muss \alert{IEnumerable}, \alert{IEnumerable<T>}, \alert{IEnumerator} oder \alert{IEnumerator<T>} sein
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{yield} return \alert{<Rückgabewert>};}
+			\item \texttt{\alert{yield} break;}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{yield}
+	\lstinputlisting{resources/09_more_stuff/yield.cs}	
+\end{frame}
+
+\section{LINQ}
+\begin{frame}{LINQ}
+	\begin{itemize}
+		\item Language-Integrated Query
+		\item LINQ ermöglicht es Abfragen an Objekte und Datenstrukturen zu stellen
+		\item Ähnlich zu z.B. SQL
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LINQ}
+	\lstinputlisting{resources/09_more_stuff/linq.cs}	
+\end{frame}
+
+\section{Arbeiten mit null}
+\begin{frame}{Arbeiten mit null}
+	\begin{itemize}
+		\item Falls ein Objekt \alert{null} sein kann sollte man diese vor dem benutzen immer überprüfen
+		\item Da \alert{obj != null} viel Schreibaufwand ist, kann dies vereinfacht werden	
+	\end{itemize}
+	\begin{itemize}
+		\item Man nutzt dafür \texttt{\alert{?.}}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{obj\alert{?.}Property ...}
+		\end{itemize}
+		\item Es wird vor dem benutzen des Objektes geschaut, ob dieses \alert{null} ist
+		\item Falls es nich \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Arbeiten mit null}
+	\lstinputlisting{resources/09_more_stuff/null1.cs}	
+	\lstinputlisting{resources/09_more_stuff/null2.cs}	
+\end{frame}
+
+\end{document}
