@@ -36,7 +36,12 @@ slides:
     published: True
   -
     number: 8
-    name: Windows Forms and Event Handling
+    name: Windows Forms und Event Handling
     url: https://www.ifsr.de/kurs-materialien/csharp/08_windows_forms_und_event_handling.pdf
+    published: True
+  -
+    number: 9
+    name: More Stuff
+    url: https://www.ifsr.de/kurs-materialien/csharp/09_more_stuff.pdf
     published: True
 
