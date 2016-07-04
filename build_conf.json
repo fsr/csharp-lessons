@@ -12,7 +12,8 @@
                 "05_null_exceptions_schluesselwoerter.tex",
                 "06_datenstrukturen.tex",
                 "07_methoden_fortgeschritten.tex",
-                "08_windows_forms_und_event_handling.tex"
+                "08_windows_forms_und_event_handling.tex",
+                "09_more_stuff.tex"
             ]
         },
         "html": {
