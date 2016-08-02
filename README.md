@@ -1,6 +1,6 @@
 # C# Lessons
 
-This repository contains the __C# Lesson__ sources for the free student courses, held at the TU Dresden.
+This repository contains the __C# Lesson__ sources for the free student courses, held at the TU Dresden. You can find the builded slides [here](https://fsr.github.io/csharp-lessons/materials.html "C# Lessons")
 
 <!-- Exercises to go along with the courses can be found [on GitHub pages](http://fsr.github.io/csharp-lessons/) or on the `gh-pages` branch of this repository as Markdown sources. -->
 
