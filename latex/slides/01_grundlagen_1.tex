@@ -22,7 +22,7 @@
 \section{Über diesen Kurs}
 \begin{frame}{Über diesen Kurs}
 	\begin{itemize}
-		\item 10 Kurseinheiten
+		\item 11 Kurseinheiten (Foliensätze) und viele Aufgaben
 		\item keine besonderen Programmierkenntnisse vorausgesetzt, aber nützlich
 		\item Ressourcen
 		\begin{itemize}
@@ -36,12 +36,12 @@
 % ----------------------- Software ------------------------------
 \section{Benötigte Software}
 \begin{frame}{Benötigte Software}
-	.Net-Framework
+	\textbf{.Net-Framework}
 	\begin{itemize}
 		\item Kann mit Visual Studio installiert werden
 		\item oder mit \href{http://www.mono-project.com/}{Mono} für Linux, Windows oder Mac
 	\end{itemize}
-	IDEs
+	\textbf{IDEs}
 	\begin{itemize}
 		\item \href{https://www.visualstudio.com/}{Visual Studio} für Windows
 		\item \href{http://www.monodevelop.com/}{Mono Develop} für Linux, Windows oder Mac
@@ -57,6 +57,7 @@
 	\centering
 	\href{https://mva.microsoft.com/de-de/training-courses/einstieg-in-c-fr-programmierer-8826?l=MoyWcix2_1304984382}{Link zum Foliensatz "Einleitung und Theorie" des MVA Kurses \\"Einstieg in C\# für Programmierer"}
 \end{frame} 
+
 % ----------------------- Hello World ------------------------------
 \section{Erstes Programm: Hello World}
 \begin{frame}{Hello World}
@@ -64,11 +65,11 @@
 \end{frame} 
 
 \subsection{Grundlegende Eigenschaften}
-\begin{frame}{Wichtige Eigenschaften}
+\begin{frame}{Grundlegende Eigenschaften}
 	\begin{itemize}
-		\item Am Ende jedem Befehls steht ein Semikolon (;)
+		\item Am Ende jedem Befehls steht ein Semikolon (\texttt{\alert{\textbf{;}}})
 		\begin{itemize}
-			\item Befehle können auch über mehrere Zeilen gezogen werden
+			\item Befehle können auch über mehrere Zeilen geschrieben werden
 		\end{itemize}
 		\item Codeblöcke werden durch geschweifte Klammern gekennzeichnet
 		\item Einrückungen sind nicht zwingend aber hilfreich
@@ -95,10 +96,10 @@
 \begin{frame}{Variablen Deklaration}
 	\textbf{Variablen}\\
 		\begin{itemize}
-			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen, siehe obere Box)
+			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren
 			\item Syntax:
 			\begin{itemize}			
-				\item \alert{\texttt{<Datentyp> <Variablenname>};}
+				\item \texttt{\alert{<Datentyp> <Variablenname>};}
 			\end{itemize}
 		\end{itemize}
 	\lstinputlisting{resources/01_grundlagen_1/variables.cs}
@@ -118,7 +119,7 @@
 		\texttt{string} & Eine Folge von Zeichen \\
 	\end{tabular}
 	\begin{itemize}
-		 \item Die Variablen mit u (unsigned) als ersten Buchstaben werden normalerweise nicht genutzt
+		 \item Die Variablen mit u (\texttt{unsigned}) als ersten Buchstaben werden nur selten genutzt
 	\end{itemize}
 \end{frame}
 
@@ -143,11 +144,11 @@
 \subsection{Operatoren}
 \begin{frame}{Operatoren}
 	\begin{description}
-	    \item[mathematisch] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, 						\alert{\texttt{\%}}\\
-	    \alert{\texttt{+=}}, \alert{\texttt{-=}}, \alert{\texttt{*=}}, \alert{\texttt{/=}}, \alert{\texttt{++}} (Inkrementieren), \alert{\texttt{--}} (Dekrementieren)
-	    \item[vergleichend] \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}, \alert{\texttt{==}} (Gleichheit), \alert{\texttt{!=}} (Ungleichheit)
-	    \item[logisch] \alert{\texttt{\&\&}} (Und), \alert{\texttt{||}} (Oder), \alert{\texttt{!}} (Negation)
-	    \item[bitweise] \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}, \alert{\texttt{\^}} (xor), \alert{\texttt{\~}} (invertieren)
+	    \item[mathematisch] \texttt{\alert{+}, \alert{-}, \alert{*}, \alert{/},	\alert{\%}}\\
+	    \texttt{\alert{+=}, \alert{-=}, \alert{*=}, \alert{/=}, \alert{++} (Inkrementieren), \alert{--} (Dekrementieren)}
+	    \item[vergleichend] \texttt{\alert{<}, \alert{>}, \alert{<=}, \alert{>=}, \alert{==} (Gleichheit), \alert{!=} (Ungleichheit)}
+	    \item[logisch] \texttt{\alert{\&\&} (Und), \alert{||} (Oder), \alert{!} (Negation)}
+	    \item[bitweise] \texttt{\alert{\&}, \alert{|}, \alert{<<}, \alert{>>}, \alert{\texttt{\^}} (xor), \alert{\texttt{\~}} (invertieren)}
 	\end{description}
 \end{frame}
 
@@ -164,13 +165,18 @@
 \begin{frame}{Methoden Deklaration}
 	\textbf{Methoden}\\
 	\begin{itemize}
+		\item Definieren ein gewisses Verhalten, welches durch die Methode aufgerufen werden kann
 		\item Diese können noch durch Schlüsselwörter modifiziert werden
 		\item Syntax:
 		\begin{itemize}			
 			\item \texttt{\alert{<Rückgabetyp> <Methodenname>}( \alert{[Übergabeparameter]} ) \\ \{ \alert{<Code>} \}}
 		\end{itemize}
 	\end{itemize}		
-	\lstinputlisting{resources/01_grundlagen_1/methods.cs}
+\end{frame}
+
+\begin{frame}{Methoden Deklaration}
+	\lstinputlisting{resources/01_grundlagen_1/methods_creation.cs}
+	\lstinputlisting{resources/01_grundlagen_1/methods_using.cs}	
 \end{frame}
 
 \end{document}
