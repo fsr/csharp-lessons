@@ -25,10 +25,10 @@
 		\item Geben an, ob der zugehörige Code von anderen Code-Abschnitten verwendet werden kann
 		\item Es gibt mehrere Arten
 		\begin{description}
-			\item[public] kann von überall zugriffen werden, solange darauf verweist wird
+			\item[public] kann von überall zugriffen werden, solange darauf verwiesen wird
 			\item[private] kann nur von Code in der eigenen Klasse benutzt werden
 			\item[protected] kann nur von Code in der eigenen und von abgeleiteten Klassen benutzt werden
-			\item[internal] kann von überall aus der eigenen Assembly heraus benutzt werden
+			\item[( internal] kann von überall aus der eigenen Assembly heraus benutzt werden \textbf{)}
 		\end{description}
 	\end{itemize}
 \end{frame}
@@ -57,8 +57,8 @@
 	\textbf{using}\\
 	\begin{itemize}
 		\item Ein Schlüsselwort zur Nutzung eines bestimmten \alert{namespace}
-		\item Dies erspart die Eingabe des gesamten namespace bei Nutzung einer Klasse
-		\item Kann zu merhdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
+		\item Dies erspart die Eingabe des gesamten Namespace bei Nutzung einer Klasse
+		\item Kann zu mehrdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
 	\end{itemize}
 	\lstinputlisting{resources/04_wichtige_prinzipien/using.cs}
 \end{frame}
@@ -68,10 +68,47 @@
 \begin{frame}{Methodenüberladung}
 	\begin{itemize}
 		\item Mehrere Methoden können den selben Namen haben
-		\item Diese Unterscheiden sich dann in dem Rückgabewert und/oder den Übergabeparametern (Reihenfolge beachten!) 
+		\item Diese Unterscheiden sich dann in dem Rückgabewert und/oder den Übergabeparametern
 		\item Wird genutzt wenn es mehrere Wege gibt eine Berechnung/Algorithmus auszuführen
 	\end{itemize}
 	\lstinputlisting{resources/04_wichtige_prinzipien/method_overload.cs}
+\end{frame}
+
+% ----------------------- Wert- und Referenztyp ------------------------------
+\section{Wert- \& Referenztyp}
+\begin{frame}{Wert- \& Referenztyp}
+	\begin{itemize}
+		\item C\texttt{\#} unterscheidet zwischen 2 Arten von Variablen
+		\item Diese haben ein anderes Verhalten beim der Zuweisung zu einer Variable oder bei der Übergabe in eine Methode
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Werttyp}
+	\begin{itemize}
+		\item Sind alle grundlegenden Datentypen (\alert{int}, \alert{bool}, ...) und \alert{struct}
+	\end{itemize}
+	\begin{itemize}
+		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird der ganze Inhalt der Variable kopiert
+		\item Es entsteht somit eine identische Kopie
+		\begin{itemize}
+			\item Wenn eine Kopie verändert wird, bleibt die andere unbetroffen
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/valuetype.cs}	
+\end{frame}
+
+\begin{frame}{Referenztyp}
+	\begin{itemize}
+		\item Sind alle Objekte von Klassen, \alert{interface} und \alert{delegate}
+	\end{itemize}
+	\begin{itemize}
+		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird die Speicheradresse kopiert
+		\item Da alle Kopien auf den selben Speicher zeigen, sind alle Kopien identisch
+		\begin{itemize}
+			\item Wenn eine Kopie verändert wird, werden alle anderen auch verändert
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/referencetype.cs}	
 \end{frame}
 
 % ----------------------- null ------------------------------
@@ -80,15 +117,12 @@
 	\begin{itemize}
 		\item Schlüsselwort für eine Referenz die auf kein Objekt zeigt
 		\item Alle Referenztyp-Variablen können \alert{null} sein
-		\item Versucht man ein \alert{null} Objekt zu dereferenzieren, wird eine NullReferenceException geworfen 
+		\item Versucht man ein \alert{null} Objekt zu dereferenzieren, wird eine \alert{NullReferenceException} geworfen 
 		\begin{itemize}
 			\item Es ist möglich ein Objekt auf eine \alert{null} Referenz zu prüfen
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/04_wichtige_prinzipien/null.cs}	
 \end{frame}
-
-% ----------------------- Wert- und Referenztyp ------------------------------
-\section{Wert- \& Referenztyp}
 
 \end{document}

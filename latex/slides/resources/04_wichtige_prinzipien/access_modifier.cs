@@ -1,6 +1,7 @@
 // Es kann jeder diese Klasse benutzen.
 public class EineKlasse
 {
+    public string einPublicFeld;
     // Diese beiden koennen nur innerhalb der Klasse benutzt 
     // werden.
     private int einFeld;
