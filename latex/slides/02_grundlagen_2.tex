@@ -1,0 +1,105 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Grundlagen von C\texttt{\#} - 2}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Debugging ------------------------------
+\section{Debugging}
+\begin{frame}{Debugging}
+
+\end{frame}
+
+% ----------------------- Arrays ------------------------------
+\section{Arrays}
+\begin{frame}{Arrays}
+	\begin{itemize}
+		\item Sind Auflistung einer beliebigen (aber nach Initalisierung festen) Anzahl von Variablen gleichen Typs
+		\item Können über eine Index aufgerufen werden
+		\begin{itemize}
+			\item Dieser geht von 0 bis (n - 1), wobei n die Anzahl der Elemente des Arrays ist
+		\end{itemize}
+		\item Können ein- oder mehrdimensional sein
+	\end{itemize}
+	\textbf{Eindimensionales Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/array.cs}	
+\end{frame}
+
+\begin{frame}{Arrays}
+	\textbf{Verzweigtes Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/array_of_array.cs}
+	\textbf{Mehrdimensionales Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/multi_array.cs}	
+\end{frame}
+
+% ----------------------- Kontrollstrukturen ------------------------------
+\section{Kontrollstrukturen}
+\begin{frame}{Kontrollstrukturen}
+	\begin{itemize}
+		\item Verändern den Ablauf des Programms
+		\item Können Verzweigungen oder Schleifen sein
+		\item Benötigen bool'sche Ausdrücke als Abfrage
+		\begin{itemize}
+			\item Beispiele: bool-Variable/-Methode, Vergleichsoperation, ...
+		\end{itemize}
+		\item Besitzen immer einen Block, den sie ausführen, wenn die zugehörige Bedingung erfüllt ist
+		\begin{itemize}
+			\item Falls der Block nur eine Zeile hat, können die geschweiften Klammern weggelassen werden
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% ----------------------- Verzweigung ------------------------------
+\section{Verzweigungen}
+\subsection{Bedingte Verzweigung (if else)}
+\begin{frame}{Bedingte Verzweigung (if else)}
+	\begin{itemize}
+		\item Prüft die Bedingung des jeweiligen Kopfes
+		\begin{itemize}
+			\item Die Köpfe werden von oben nach unten durchgegangen
+		\end{itemize}
+		\item Falls ein Kopf zutrifft, wird der zugehörige Block ausgeführt und die anderen Köpfe werden nicht mehr geprüft
+		\item Falls keine der Köpfe zutrifft wird der \alert{else} Block gewählt
+		\begin{itemize}
+			\item Dieser ist optional
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/if.cs}
+\end{frame}
+
+% ----------------------- Schleifen ------------------------------
+\section{Schleifen}
+\subsection{Kopfgesteuerte Schleife (while)}
+\begin{frame}{Kopfgesteuerte Schleife (while)}
+	\begin{itemize}
+		\item Die Schleife läuft so lange durch deren Körper, wie die Bedingung in den Klammern erfüllt ist
+		\item Die Bedingung wird am Anfang geprüft, und falls diese nicht \alert{true} ist, wird der Körper nie ausgeführt
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/while.cs}	
+\end{frame}
+
+\subsection{Fußgesteuerte Schleife (do while)}
+\begin{frame}{Fußgesteuerte Schleife (do while)}
+	\begin{itemize}
+		\item Selbe Funktion wie die while-Schleife
+		\item Die Bedingung wird hier aber erst am Ende evaluiert
+		\item Dementsprechend wird der Körper mindestens einmal ausgeführt, selbst wenn die Bedingung beim ersten Durchlauf falsch sein sollte
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
+\end{frame}
+
+\end{document}

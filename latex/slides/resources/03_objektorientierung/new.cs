@@ -1,0 +1,1 @@
+EineKlasse variable = new EineKlasse();

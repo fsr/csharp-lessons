@@ -1,0 +1,131 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Datenstrukturen}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Indexer ------------------------------
+\section{Indexer}
+\begin{frame}{Indexer}
+	\begin{itemize}
+		\item Sind Member einer Klasse
+		\item Geben die Möglichkeit wie ein/e Array/Collection über \alert{[ ]} angesprochen zu werden
+		\item Brauchen immer ein \alert{set} und \alert{get}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Typ>} this[\alert{<Indextyp> <Indexname>}]\\ \{ get \{ \alert{<Code>} \} set \{ \alert{<Code>}\} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Indexer}
+	\lstinputlisting{resources/07_datenstrukturen/indexer.cs}
+\end{frame}
+
+% ----------------------- Enummeration ------------------------------
+\section{Enumeration}
+\begin{frame}{Enumeration}
+	\begin{itemize}
+		\item Zu dt. Aufzählung
+		\item Das Schlüsselwort dafür ist \alert{enum}
+		\item Ist ein eigens erstellter Datentyp mit fester Anzahl von Konstanten
+		\item Der Konstante werden Intern ein \alert{int}-Wert zugeordnet
+		\begin{itemize}
+			\item Man kann auch andere Typen angeben (wie z.B. \alert{byte}, \alert{short} ...)
+			\item Diese beginnt Standardmäßig bei 0 und wird mit jedem neuen Element um 1 erhöht
+			\item Man kann den Konstanten Werte zuweisen und Werte können mehrmals vergeben werden
+			\item Man kann damit ein \alert{enum}-Wert in einen zugehörigen Typ Wert casten			
+		\end{itemize}
+		\item Syntax zur Nutzung:
+		\begin{itemize}
+			\item \texttt{\alert{<Enum> <Variablenname>} = \alert{<Enum>}.\alert{<Enumwert>};} oder
+			\item \texttt{\alert{<Enum> <Variablenname>} = \alert{<Int-Wert>};}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Enumeration}
+	\lstinputlisting{resources/07_datenstrukturen/enum_creation.cs}
+	\lstinputlisting{resources/07_datenstrukturen/enum_using.cs}
+\end{frame}
+
+% ----------------------- Structs ------------------------------
+\section{Structs}
+\begin{frame}{Structs}
+	\begin{itemize}
+		\item Schlüsselwort ist \alert{struct}
+		\item Ist nahezu identisch mit einer Klasse
+		\item Sie sind nicht Referenz-, sondern Werttypen
+		\item Werden genutzt um kleine Gruppen verwandter Variablen zusammen zufassen
+		\item Sie können von Interfaces, aber nicht von anderen Structs oder Klassen erben 
+		\begin{itemize}
+			\item \alert{struct} sind automatisch \alert{sealed}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Structs}
+	\lstinputlisting{resources/07_datenstrukturen/struct_creation.cs}
+	\lstinputlisting{resources/07_datenstrukturen/struct_using.cs}
+\end{frame}
+
+% ----------------------- Schlüsselwörter ------------------------------
+\section{Schlüsselwörter}
+\begin{frame}{Schlüsselwörter}
+	\textbf{static}\\
+	\begin{itemize}
+		\item Es können Klassen, Methoden, Eigenschaften, Felder und mehr statisch sein
+		\item Von einer statischen Klasse kann keine Instanz erzeugt werden
+		\begin{itemize}
+			\item Diese wird automatisch bei Programmstart angelegt
+		\end{itemize}
+		\item Statische Member existieren außerhalb eines Objektes einer Klasse
+		\begin{itemize}
+			\item Werden über die Klasse/Datentyp aufgerufen
+			\item Können nicht auf nicht-statische Member der zugehörigen Klasse zugreifen
+		\end{itemize}
+	\end{itemize}
+	\textbf{readonly}\\
+	\begin{itemize}
+		\item Kann nur auf Felder benutzt werden
+		\item Stellt sicher, dass das Feld im Laufe der Benutzung nicht verändert wird
+		\item Der Wert des Feldes kann nur durch direkte Deklaration oder in einem Konstruktor der zugehörigen Klasse initialisiert werden
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/07_datenstrukturen/static_readonly.cs}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\textbf{var}\\
+	\begin{itemize}
+		\item Kann für Variablen innerhalb von Methoden genutzt werden
+		\item Dabei wird der Datentyp der Variable durch den Compiler bestimmt
+		\begin{itemize}
+			\item Der Datentyp muss zur Compilezeit bekannt sein
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{var \alert{<Variablenname>} = \alert{<Eine Zuweisung>};}
+		\end{itemize}
+		\item Man sollte es nur nutzen, wenn man durch die rechte Seite erkennt, was für ein Typ zugewiesen wird
+	\end{itemize}
+	\lstinputlisting{resources/07_datenstrukturen/var.cs}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,201 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Objektorientierung}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Verzweigung ------------------------------
+\section{Verzweigungen}
+\subsection{Tertiäre-Verzweigung}
+\begin{frame}{Tertiäre-Verzweigung}
+	\begin{itemize}
+		\item Werden genauso genutzt wie eine if-else-Verzweigung
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Bedingung>} ? \alert{<Dann-Pfad>} : \alert{<Sonst-Pfad>}}
+		\end{itemize}
+		\item Das \alert{\texttt{?}} steht für \alert{dann}
+		\item Das \alert{\texttt{:}} steht für \alert{sonst}
+	\end{itemize}		
+	\lstinputlisting{resources/03_objektorientierung/tertiary.cs}
+\end{frame}
+
+\subsection{switch case}
+\begin{frame}{switch case}
+	\begin{itemize}
+		\item Hat ähnliches Verhalten wie die bedingte Verzweigung
+		\begin{itemize}
+			\item \alert{default} verhält sich wie \alert{else}
+		\end{itemize}
+		\item Jeder \alert{case} prüft die Variable im \alert{switch} auf Gleichheit und führt den darunterliegenden Code bis zum \alert{break} aus
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/switch_case.cs}
+\end{frame}
+
+% ----------------------- Schleifen ------------------------------
+\section{Schleifen}
+\subsection{Zählschleife (for)}
+\begin{frame}{Zählschleife (for)}
+	\begin{itemize}
+		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{for( \alert{<Zählvariable>}; \alert{<Bedingung>}; \alert{<Schrittweite>} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/for.cs}	
+\end{frame}
+
+\subsection{break \& continue}
+\begin{frame}{break \& continue}
+	\textbf{break}\\
+	\begin{itemize}
+		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
+		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch geben würde
+	\end{itemize}
+	\textbf{continue}\\
+	\begin{itemize}
+		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zum Kopf der Schleife zurück
+		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortsetzen
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{break \& continue}
+	\textbf{break \& continue:}\\
+	\begin{itemize}
+		\item Beide können und sollten mit Verzweigungen benutzt werden
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/break_continue.cs}
+\end{frame}
+
+% ----------------------- Objektorientierung ------------------------------
+\section{Objektorientierung}
+\begin{frame}{Objektorientierung}
+	\begin{itemize}
+		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. int oder bool
+		\item Damit kann alles in C\texttt{\#} Felder und Methoden besitzen		
+	\end{itemize}
+\end{frame}
+
+\subsection{Klassen}
+\begin{frame}{Klassen}
+	\begin{itemize}
+		\item Ist eine Vorlage oder ein Bauplan
+		\item Kann Felder, Eigenschaften und Methoden besitzen
+		\item Klassen werden durch das Schlüsselwort \alert{class} gekennzeichnet
+	\end{itemize}	
+	\lstinputlisting{resources/03_objektorientierung/class.cs}
+\end{frame}
+
+\subsection{Objekte}
+\begin{frame}{Objekte}
+	\begin{itemize}
+		\item Werden anhand von Klassen erstellt und sind somit Instanzen einer Klasse
+		\begin{itemize}
+			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
+		\end{itemize}
+		\item Befüllen die Felder einer Klasse mit konkreten Werten
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
+\end{frame}
+
+\subsection{Konstruktor}
+\begin{frame}{Konstruktor}
+	\begin{itemize}
+		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden
+		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
+		\item Sollte sicherstellen, dass eine gültige Instanz einer Klasse erzeugt wird
+		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weist allen Feldern Standardwerte zu)
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/constructor.cs}	
+\end{frame}
+
+\begin{frame}{Konstruktor}
+	\textbf{Schlüsselwort new}\\
+	\begin{itemize}
+		\item Zur Erstellung einer Instanz einer Klasse
+		\item Ruft immer einen Konstruktor der jeweiligen Klasse auf
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/new.cs}
+\end{frame}
+
+\subsection{Felder \& Eigenschaften}
+\begin{frame}{Felder \& Eigenschaften}
+	\textbf{Felder}\\
+	\begin{itemize}
+		\item Werden auch Attribute genannt
+		\item Sind Variablen eines beliebigen Typs, welche direkt in einer Klasse deklariert wurden und damit dieser Klasse zugehörig sind
+	\end{itemize}
+	\textbf{Eigenschaften}\\
+	\begin{itemize}
+		\item Bietet flexible Mechanismen zum Lesen, Schreiben und Berechnen der Werte eines Feldes
+		\item Es muss aber nicht zwangsläufig ein Feld abbilden
+		\item Besitzen nach dem Namen einen Block in denen ein \alert{get} und/oder \alert{set} definiert werden kann
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Felder \& Eigenschaften}
+	\textbf{Eigenschaften: get \& set}
+	\begin{itemize}
+		\item Diese agieren wie Methoden
+		\item Sie können einen Körper haben, müssen es aber nicht
+		\begin{itemize}
+			\item Sobald einer der beiden einen Körper hat, muss der andere auch einen haben (wenn sowohl \alert{get} als auch \alert{set} implementiert werden sollen)
+			\item Falls kein eigener Körper definiert wurde, wird die Variable wie ein Feld benutzt
+		\end{itemize}
+		\item Besitzen eigene Sichtbarkeiten (unterschiedlich vom Feld selbst)
+		\item \alert{set} hat dabei einen Übergabeparameter, und zwar \alert{value}
+		\begin{itemize}
+			\item Dieser ist vom selben Typ, wie die Eigenschaft		
+		\end{itemize}		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Felder \& Eigenschaften}	
+	\lstinputlisting{resources/03_objektorientierung/field_property.cs}
+\end{frame}
+
+\subsection{Zugriff}
+\begin{frame}{Zugriff}
+	\textbf{Zugriff mit .}\\
+	\begin{itemize}
+		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{\textbf{.}}
+		\item Dahinter kommt der Member den man nutzen möchte
+	\end{itemize}
+	\textbf{this}\\
+	\begin{itemize}
+		\item Gibt die aktuelle Instanz der Klasse (in dem man gerade ist und arbeitet) als Variable wieder
+		\item Nutzen:
+		\begin{itemize}
+			\item Übergabe der aktuellen Instanz der Klasse in Methoden
+			\item Nutzung von Membern, die durch gleiche Kennzeichner ausgeblendet werden (falls Member und Variablen den gleichen Namen haben)
+			\item Und andere (wird später erläutert)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% ----------------------- Scope ------------------------------
+\section{Gültigkeit (Scope)}
+\begin{frame}{Gültigkeit (Scope)}
+	\begin{itemize}
+		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden
+		\item Methoden und Felder nur in deren Klassen, Parameter nur in deren Methoden, lokale Variablen innerhalb ihrer Blöcke
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/scope.cs}
+\end{frame}
+
+\end{document}

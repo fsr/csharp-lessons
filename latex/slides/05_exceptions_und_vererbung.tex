@@ -1,0 +1,223 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Vererbung und Polymorphie}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Exceptions ------------------------------
+\section{Exceptions}
+\begin{frame}{Exceptions}
+	\begin{itemize}
+		\item Zu dt. Ausnahmen
+		\item Zeigt an, dass ein außergewöhnlicher oder unerwarteter Programmzustand eingetreten ist
+		\item Beinhalten Information über Art und Auftreten des Fehlers
+		\item Es gibt verschiedene Arten, wie z.B.:
+		\begin{itemize} 
+			\item ArgumentException
+			\item NullReferenceException	
+			\item FileNotFoundException
+		\end{itemize}
+		\item Exception welche nicht behandelt wurden, führen zum Absturz des Programms
+	\end{itemize}
+\end{frame}
+
+\subsection{Handling}
+\begin{frame}{Handling}
+	\textbf{try catch finally}\\
+	\begin{itemize}
+		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
+		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
+		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
+		\begin{itemize}
+			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
+			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
+		\end{itemize}
+		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
+		\begin{itemize}
+			\item Wird auch Bereinigungsblock genannt
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Handling}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_handling.cs}	
+\end{frame}
+
+\subsection{Eigene Exceptions}
+\begin{frame}{Eigene Exceptions}
+	\textbf{throw}\\
+	\begin{itemize}
+		\item Schlüsselwort um eine Exception zu werfen/auszulösen
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{throw new \alert{<Exceptionkonstruktor>}(\alert{[Parameter]});}
+		\end{itemize}
+	\end{itemize}
+	\textbf{Eigene Exception}\\
+	\begin{itemize}
+		\item Man kann eine eigene Excpetion-Klasse schreiben, in dem man von der Klasse \alert{System.Exception} erbt
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Eigene Exceptions}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_throw.cs}
+\end{frame}
+
+% ----------------------- Dokumentationskommentare ------------------------------
+\section{Dokumentationskommentare}
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Das Doku-Kommentar beginnt mit 3, anstatt 2 \alert{/}
+		\item Beschreiben nur Klassen, Felder/Eigenschaften und Methoden
+		\begin{itemize}
+			\item Das Kommentar steht dabei immer direkt über den zu kommentierenden Code
+		\end{itemize}
+		\item Man kann aus diesen eine Dokumentation generieren
+		\item Außerdem können einige IDEs (z.B. Visual Studio) daraus eine Kurzbeschreibung der Elemente während des Programmierens schaffen		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\textbf{Tags}
+	\begin{itemize}
+		\item Geben an, was genau von dem Code dokumentiert werden soll
+		\item 3 wichtige Tags:
+		\begin{description}
+			\item[summary] Beschreibung des zu kommentierenden Codes\\ Für alle 3 Arten
+			\item[param] Beschreibung der Übergabeparameter einer Methode
+			\item[returns] Beschreibung des Rückgabewertes einer Methode
+		\end{description}
+		\item \href{https://msdn.microsoft.com/de-de/library/5ast78ax.aspx}{Hier findet man weitere Tags}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Die genannten Tags am Beispiel einer Methode:
+	\end{itemize}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/documentation.cs}	
+\end{frame}
+
+% ----------------------- Vererbung ------------------------------
+\section{Vererbung}
+\begin{frame}{Vererbung}
+	\begin{itemize}
+		\item Ermöglicht das definieren von Klassen die auf anderen basieren
+		\item Diese erben die Funktionalitäten der Basisklasse und können diese benutzen oder erweitern
+		\item Es wird alles vererbt, doch einige Member sind von dem Erben nicht sichtbar 
+		\item Alle Klassen erben von der Klasse \alert{Object}
+		\item Klassen können maximal von einer Klasse erben
+		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/inheritance.cs}
+\end{frame}
+
+\subsection{Polymorphie}
+\begin{frame}{Polymorphie}
+	\begin{itemize}
+		\item Zu dt. Vielgestaltigkeit
+		\item Instanzen abgeleitete Klassen können auch immer als Instanzen einer ihrer Basisklassen betrachtet werden
+		\item Basisklassen können Methoden und Eigenschaften besitzen, die von den abgeleiteten Klassen überschrieben werden können
+		\item Während der Nutzung eines Objekts als Basisklasse wird der Laufzeittyp ermittelt und die überschrieben/veränderten Methoden und Eigenschaften genutzt
+		\item Alle nicht überschriebenen Methoden oder Eigenschaften sind identisch mit denen der Basisklasse
+	\end{itemize} 
+\end{frame}
+
+\subsection{Methoden- \& Eigenschaftsüberschreibung}
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
+	\textbf{virtual}\\
+	\begin{itemize}
+		\item Erlaubt das Überschreiben einer Methode
+		\item Wird an die Methoden einer Basisklasse geschrieben
+	\end{itemize}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/virtual.cs}
+\end{frame}
+
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
+	\textbf{override}\\
+	\begin{itemize}
+		\item Gibt an, dass es sich um eine Überschreibung einer Methode aus der Basisklasse handelt
+		\begin{itemize}
+			\item Es darf bloß überschrieben werden, wenn die Methode in der Basisklasse ein \alert{virtual} hat
+		\end{itemize}
+		\item Wird an die Methoden in der abgeleiteten Klasse geschrieben
+	\end{itemize}
+	\textbf{new}\\
+	\begin{itemize}
+		\item Gibt an ob eine neue Methode mit selber Signatur wie in einer Basisklasse erzeugt wird
+		\begin{itemize}
+			\item Die ursprüngliche Methode wird bei der Nutzung der abgeleiteten Klasse ausgeblendet
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Methoden- \& Eigenschaftsüberschreibung}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/override_new.cs}
+\end{frame}
+
+\subsection{Weitere Schlüsselwörter}
+\begin{frame}{Weitere Schlüsselwörter}
+	\textbf{sealed}\\
+	\begin{itemize}
+		\item Modifikator für Klassen und Methoden
+		\item Verhindert das von einer Klasse geerbt werden kann
+		\item Bei Methoden wird verhindert, dass diese weiter überschrieben werden können
+	\end{itemize}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/sealed.cs}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\textbf{as}\\
+	\begin{itemize}
+		\item Wird als Casting-Operator zwischen vererbten Klassen genutzt
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{(\alert{<Variable>} as \alert{<Datentyp/Klasse>})}
+		\end{itemize}
+		\item Nach der Klammer kann auf die Variable als der neue Typ zugegriffen werden
+		\item Falls die Umwandlung nicht möglich ist, wird die Operation als \alert{null} ausgewertet
+	\end{itemize}	
+	\lstinputlisting{resources/05_exceptions_und_vererbung/as.cs}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\textbf{base}\\
+	\begin{itemize}
+		\item Ist eine Referenz auf die Member der Basisklasse
+		\item Ermöglicht es auf die Methoden- und Eigenschaftsimplementationen der Basisklasse zuzugreifen
+	\end{itemize}
+	\begin{itemize}
+		\item Muss genutzt werden, wenn die Basisklasse einen Konstruktor mit Übergabeparametern hat
+		\begin{itemize}
+			\item Dabei wird der Konstruktor der Basisklasse vor dem eigenen aufgerufen
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{Klasse}(\alert{[Übergabeparameter-B][Übergabeparameter]})\\ : base(\alert{[Übergabeparameter-B]}) \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Weitere Schlüsselwörter}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/base.cs}
+\end{frame}
+
+\end{document}

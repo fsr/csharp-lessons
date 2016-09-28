@@ -1,0 +1,176 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Grundlagen von C\texttt{\#} - 1}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Über den Kurs ------------------------------
+\section{Über diesen Kurs}
+\begin{frame}{Über diesen Kurs}
+	\begin{itemize}
+		\item 10 Kurseinheiten
+		\item keine besonderen Programmierkenntnisse vorausgesetzt, aber nützlich
+		\item Ressourcen
+		\begin{itemize}
+			\item Google (C\texttt{\#} meine Frage hier); man landet oft auf der Microsoft Seite
+			\item \href{http://stackoverflow.com/}{Stackoverflow}
+			\item unsere \href{https://github.com/fsr}{Github-Organisation}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% ----------------------- Software ------------------------------
+\section{Benötigte Software}
+\begin{frame}{Benötigte Software}
+	.Net-Framework
+	\begin{itemize}
+		\item Kann mit Visual Studio installiert werden
+		\item oder mit \href{http://www.mono-project.com/}{Mono} für Linux, Windows oder Mac
+	\end{itemize}
+	IDEs
+	\begin{itemize}
+		\item \href{https://www.visualstudio.com/}{Visual Studio} für Windows
+		\item \href{http://www.monodevelop.com/}{Mono Develop} für Linux, Windows oder Mac
+		\item \href{https://www.visualstudio.com/de-de/products/code-vs.aspx}{Visual Code} für Linux, Windows oder Mac
+		\begin{itemize}
+			\item Benötigt noch eine C\texttt{\#}-Extension (Ctrl+P \texttt{->} ext install C\texttt{\#})
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section[Exkurs: \newline Architektur von .NET und C\#]{Exkurs:  Architektur von .NET und C\#}
+\begin{frame}{Exkurs: Architektur von .NET und C\#}
+	\centering
+	\href{https://mva.microsoft.com/de-de/training-courses/einstieg-in-c-fr-programmierer-8826?l=MoyWcix2_1304984382}{Link zum Foliensatz "Einleitung und Theorie" des MVA Kurses \\"Einstieg in C\# für Programmierer"}
+\end{frame} 
+% ----------------------- Hello World ------------------------------
+\section{Erstes Programm: Hello World}
+\begin{frame}{Hello World}
+    \lstinputlisting{resources/01_grundlagen_1/helloworld.cs}   
+\end{frame} 
+
+\subsection{Grundlegende Eigenschaften}
+\begin{frame}{Wichtige Eigenschaften}
+	\begin{itemize}
+		\item Am Ende jedem Befehls steht ein Semikolon (;)
+		\begin{itemize}
+			\item Befehle können auch über mehrere Zeilen gezogen werden
+		\end{itemize}
+		\item Codeblöcke werden durch geschweifte Klammern gekennzeichnet
+		\item Einrückungen sind nicht zwingend aber hilfreich
+	\end{itemize}
+\end{frame}
+
+% ----------------------- Grundlagen der Sprache ------------------------------
+\section{Grundlagen der Sprache}
+\begin{frame}{Grundlagen der Sprache}
+	\begin{itemize}
+		\item C\texttt{\#} ist eine typsichere, objektorientierte Allzweck-Programmiersprache	
+		\item Hat auch andere Paradigmen wie:
+		\begin{itemize}
+			\item imperativ
+			\item deklarativ
+			\item ereignisorientiert
+			\item generisch
+			\item ...
+		\end{itemize}
+	\end{itemize}	
+\end{frame}
+
+\subsection{Variablen Deklaration}
+\begin{frame}{Variablen Deklaration}
+	\textbf{Variablen}\\
+		\begin{itemize}
+			\item Man kann Variablen gleichzeitig Deklarieren und Initialisieren (Werte zuweisen, siehe obere Box)
+			\item Syntax:
+			\begin{itemize}			
+				\item \alert{\texttt{<Datentyp> <Variablenname>};}
+			\end{itemize}
+		\end{itemize}
+	\lstinputlisting{resources/01_grundlagen_1/variables.cs}
+\end{frame}
+
+\subsection{Datentypen}
+\begin{frame}{Primitive Datentypen}
+	\begin{tabular}{c|l}
+		Name & Funktion \\ \hline
+		\texttt{int, long} & Ganzzahl "beliebiger" Größe \\
+		\texttt{uint, ulong} & Natürliche Zahle "beliebiger" Größe \\
+		\texttt{float, double} & Gleitkommazahl "beliebiger" Größe \\
+		\texttt{ufloat, udouble} & Positive Gleitkommazahl "beliebiger" Größe \\
+        \texttt{decimal} & Präziser Bruch/Ganzzahl mit 29 signifikanten Stellen \\
+		\texttt{bool} & Wahrheitswert (\texttt{True}, \texttt{False})\\
+        \texttt{char} & Ein einzelnes Zeichen \\
+		\texttt{string} & Eine Folge von Zeichen \\
+	\end{tabular}
+	\begin{itemize}
+		 \item Die Variablen mit u (unsigned) als ersten Buchstaben werden normalerweise nicht genutzt
+	\end{itemize}
+\end{frame}
+
+\subsection{Casting}
+\begin{frame}{Casting}
+	\begin{itemize}
+		\item Ist das Umwandeln von einem Datentyp in einen anderen
+		\item Klappt bei allen Datentypen die es gibt
+		\item Achtung:
+		\begin{itemize}
+			\item Casting zwischen inkompatiblen Datentypen (z.B. string zu float) kann Fehler hervorrufen
+			\item Es kann die Genauigkeiten bei Zahlen verringern
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Variable>} = (\alert{Variablentyp})\alert{Wert};}
+		\end{itemize}
+	\end{itemize}
+		\lstinputlisting{resources/01_grundlagen_1/casting.cs}
+\end{frame}
+
+\subsection{Operatoren}
+\begin{frame}{Operatoren}
+	\begin{description}
+	    \item[mathematisch] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, 						\alert{\texttt{\%}}\\
+	    \alert{\texttt{+=}}, \alert{\texttt{-=}}, \alert{\texttt{*=}}, \alert{\texttt{/=}}, \alert{\texttt{++}} (Inkrementieren), \alert{\texttt{--}} (Dekrementieren)
+	    \item[vergleichend] \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}, \alert{\texttt{==}} (Gleichheit), \alert{\texttt{!=}} (Ungleichheit)
+	    \item[logisch] \alert{\texttt{\&\&}} (Und), \alert{\texttt{||}} (Oder), \alert{\texttt{!}} (Negation)
+	    \item[bitweise] \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}, \alert{\texttt{\^}} (xor), \alert{\texttt{\~}} (invertieren)
+	\end{description}
+\end{frame}
+
+\subsection{Kommentare}
+\begin{frame}{Kommentare}
+	\begin{itemize}
+		\item Werden vom Compiler nicht beachtet und dienen nur zum besseren Verständnis des Codes für Programmierer
+		\item Außerdem kann aus Dokumentationskommentare eine Dokumentation erstellt werden
+	\end{itemize}
+	\lstinputlisting{resources/01_grundlagen_1/comments.cs}
+\end{frame}
+
+\subsection{Methoden Deklaration}
+\begin{frame}{Methoden Deklaration}
+	\textbf{Methoden}\\
+	\begin{itemize}
+		\item Diese können noch durch Schlüsselwörter modifiziert werden
+		\item Syntax:
+		\begin{itemize}			
+			\item \texttt{\alert{<Rückgabetyp> <Methodenname>}( \alert{[Übergabeparameter]} ) \\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}		
+	\lstinputlisting{resources/01_grundlagen_1/methods.cs}
+\end{frame}
+
+\end{document}

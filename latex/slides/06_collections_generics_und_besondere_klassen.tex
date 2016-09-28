@@ -1,0 +1,168 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Vererbung und Polymorphie}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Abstrakt ------------------------------
+\section{Abstrakt}
+\begin{frame}{Abstrakt}
+	\begin{itemize}
+		\item Schlüsselwort \alert{abstract}
+		\begin{itemize}
+			\item Kann für Klassen, Methoden und Eigenschaften genutzt werden		
+		\end{itemize}
+		\item Gibt an ob keine Implementierung existieren darf
+		\item Von Klassen die \alert{abstract} sind, können keine Objekte initialisiert werden
+		\begin{itemize}
+			\item Dementsprechend muss von diesen geerbt werden um sie zu nutzen
+		\end{itemize}
+		\item Methoden und Eigenschaften besitzen keinen Körper wenn diese \alert{abstract} sind
+		\begin{itemize}
+			\item Dementsprechend wird eine Klasse, die davon erbt, gezwungen diese Methoden und Eigenschaften zu überschreiben und zu implementieren
+			\item Eigenschaften können dennoch entscheiden ob sie ein \alert{get} oder \alert{set} brauchen und die abgeleitete Klasse darf nur die vorgegebenen implementieren
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Abstrakt}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/abstract.cs}
+\end{frame}
+
+% ----------------------- Interface ------------------------------
+\section{Interface}
+\begin{frame}{Interface}
+	\begin{itemize}
+		\item Zu dt. Schnittstelle
+		\item Enthält nur die \alert{Signaturen} von Methoden und Eigenschaften
+		\begin{itemize}
+			\item Das heißt diese haben alle keinen Körper
+		\end{itemize}
+		\item Interfaces und Klassen können von beliebig vielen Interfaces erben
+		\item Die Klassen, die von Interfaces erben, müssen alle in den Interfaces definierten Methoden und Eigenschaften implementieren
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Interface}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/interface.cs}
+\end{frame}
+
+% ----------------------- Generics ------------------------------
+\section{Generics}
+\begin{frame}{Generics}
+	\begin{itemize}
+		\item Auch Typparameter genannt
+		\item Ermöglicht Typsicherheit ohne Angabe eines expliziten Types
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{class \alert{<Klassenname>} <\alert{<Typparameter>}> \{ \}}
+		\end{itemize}
+	\end{itemize}
+	\textbf{Einschränkungen}\\
+	\begin{itemize}
+		\item Man kann den Typparameter auch einschränken
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Klassenkopf>} where \alert{<Typparameter>} : \alert{<Einschränkung>}\\ \{ \}}
+		\end{itemize}
+		\item Einschränkungen können sein:
+		\begin{itemize}
+			\item Basisklasse, Interfaces
+			\item \alert{struct} (Werttyp), \alert{class} (Referenztyp)
+			\item \alert{new()} (Typparameter muss einen öffentlichen, leeren Konstruktor haben)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Generics}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/generics_creation.cs}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/generics_using.cs}
+\end{frame}
+
+% ----------------------- Collections ------------------------------
+\section{Collections}
+\begin{frame}{Collections}
+	\begin{itemize}
+		\item Ermöglicht die Gruppierung von Objekte gleichen Types
+		\item Bieten verschiedene Datentypen wie verkettete Listen, Hash-Maps, ...
+		\item Bieten Methoden zum Sortieren, Durchsuchen und Bearbeiten
+		\begin{itemize}
+			\item Nutzen dafür Generics
+		\end{itemize}
+		\item Haben eine dynamische Größe, können somit während der Ausführung schrumpfen und wachsen
+		\item Namespace:
+		\begin{itemize}			
+			\item \alert{System.Collection.Generic}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{List}
+\begin{frame}{List}
+	\begin{itemize}
+		\item Eine Liste beliebiger Elemente
+		\item Kann über einen Index angesteuert werden (ähnlich zum Array)
+	\end{itemize}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/list.cs}
+\end{frame}
+
+\subsection{Dictionary}
+\begin{frame}{Dictionary}
+	\begin{itemize}
+		\item Ein "Lexikon" von Paaren mit beliebigen Schlüssel und Wert
+		\item Jeder Schlüssel kann nur genau einmal vorkommen
+		\item Kann ebenfalls, ähnlich zum Array, angesprochen werden, aber dieses mal wird ein Schlüssel übergeben
+	\end{itemize}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/dictionary.cs}
+\end{frame}
+
+\subsection{Weitere}
+\begin{frame}{Weitere}
+	\textbf{Stack}\\
+	\begin{itemize}
+		\item Ein ''Stapel'' an Elementen
+		\item Arbeitet nach dem LIFO-Prinzip
+		\item \alert{.Push()} (Hinzufügen eines Elementes), \alert{.Pop()} (Entfernen eines Elementes)
+	\end{itemize}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/stack.cs}
+	\textbf{Queue}\\
+	\begin{itemize}
+		\item Eine ''Schlange'' an Elementen
+		\item Arbeitet nach dem FIFO-Prinzip
+		\item \alert{.Enqueue()} (Hinzufügen eines Elementes), \alert{.Dequeue()} (Entfernen eines Elementes)
+	\end{itemize}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/queue.cs}
+\end{frame}
+
+\subsection{foreach}
+\begin{frame}{foreach}
+	\begin{itemize}
+		\item Läuft durch ein/e Array/Collection an Elementen eines Typen durch 
+		\item Weist jeden Durchlauf ein neues Element aus dem Array/der Collection der Variable zu
+		\begin{itemize}
+			\item Der Typ stimmt mit dem Generic der Collection überein
+			\item Bei Dictionarys ist der Typ ein \alert{KeyValuePair}		
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{foreach( \alert{<Datentyp> <Variablenname>} in \alert{<Aufzählung>} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/06_collections_generics_und_besondere_klassen/foreach.cs}	
+\end{frame}
+
+\end{document}
