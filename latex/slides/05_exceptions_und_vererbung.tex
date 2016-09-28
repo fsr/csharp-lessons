@@ -18,70 +18,11 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Exceptions ------------------------------
-\section{Exceptions}
-\begin{frame}{Exceptions}
-	\begin{itemize}
-		\item Zu dt. Ausnahmen
-		\item Zeigt an, dass ein außergewöhnlicher oder unerwarteter Programmzustand eingetreten ist
-		\item Beinhalten Information über Art und Auftreten des Fehlers
-		\item Es gibt verschiedene Arten, wie z.B.:
-		\begin{itemize} 
-			\item ArgumentException
-			\item NullReferenceException	
-			\item FileNotFoundException
-		\end{itemize}
-		\item Exception welche nicht behandelt wurden, führen zum Absturz des Programms
-	\end{itemize}
-\end{frame}
-
-\subsection{Handling}
-\begin{frame}{Handling}
-	\textbf{try catch finally}\\
-	\begin{itemize}
-		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
-		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
-		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
-		\begin{itemize}
-			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
-			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
-		\end{itemize}
-		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
-		\begin{itemize}
-			\item Wird auch Bereinigungsblock genannt
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Handling}
-	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_handling.cs}	
-\end{frame}
-
-\subsection{Eigene Exceptions}
-\begin{frame}{Eigene Exceptions}
-	\textbf{throw}\\
-	\begin{itemize}
-		\item Schlüsselwort um eine Exception zu werfen/auszulösen
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{throw new \alert{<Exceptionkonstruktor>}(\alert{[Parameter]});}
-		\end{itemize}
-	\end{itemize}
-	\textbf{Eigene Exception}\\
-	\begin{itemize}
-		\item Man kann eine eigene Excpetion-Klasse schreiben, in dem man von der Klasse \alert{System.Exception} erbt
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Eigene Exceptions}
-	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_throw.cs}
-\end{frame}
-
 % ----------------------- Dokumentationskommentare ------------------------------
 \section{Dokumentationskommentare}
 \begin{frame}{Dokumentationskommentare}
 	\begin{itemize}
-		\item Das Doku-Kommentar beginnt mit 3, anstatt 2 \alert{/}
+		\item Das Doku-Kommentar beginnt mit 3, anstatt 2 \texttt{\alert{/}}
 		\item Beschreiben nur Klassen, Felder/Eigenschaften und Methoden
 		\begin{itemize}
 			\item Das Kommentar steht dabei immer direkt über den zu kommentierenden Code
@@ -101,7 +42,7 @@
 			\item[param] Beschreibung der Übergabeparameter einer Methode
 			\item[returns] Beschreibung des Rückgabewertes einer Methode
 		\end{description}
-		\item \href{https://msdn.microsoft.com/de-de/library/5ast78ax.aspx}{Hier findet man weitere Tags}
+		\item \href{https://msdn.microsoft.com/de-de/library/5ast78ax.aspx}{\alert{Hier}} findet man weitere Tags
 	\end{itemize}
 \end{frame}
 
@@ -124,7 +65,7 @@
 		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
 		\item Syntax:
 		\begin{itemize}
-			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}}
+			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}} { }
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/05_exceptions_und_vererbung/inheritance.cs}
@@ -143,7 +84,7 @@
 
 \subsection{Methoden- \& Eigenschaftsüberschreibung}
 \begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
-	\textbf{virtual}\\
+	\textbf{virtual}
 	\begin{itemize}
 		\item Erlaubt das Überschreiben einer Methode
 		\item Wird an die Methoden einer Basisklasse geschrieben
@@ -218,6 +159,62 @@
 
 \begin{frame}{Weitere Schlüsselwörter}
 	\lstinputlisting{resources/05_exceptions_und_vererbung/base.cs}
+\end{frame}
+
+% ----------------------- Exceptions ------------------------------
+\section{Exceptions}
+\begin{frame}{Exceptions}
+	\begin{itemize}
+		\item Zu dt. Ausnahmen
+		\item Zeigt an, dass ein außergewöhnlicher oder unerwarteter Programmzustand eingetreten ist
+		\item Beinhalten Information über Art und Auftreten des Fehlers
+		\item Es gibt verschiedene Arten, wie z.B.:
+		\begin{itemize} 
+			\item ArgumentException
+			\item NullReferenceException	
+			\item FileNotFoundException
+		\end{itemize}
+		\item Exception welche nicht behandelt wurden, führen zum Absturz des Programms
+	\end{itemize}
+\end{frame}
+
+\subsection{Handling}
+\begin{frame}{Handling}
+	\textbf{try catch finally}\\
+	\begin{itemize}
+		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
+		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
+		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
+		\begin{itemize}
+			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
+			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
+		\end{itemize}
+		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Handling}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_handling.cs}	
+\end{frame}
+
+\subsection{Eigene Exceptions}
+\begin{frame}{Eigene Exceptions}
+	\textbf{throw}\\
+	\begin{itemize}
+		\item Schlüsselwort um eine Exception zu werfen/auszulösen
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{throw new \alert{<Exceptionkonstruktor>}(\alert{[Parameter]});}
+		\end{itemize}
+	\end{itemize}
+	\textbf{Eigene Exception}\\
+	\begin{itemize}
+		\item Man kann eine eigene Excpetion-Klasse schreiben, in dem man von der Klasse \alert{System.Exception} erbt
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Eigene Exceptions}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_throw.cs}
 \end{frame}
 
 \end{document}

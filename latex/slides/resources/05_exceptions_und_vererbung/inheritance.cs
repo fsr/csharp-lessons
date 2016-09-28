@@ -1,4 +1,4 @@
-public class eineBasisklasse 
+public class EineBasisklasse 
 { }
-public class EineKlasse : eineBasisklasse 
+public class EineKlasse : EineBasisklasse 
 { }

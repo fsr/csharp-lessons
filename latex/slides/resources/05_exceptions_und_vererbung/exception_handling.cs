@@ -13,5 +13,5 @@ catch(Exception e)
 }
 finally
 {
-    // Bereinigungsblock. Wird immer aufgerufen.
+    // Wird immer aufgerufen.
 }
