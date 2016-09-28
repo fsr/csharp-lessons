@@ -1,13 +1,13 @@
 int note = 2;
 string noteStr = "";
 // Hier beginnt die switch-case-Verzweigung.
-switch (zahl)
+switch (note)
 {
     case 1:
         noteStr = "Sehr gut";
         break;
     case 2:
-        noteStr = "gut";   
+        noteStr = "Gut";   
         break;
     // ...
     default:

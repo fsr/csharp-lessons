@@ -26,7 +26,7 @@
 		\item Werden genauso genutzt wie eine if-else-Verzweigung
 		\item Syntax:
 		\begin{itemize}
-			\item \texttt{\alert{<Bedingung>} ? \alert{<Dann-Pfad>} : \alert{<Sonst-Pfad>}}
+			\item \texttt{\alert{<Bedingung>} ? \alert{<Dann-Pfad>} : \alert{<Sonst-Pfad>};}
 		\end{itemize}
 		\item Das \alert{\texttt{?}} steht für \alert{dann}
 		\item Das \alert{\texttt{:}} steht für \alert{sonst}
@@ -69,7 +69,7 @@
 	\end{itemize}
 	\textbf{continue}\\
 	\begin{itemize}
-		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zum Kopf der Schleife zurück
+		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zur Bedingung der Schleife zurück
 		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortsetzen
 	\end{itemize}
 \end{frame}
@@ -86,7 +86,7 @@
 \section{Objektorientierung}
 \begin{frame}{Objektorientierung}
 	\begin{itemize}
-		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. int oder bool
+		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. \alert{int} oder \alert{bool}
 		\item Damit kann alles in C\texttt{\#} Felder und Methoden besitzen		
 	\end{itemize}
 \end{frame}
@@ -108,7 +108,7 @@
 		\begin{itemize}
 			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
 		\end{itemize}
-		\item Befüllen die Felder einer Klasse mit konkreten Werten
+		\item Sollten die Felder einer Klasse mit konkreten Werten befüllen
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
 \end{frame}
@@ -118,6 +118,9 @@
 	\begin{itemize}
 		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden
 		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
+		\begin{itemize}
+			\item Es wird aber \textbf{kein} \alert{return} benötigt
+		\end{itemize}
 		\item Sollte sicherstellen, dass eine gültige Instanz einer Klasse erzeugt wird
 		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weist allen Feldern Standardwerte zu)
 	\end{itemize}
@@ -171,7 +174,7 @@
 
 \subsection{Zugriff}
 \begin{frame}{Zugriff}
-	\textbf{Zugriff mit .}\\
+	\textbf{Zugriff mit \texttt{\alert{.}} (Punkt)}\\
 	\begin{itemize}
 		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{\textbf{.}}
 		\item Dahinter kommt der Member den man nutzen möchte
@@ -192,9 +195,16 @@
 \section{Gültigkeit (Scope)}
 \begin{frame}{Gültigkeit (Scope)}
 	\begin{itemize}
-		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden
-		\item Methoden und Felder nur in deren Klassen, Parameter nur in deren Methoden, lokale Variablen innerhalb ihrer Blöcke
+		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden:
+		\begin{itemize}
+			\item Methoden und Felder nur in deren Klassen
+			\item Parameter nur in deren Methoden
+			\item Lokale Variablen innerhalb ihrer Blöcke
+		\end{itemize}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Gültigkeit (Scope)}
 	\lstinputlisting{resources/03_objektorientierung/scope.cs}
 \end{frame}
 

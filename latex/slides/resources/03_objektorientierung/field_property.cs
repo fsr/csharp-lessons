@@ -1,16 +1,16 @@
 class EineKlasse 
 {
-    int EinFeld;
+    int einFeld;
     int EineEigenschaft 
     {
         get 
         { 
-            return EinFeld; 
+            return einFeld; 
         }
         private set 
         { 
             // Moegliche Berechnungen
-            EinFeld = value; 
+            einFeld = value + 42; 
         }    
     }
 }
