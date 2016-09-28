@@ -38,15 +38,15 @@
 \begin{frame}{Opertatoren Überladung}
 	\textbf{Operatoren}\\
 	\begin{description}
-		\item[unäre] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{!}}, \alert{\texttt{\~}}, \alert{\texttt{++}}, \alert{\texttt{--}}, \alert{\texttt{true}}, \alert{\texttt{false}}
-		\item[binär] \alert{\texttt{+}}, \alert{\texttt{-}}, \alert{\texttt{*}}, \alert{\texttt{/}}, \alert{\texttt{\%}}, \alert{\texttt{\&}}, \alert{\texttt{|}}, \alert{\texttt{\^}}, \alert{\texttt{<<}}, \alert{\texttt{>>}}
-		\item[vergleich]  \alert{\texttt{==}}, \alert{\texttt{!=}}, \alert{\texttt{<}}, \alert{\texttt{>}}, \alert{\texttt{<=}}, \alert{\texttt{>=}}
+		\item[unäre] \texttt{\alert{+}, \alert{-}, \alert{!}, \alert{\texttt{\~}}, \alert{++}, \alert{--}, \alert{true}, \alert{false}}
+		\item[binär] \texttt{\alert{+}, \alert{-}, \alert{*}, \alert{/}, \alert{\%}, \alert{\&}, \alert{|}, \alert{\texttt{\^}}, \alert{<<}, \alert{>>}}
+		\item[vergleich]  \texttt{\alert{==}, \alert{!=}, \alert{<}, \alert{>}, \alert{<=}, \alert{>=}}
 	\end{description}
 	\begin{itemize}
 		\item Andere Operatoren können nicht überschrieben werden
 		\item Operatoren wie \alert{+=} und \alert{\&\&} werden durch \alert{+} und \alert{\&} beschrieben
 		\item \alert{true} und \alert{false} geben dem Objekt die Möglichkeit wie bool behandelt zu werden
-		\item Bei Vergleichoperatoren muss der jeweilige Gegensatz auch überschrieben werden (z.B. bei \alert{==} auch \alert{!=} überschreiben)
+		\item Bei Vergleichsoperatoren muss der jeweilige Gegensatz auch überschrieben werden (z.B. bei \alert{==} auch \alert{!=} überschreiben)
 	\end{itemize}
 \end{frame}
 
@@ -59,18 +59,18 @@
 \section{delegate}
 \begin{frame}{delegate}
 	\begin{itemize}
-		\item Auch Funktionspointer gennant
+		\item Auch Funktionspointer genannt
 		\item Schlüsselwort zur Kapselung der Signatur von Methoden, um Referenzen auf diese abbilden zu können
 		\item Es wird für diese (wie bei den Methoden) Übergabeparameter und Rückgabetyp deklariert
 			\begin{itemize}
 				\item Alle Methoden mit dieser Signatur können durch den Delegate dargestellt werden
 			\end{itemize}
 		\item Wird genutzt um eine Methode aufzurufen ohne auf dessen Objekt eine Referenz zuhaben
-		\item Syntax (zur Deklarierung):
+		\item Syntax (zur Datentyps Deklarierung):
 		\begin{itemize}
 			\item \texttt{delegate \alert{<Rückgabetyp> <Delegatename>}\\( \alert{[Übergabeparameter]} );}
 		\end{itemize}
-		\item Syntax (zur Instanziierung):
+		\item Syntax (zur Variablen Deklaration und Instanziierung):
 		\begin{itemize}
 			\item \texttt{\alert{<Delegantename> <Variablenname>} = \alert{<Methodenname>};}
 		\end{itemize}
