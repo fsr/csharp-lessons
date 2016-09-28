@@ -18,69 +18,25 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Weiteres zu null ------------------------------
-\section{Weiteres zu null}
-\subsection{Nullable}
-\begin{frame}{Nullable}
-	\begin{itemize}
-		\item Werden genutzt, damit Werttyp-Variablen ebenfalls \alert{null} haben können
-		\item Besitzt 2 Eigenschaften
-		\begin{description}
-			\item[HasValue] Gibt an, ob das Objekt einen Wert hat oder nicht
-			\item[Value] Gibt den Wert des Objektes zurück\\ Wirft eine InvalidOperationException falls HasValue \alert{false} ist 
-		\end{description}
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{\alert{<Werttyp>}? \alert{<Variablenname>};} oder
-			\item \texttt{Nullable<\alert{<Datentyp>}> \alert{<Variablenname>};}
-			\begin{itemize}
-				\item Das ist ein Generic
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Nullable}
-	\lstinputlisting{resources/10_weiteres/nullable.cs}	
-\end{frame}
-
-\begin{frame}{Weiteres zu null}
-	\begin{itemize}
-		\item Falls ein Objekt \alert{null} sein kann sollte man diese vor dem benutzen immer überprüfen
-		\item Da \alert{obj != null} viel Schreibaufwand ist, kann dies vereinfacht werden	
-	\end{itemize}
-	\begin{itemize}
-		\item Man nutzt dafür \texttt{\alert{?.}}
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{obj\alert{?.}Property ...}
-		\end{itemize}
-		\item Es wird vor dem benutzen des Objektes geschaut, ob dieses \alert{null} ist
-		\item Falls es nich \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Weiteres zu null}
-	\lstinputlisting{resources/10_weiteres/null1.cs}	
-	\lstinputlisting{resources/10_weiteres/null2.cs}	
-\end{frame}
-
 % ----------------------- Eventhandling ------------------------------
 \section{Event Handling}
 \subsection{Event Handler}
 \begin{frame}{EventHandler}
 	\begin{itemize}
 		\item Ein vordefinierter Delegate
-		\item Wird genutzt um Event handling zu betreiben
+		\item Wird genutzt um Eventhandling zu betreiben
 		\begin{itemize}
 			\item Man kann auch einen eigenen nehmen
 		\end{itemize}
 		\item Gibt \alert{void} zurück
 		\item Hat 2 Übergabeparameter:
 		\begin{itemize}
-			\item \alert{object} (als Sender)
+			\item \alert{object} (der Sender dieses Events)
 			\item \alert{TEventArgs}
 		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item Der Kopf des EventHandlers im Framework
 	\end{itemize}
 	\lstinputlisting{resources/10_weiteres/event_handler.cs}	
 \end{frame}
@@ -135,6 +91,54 @@
 
 \begin{frame}{Beispiel}
 	\lstinputlisting{resources/10_weiteres/event_handling_usage_2.cs}
+\end{frame}
+
+% ----------------------- Weiteres zu null ------------------------------
+\section{Weiteres zu null}
+\subsection{Nullable}
+\begin{frame}{Nullable}
+	\begin{itemize}
+		\item Werden genutzt, damit Werttyp-Variablen ebenfalls den Inhalt von \alert{null} haben können
+		\item Ist eine generische Klasse
+		\item Besitzt 2 Eigenschaften
+		\begin{description}
+			\item[HasValue] Gibt an, ob das Objekt einen Wert hat oder nicht
+			\item[Value] Gibt den Wert des Objektes zurück\\ Wirft eine InvalidOperationException falls HasValue \alert{false} ist 
+		\end{description}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Werttyp>}? \alert{<Variablenname>};} oder
+			\item \texttt{Nullable<\alert{<Datentyp>}> \alert{<Variablenname>};}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Nullable}
+	\lstinputlisting{resources/10_weiteres/nullable.cs}	
+\end{frame}
+
+\begin{frame}{Weiteres zu null}
+	\begin{itemize}
+		\item Falls ein Objekt \alert{null} sein kann sollte man diese vor dem benutzen immer überprüfen
+		\item Da \alert{obj != null} viel Schreibaufwand ist, kann dies vereinfacht werden	
+	\end{itemize}
+	\begin{itemize}
+		\item Man nutzt dafür \texttt{\alert{?.}}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{obj\alert{?.}Property ...}
+		\end{itemize}
+		\item Es wird vor dem Benutzen des Objektes geschaut, ob dieses \alert{null} ist
+		\item Falls es nich \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Weiteres zu null}
+	\lstinputlisting{resources/10_weiteres/null1.cs}
+	\begin{itemize}
+		\item Hier für einen \alert{delegate}
+	\end{itemize}		
+	\lstinputlisting{resources/10_weiteres/null2.cs}	
 \end{frame}
 
 % ----------------------- LINQ ------------------------------
