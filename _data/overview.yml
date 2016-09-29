@@ -1,14 +1,23 @@
 targets:
-    - data types
+    - data types and variables
+    - operations and operation overload
+    - comments and documentation comments
+    - arrays
     - controll structures
     - object orientation
     - members (methods / properties / fields / events / indexer )
-    - null / nullable
+    - methods overload
+    - inheritance
     - exceptions
+    - null / nullable
     - generics
     - collections
-    - operation overload
-    - delegates
-    - lamda
+    - enum and struct 
+    - delegates and events
+    - anonymous methods and lambda
     - extensions
     - LINQ
+    - debugging
+    - windows forms
+    - ...
+    - and more small principles and keywords
