@@ -1,6 +1,6 @@
 ---
 title: A04 - Class for Polygon and Point
-number: 5
+number: 6
 status: finished
 authors: marc
 lesson: 3

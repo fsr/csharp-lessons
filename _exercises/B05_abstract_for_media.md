@@ -1,9 +1,9 @@
 ---
 title: 
-number: 
+number: 14
 status: drafty
 authors: marc
-lesson: 
+lesson: 6
 ---
 
 blabla - Beschreibung.[^solution]

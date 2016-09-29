@@ -1,9 +1,9 @@
 ---
 title: B07 - Advancing the Library
-number: 15
+number: 18
 status: reviewed
 authors: [sascha]
-lesson: 6
+lesson: 7
 ---
 
 Lets add some useful functionality to our library project[^solution]. The **tests** [^tests] for this exercise will help you work out the correct implementation. **Use them!**
@@ -12,7 +12,7 @@ Lets add some useful functionality to our library project[^solution]. The **test
     You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/B07_advanced_example/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/lesson_06/B07_advanced_example/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/B07_advanced_example/ExerciseSolution/).
 
 ### What's to do
 
