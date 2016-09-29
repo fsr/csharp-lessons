@@ -191,21 +191,23 @@
 	\end{itemize}
 \end{frame}
 
-% ----------------------- Scope ------------------------------
-\section{Gültigkeit (Scope)}
-\begin{frame}{Gültigkeit (Scope)}
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
+\section{Zugriffsmodifikatoren/Sichtbarkeiten}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
 	\begin{itemize}
-		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden:
-		\begin{itemize}
-			\item Methoden und Felder nur in deren Klassen
-			\item Parameter nur in deren Methoden
-			\item Lokale Variablen innerhalb ihrer Blöcke
-		\end{itemize}
+		\item Geben an, ob der zugehörige Code von anderen Code-Abschnitten verwendet werden kann
+		\item Es gibt mehrere Arten
+		\begin{description}
+			\item[public] kann von überall zugriffen werden, solange darauf verwiesen wird
+			\item[private] kann nur von Code in der eigenen Klasse benutzt werden
+			\item[protected] kann nur von Code in der eigenen und von abgeleiteten Klassen benutzt werden
+			\item[( internal] kann von überall aus der eigenen Assembly heraus benutzt werden \textbf{)}
+		\end{description}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Gültigkeit (Scope)}
-	\lstinputlisting{resources/03_objektorientierung/scope.cs}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\lstinputlisting{resources/03_objektorientierung/access_modifier.cs}
 \end{frame}
 
 \end{document}
