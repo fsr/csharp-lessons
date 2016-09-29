@@ -6,13 +6,13 @@ authors: [marc,sascha]
 lesson: 5
 ---
 
-Now we want to extend our Library example a bit more. This time we will use abstract class and more.[^tests] [^solution]
+Now we want to extend our Library example a bit more. This time we will use inheritance.[^tests] [^solution]
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/B04_abstract_media/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/B04_media/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/B04_abstract_media/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/B04_media/ExerciseSolution/).
 
 ### Step 1
 

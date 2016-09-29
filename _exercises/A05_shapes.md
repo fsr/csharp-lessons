@@ -9,7 +9,7 @@ lesson: 5
 Now we want to extend our Polygon example a bit more. This time we will use abstract class and more.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/A05_abstract_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A05_shapes/ExerciseSolution/).
 
 ### Step 1
 
@@ -34,7 +34,7 @@ Create a new class `Circle` that also derive from `Shape`. This class needs also
 - a `private` field and `public` for the radius
   - if the radius changed (per `set`) it should recalculate the area
 - a constructor that take the radius of that `Circle` as a parameter
-- the implementation of the given calculation method for the area
+- override the implementation of the given calculation method for the area
 
 ### Step 4
 

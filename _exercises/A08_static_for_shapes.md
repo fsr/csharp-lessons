@@ -1,5 +1,5 @@
 ---
-title: A06 - Static for Shapes
+title: A08 - Static for Shapes
 number: 17
 status: drafty
 authors: marc
@@ -9,7 +9,7 @@ lesson: 7
 In this exercise we want to handel all kind of exceptions and more.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A06_static_for_shapes/ExerciseSolution).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_07/A08_static_for_shapes/ExerciseSolution).
 
 ### Step 1
 
