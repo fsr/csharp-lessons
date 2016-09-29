@@ -10,7 +10,7 @@ There is a bug in the program given. Use the debugger and find the problem.
 
 ### Step 1
 
-Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/X02_debugging_test_2/Exercise).
+Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/X02_debugging_test_2/ExerciseSolution).
 
 ### Step 2
 
