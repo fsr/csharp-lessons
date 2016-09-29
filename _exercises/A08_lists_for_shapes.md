@@ -1,5 +1,5 @@
 ---
-title: A07 - Lists for Shapes
+title: A08 - Lists for Shapes
 number: 16
 status: drafty
 authors: marc
@@ -9,7 +9,7 @@ lesson: 6
 Lists are better than arrays. Therefor we want to switch all arrays to lists.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/A07_lists_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/A08_lists_for_shapes/ExerciseSolution/).
 
 ### Step 1
 
