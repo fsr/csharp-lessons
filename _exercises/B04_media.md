@@ -1,22 +1,22 @@
 ---
-title: B04 - Abstract Media class and derivation
-number: 9
-status: reviewed
+title: B04 - Media class and derivation
+number: 11
+status: finished
 authors: [marc,sascha]
-lesson: 4
+lesson: 5
 ---
 
-Now we want to extend our Library example a bit more. This time we will use abstract class and more.[^tests] [^solution]
+Now we want to extend our Library example a bit more. This time we will use inheritance.[^tests] [^solution]
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/B04_abstract_media/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/B04_media/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/lesson_04/B04_abstract_media/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/B04_media/ExerciseSolution/).
 
 ### Step 1
 
-First we create an `abstract` class with the name `Medium`. This class need the following member:
+First we create a class with the name `Medium`. This class need the following member:
 
 - a `protected` field "borrowedTo" with the type of `UserAccount`
 - a `string` property "Title"
@@ -37,12 +37,12 @@ Now let our `Book` class be derived from `Medium` and adjust it to the derivatio
 
 Adjust your "Search" method in `Book` so that it will use its derived code.
 
-*Hint: A `base` call wouldn't be bad idea.*
+*Hint: A `base` call wouldn't be a bad idea.*
 
 ### Step 4
 
 Adjust your `Library` and `UserAccount` class.
-Especially change your "Search" method in `Library` so, that it will now give a array of `Medium`
+Especially change your "Search" method in `Library` so, that it will now give a array of `Medium`.
 
 *Hint: Maybe your member needs a new typ and also a new name.*
 

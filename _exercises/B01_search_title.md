@@ -1,6 +1,6 @@
 ---
 title: B01 - Search title
-number: 4
+number: 3
 status: finished
 authors: marc
 lesson: 2

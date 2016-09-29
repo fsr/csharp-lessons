@@ -1,6 +1,6 @@
 ---
 title: A03 - Polygon Area with user input
-number: 3
+number: 5
 status: finished
 authors: marc
 lesson: 3
@@ -9,7 +9,7 @@ lesson: 3
 An extension of the polygon area calculation by user input. There can be arbitrary many vertices of the polygon.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/lesson_02/A03_polygon_area_2/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_03/A03_polygon_area_2/ExerciseSolution/).
 
 *We assume that the user only enters correct input strings.*
 
@@ -33,7 +33,7 @@ Create the two arrays (empty) with the given count of vertices.
 
 ### Step 3
 
-Read the user input. The user input for a new vertex should be look like `x:y`. The input for the vertices end if both arrays are full.
+Read the user input. The user input for a new vertex should be look like `x-y`. The input for the vertices end if both arrays are full.
 
 ### Step 4
 

@@ -1,18 +1,18 @@
 ---
-title: B05 - Fee calculation with DateTime
-number: 10
+title: B07 - Fee calculation with DateTime
+number: 19
 status: reviewed
 authors: [marc,sascha]
-lesson: [3, 4]
+lesson: 7
 ---
 
 This time we want to calculate overdraft fees for the media.[^tests] [^solution]
     
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_04/B05_fee_calculation/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_07/B07_fee_calculation/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/lesson_04/B05_fee_calculation/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_07/B07_fee_calculation/ExerciseSolution/).
 
 ### Step 1
 

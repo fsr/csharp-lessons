@@ -1,6 +1,6 @@
 ---
 title: A04 - Class for Polygon and Point
-number: 5
+number: 6
 status: finished
 authors: marc
 lesson: 3
@@ -49,4 +49,7 @@ Give both classes all possible documentation commentaries.
 
 ### Step 5 (Optional)
 
-Put the whole process of the polygon creation in an own (`static`) method in the `Programm` class.
+Put the whole process of the polygon creation in an own (`static`[^static]) method in the `Programm` class.
+
+[^static]:
+    We discuss `static` in a different lesson. So be patient ;)
