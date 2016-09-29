@@ -1,0 +1,107 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Methoden (fortgeschritten) in C\texttt{\#} - 2}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Extensions ------------------------------
+\section{Extensions}
+\begin{frame}{Extensions}
+	\begin{itemize}
+		\item Ermöglichen es vorhandenen Typen eigene Methoden hinzuzufügen
+		\item Ohne eine abgeleitete Klasse zu erstellen oder den originalen Typen neu zu erstellen
+		\item Sind statische Methoden, welche aber als Instanzmethoden auf den erweiterten Typ agieren
+		\item Befinden sich selbst in einer extra statischen Klasse
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Rückgabetyp> <Name>}( this \alert{<Erweiterter Typ> <Variablenname>}, \alert{[Übergabeparameter]} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Extensions}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/extension_creation.cs}
+\end{frame}
+
+\begin{frame}{Extensions}
+	\begin{itemize}
+		\item Um die Extension nutzen zu können, muss diese mit einem \alert{using} eingebunden werden
+	\end{itemize}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/using_for_extension.cs}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/extension_using.cs}
+\end{frame}
+
+% ----------------------- yield ------------------------------
+\section{yield}
+\begin{frame}{yield}
+	\begin{itemize}
+		\item Schlüsselwort
+		\item Macht aus einer Methode, Operator oder get-Accessor einen Iterator
+		\begin{itemize}
+			\item Der Rückgabetyp muss \alert{IEnumerable}, \alert{IEnumerable\texttt{<T>}}, \alert{IEnumerator} oder \alert{IEnumerator\texttt{<T>}} sein
+		\end{itemize}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{yield} return \alert{<Rückgabewert>};}
+			\item \texttt{\alert{yield} break;}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{yield}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/yield.cs}	
+\end{frame}
+
+% ----------------------- Schlüsselwörter ------------------------------
+\section{Schlüsselwörter}
+\begin{frame}{Schlüsselwörter}
+	\textbf{ref}\\
+	\begin{itemize}
+		\item Ermöglicht es einen Werttyp (wie z.B. int) als Referenztyp in eine Methode zu übergeben
+		\item Wird dabei vor den Datentyp eines Übergabeparameters und beim Aufruf vor die Variable geschrieben
+	\end{itemize}
+	\textbf{params}\\
+	\begin{itemize}
+		\item Ermöglicht es eine beliebige Anzahl von Übergabeparametern eines Typs einer Methode zu geben
+		\item Diese werden in der Methode dann als Array genutzt
+		\item Die Übergabe kann über eine mit Komma getrennte Liste oder über ein Array passieren
+		\item Dieser muss am Ende der Übergabeparameter stehen
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/ref_param_creation.cs}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/ref_param_using.cs}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\textbf{out}\\
+	\begin{itemize}
+		\item Eine Variable wird, wie bei \alert{ref}, als Verweis übergeben
+		\item Jedoch muss diese Variable nun nicht deklariert sein
+		\item Die Variable enthält zum Ende der Methode den zuletzt zugewiesenen Wert
+		\item Es muss innerhalb der Methode mindestens eine Zuweisung erfolgen
+		\item Kann verwendet werden, wenn eine Methode mehr als einen Wert zurückgeben soll
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Schlüsselwörter}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/out_creation.cs}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/out_using.cs}
+\end{frame}
+
+\end{document}

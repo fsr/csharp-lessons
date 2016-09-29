@@ -1,0 +1,161 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Methoden (fortgeschritten) in C\texttt{\#} - 1}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Opertatoren Überladung ------------------------------
+\section{Opertatoren Überladung}
+\begin{frame}{Opertatoren Überladung}
+	\begin{itemize}
+		\item Alle Typen können statische Methoden haben, welche Operatoren überschreiben und neu definieren können
+		\item Nicht alle Operatoren können überschrieben werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Datentyp>} operator \alert{<Operator>}\\( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \}}
+		\end{itemize}
+		\item Verschiedene Operatoren brauchen verschiedene Übergabeparameter und Rückgabeparameter
+		\begin{itemize}
+			 \item Man kann den selben Operator mit verschiedenen Übergabetypen überladen
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Opertatoren Überladung}
+	\textbf{Operatoren}\\
+	\begin{description}
+		\item[unäre] \texttt{\alert{+}, \alert{-}, \alert{!}, \alert{\texttt{\~}}, \alert{++}, \alert{--}, \alert{true}, \alert{false}}
+		\item[binär] \texttt{\alert{+}, \alert{-}, \alert{*}, \alert{/}, \alert{\%}, \alert{\&}, \alert{|}, \alert{\texttt{\^}}, \alert{<<}, \alert{>>}}
+		\item[vergleich]  \texttt{\alert{==}, \alert{!=}, \alert{<}, \alert{>}, \alert{<=}, \alert{>=}}
+	\end{description}
+	\begin{itemize}
+		\item Andere Operatoren können nicht überschrieben werden
+		\item Operatoren wie \alert{+=} und \alert{\&\&} werden durch \alert{+} und \alert{\&} beschrieben
+		\item \alert{true} und \alert{false} geben dem Objekt die Möglichkeit wie bool behandelt zu werden
+		\item Bei Vergleichsoperatoren muss der jeweilige Gegensatz auch überschrieben werden (z.B. bei \alert{==} auch \alert{!=} überschreiben)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Opertatoren Überladung}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/operation_overload_creation.cs}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/operation_overload_using.cs}
+\end{frame}
+
+% ----------------------- delegate ------------------------------
+\section{delegate}
+\begin{frame}{delegate}
+	\begin{itemize}
+		\item Auch Funktionspointer genannt
+		\item Schlüsselwort zur Kapselung der Signatur von Methoden, um Referenzen auf diese abbilden zu können
+		\item Es wird für diese (wie bei den Methoden) Übergabeparameter und Rückgabetyp deklariert
+			\begin{itemize}
+				\item Alle Methoden mit dieser Signatur können durch den Delegate dargestellt werden
+			\end{itemize}
+		\item Wird genutzt um eine Methode aufzurufen ohne auf dessen Objekt eine Referenz zuhaben
+		\item Syntax (zur Datentyps Deklarierung):
+		\begin{itemize}
+			\item \texttt{delegate \alert{<Rückgabetyp> <Delegatename>}\\( \alert{[Übergabeparameter]} );}
+		\end{itemize}
+		\item Syntax (zur Variablen Deklaration und Instanziierung):
+		\begin{itemize}
+			\item \texttt{\alert{<Delegantename> <Variablenname>} = \alert{<Methodenname>};}
+		\end{itemize}
+		\item Variable wird genauso genutzt wie eine normale Methode
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{delegate}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/delegate_creation.cs}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/delegate_using.cs}
+\end{frame}
+
+% ----------------------- Anonyme Methoden ------------------------------
+\section{Anonyme Methoden}
+\begin{frame}{Anonyme Methoden}
+	\begin{itemize}
+		\item Haben keinen eigenen Methodenkopf
+		\item Können nur durch Delegate-Variablen aufgerufen und genutzt werden
+		\item Es gibt 2 Arten der Erstellung:
+		\begin{itemize}
+			\item Durch Schlüsselwort \alert{delegate}
+			\item Über Lamda-Terme
+		\end{itemize}	
+	\end{itemize}
+\end{frame}
+
+\subsection{delegate}
+\begin{frame}{delegate}
+	\begin{itemize}
+		\item \alert{delegate} kann auch als Methodendefinition genutzt werden
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Delegate-Variable>} = \\delegate( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \};}
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_creation.cs}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_using.cs}	
+\end{frame}
+
+\subsection{Lamda}
+\begin{frame}{Lamda}
+	\begin{itemize}
+		\item Benutzt den Lamda-Operator \alert{\texttt{=>}}
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{( \alert{[Übergabeparameter]} ) => \{ \alert{<Code>} \};}
+			\item Es gibt Unterschiede in der Syntax zwischen den einzelnen Lamda Arten
+			\item Übergabeparameter brauchen nicht immer einen Typ, da dieser hergeleitet werden kann
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsubsection{Ausdruck-Lamdas}
+\begin{frame}{Ausdruck-Lamdas}
+	\begin{itemize}
+		\item Besitzt im Körper nur einen Ausdruck und braucht somit keine geschweiften Klammern
+		\item Gibt als Ergebnis das Ergebnis des einen Ausdrucks zurück
+	\end{itemize}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_creation_2.cs}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/expression_lamda.cs}	
+\end{frame}
+
+\subsubsection{Anweisung-Lamdas}
+\begin{frame}{Anweisung-Lamdas}
+	\begin{itemize}
+		\item Besitzen zur Eingrenzung des Körpers geschweifte Klammern
+		\item Müssen nun (wenn kein \alert{void} als Rückgabetyp) ein \alert{return} besitzen	
+	\end{itemize}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_creation_3.cs}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/statement_lamda.cs}
+\end{frame}
+
+\subsubsection{Variablenbereich für Lamdas}
+\begin{frame}{Variablenbereich für Lamdas}
+	\begin{itemize}
+		\item Lamdas können auf Variablen außerhalb ihres eigenen Gültigkeitsbereichs/Scopes verweisen und diese nutzen
+		\item Diese werden zur Verwendung im Lamda gespeichert
+		\item In diesem Fall werden lokale Referenzen zu den Objekten im Lamda gespeichert
+		\item So eine aüßere Variable muss definitiv vorher zugewiesen sein
+	\end{itemize}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_creation_3.cs}
+\end{frame}
+
+\begin{frame}{Variablenbereich für Lamdas}
+	\lstinputlisting{resources/08_methoden_fortgeschritten_1/variable_scope_lamda.cs}
+\end{frame}
+
+\end{document}

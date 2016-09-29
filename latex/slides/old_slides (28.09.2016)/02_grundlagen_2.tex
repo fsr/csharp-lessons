@@ -22,7 +22,7 @@
 \section{Arrays}
 \begin{frame}{Arrays}
 	\begin{itemize}
-		\item Sind Auflistung einer beliebigen (aber nach Initialisierung festen) Anzahl von Variablen gleichen Typs
+		\item Sind Auflistung einer beliebigen (aber nach Initalisierung festen) Anzahl von Variablen gleichen Typs
 		\item Können über eine Index aufgerufen werden
 		\begin{itemize}
 			\item Dieser geht von 0 bis (n - 1), wobei n die Anzahl der Elemente des Arrays ist
@@ -34,10 +34,10 @@
 \end{frame}
 
 \begin{frame}{Arrays}
-	\textbf{Mehrdimensionales Array:}\\
-	\lstinputlisting{resources/02_grundlagen_2/multi_array.cs}	
 	\textbf{Verzweigtes Array:}\\
 	\lstinputlisting{resources/02_grundlagen_2/array_of_array.cs}
+	\textbf{Mehrdimensionales Array:}\\
+	\lstinputlisting{resources/02_grundlagen_2/multi_array.cs}	
 \end{frame}
 
 % ----------------------- Kontrollstrukturen ------------------------------
@@ -75,14 +75,39 @@
 	\lstinputlisting{resources/02_grundlagen_2/if.cs}
 \end{frame}
 
+\subsection{Tertiäre-Verzweigung}
+\begin{frame}{Tertiäre-Verzweigung}
+	\begin{itemize}
+		\item Werden genauso genutzt wie eine if-else-Verzweigung
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{\alert{<Bedingung>} ? \alert{<Dann-Pfad>} : \alert{<Sonst-Pfad>}}
+		\end{itemize}
+		\item Das \alert{\texttt{?}} steht für \alert{dann}
+		\item Das \alert{\texttt{:}} steht für \alert{sonst}
+	\end{itemize}		
+	\lstinputlisting{resources/02_grundlagen_2/tertiary.cs}
+\end{frame}
+
+\subsection{switch case}
+\begin{frame}{switch case}
+	\begin{itemize}
+		\item Hat ähnliches Verhalten wie die bedingte Verzweigung
+		\begin{itemize}
+			\item \alert{default} verhält sich wie \alert{else}
+		\end{itemize}
+		\item Jeder \alert{case} prüft die Variable im \alert{switch} auf Gleichheit und führt den darunterliegenden Code bis zum \alert{break} aus
+	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/switch_case.cs}
+\end{frame}
+
 % ----------------------- Schleifen ------------------------------
 \section{Schleifen}
 \subsection{Kopfgesteuerte Schleife (while)}
 \begin{frame}{Kopfgesteuerte Schleife (while)}
 	\begin{itemize}
 		\item Die Schleife läuft so lange durch deren Körper, wie die Bedingung in den Klammern erfüllt ist
-		\item Die Bedingung wird am Anfang geprüft
-		\item Falls diese nicht \alert{true} ist, wird der Körper nie ausgeführt
+		\item Die Bedingung wird am Anfang geprüft, und falls diese nicht \alert{true} ist, wird der Körper nie ausgeführt
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/while.cs}	
 \end{frame}
@@ -97,71 +122,38 @@
 	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
 \end{frame}
 
-% ----------------------- Debugging ------------------------------
-\section{Debugging}
-\begin{frame}{Debugging}
+\subsection{Zählschleife (for)}
+\begin{frame}{Zählschleife (for)}
 	\begin{itemize}
-		\item Tätigkeit Fehler in einem Programm zu finden und zu beheben
-		\item Fehler können Programm zum Absturz bringen oder nicht ordnungsgemäß funktionieren lassen
-		\item Außerdem kann damit der Verlauf eines Programmes verfolgt werden
+		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{for( \alert{<Zählvariable>}; \alert{<Bedingung>}; \alert{<Schrittweite>} )\\ \{ \alert{<Code>} \}}
+		\end{itemize}
 	\end{itemize}
+	\lstinputlisting{resources/02_grundlagen_2/for.cs}	
+\end{frame}
+
+\subsection{break \& continue}
+\begin{frame}{break \& continue}
+	\textbf{break}\\
 	\begin{itemize}
-		\item Genutzt wird dafür ein Debugger (meist in eine IDE eingebaut)
+		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
+		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch geben würde
+	\end{itemize}
+	\textbf{continue}\\
+	\begin{itemize}
+		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zum Kopf der Schleife zurück
+		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortsetzen
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Debugging}
-	\textbf{Debugger}
+\begin{frame}{break \& continue}
+	\textbf{break \& continue:}\\
 	\begin{itemize}
-		\item Zum Steuern des Programmablaufs durch Haltepunkte
-		\item Weiterhin kann das Programm schrittweise fortgesetzt werden und in Methoden springen
-		\item Inspizieren von Daten (Inhalte von Variablen)
-		\item Verändern von Daten
+		\item Beide können und sollten mit Verzweigungen benutzt werden
 	\end{itemize}
-	\textbf{Haltepunkt}
-	\begin{itemize}
-		\item Unterbricht an der angegeben Stelle das Programm und pausiert es
-		\item Der Nutzer kann nun Daten ansehen und bearbeiten und nach belieben das Programm weiter ausführen lassen		
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Beispiel: Visual Studio}
-	\begin{figure}
-		\includegraphics[scale=0.322]{resources/02_grundlagen_2/debugger.JPG}
-	\end{figure}
-\end{frame}
-
-\begin{frame}{Beispiel: Visual Studio}
-	\textbf{1 - Variablenanzeige:}
-	\begin{itemize}
-		\item Anzeige aller Variablen die gerade genutzt werden
-		\item Dort kann man auch Daten verändern
-	\end{itemize}
-	\textbf{2 - Aufrufhierarchie:}
-	\begin{itemize}
-		\item Zeigt an von wo aus die jetzige Methode aufgerufen wurden ist
-	\end{itemize}
-	\textbf{3 - Haltepunkt:}
-	\begin{itemize}
-		\item Wie oben beschrieben
-		\item Wird gesetzt durch einfaches klicken in die Leiste
-	\end{itemize}
-	\textbf{4 - Nächste auszuführende Zeile}
-	\begin{itemize}
-		\item Diese Zeile wird bei der nächsten schrittweisen Ausführen bearbeitet
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Beispiel: Visual Studio}
-	\begin{figure}
-		\includegraphics{resources/02_grundlagen_2/debugging.png}
-	\end{figure}
-	\begin{description}
-		\item[1: ] Zeigt die nächste auszuführende Programmzeile an
-		\item[2: ] Führt die nächste Zeile aus. Bei einer Methode wird in diese hineingegangen.
-		\item[3: ] Führt die nächste Zeile aus.
-		\item[4: ] Springt aus der jetzigen Methode heraus.
-	\end{description}
+	\lstinputlisting{resources/02_grundlagen_2/break_continue.cs}
 \end{frame}
 
 \end{document}

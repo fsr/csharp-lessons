@@ -18,75 +18,11 @@
 	\tableofcontents
 \end{frame}
 
-% ----------------------- Verzweigung ------------------------------
-\section{Verzweigungen}
-\subsection{Tertiäre-Verzweigung}
-\begin{frame}{Tertiäre-Verzweigung}
-	\begin{itemize}
-		\item Werden genauso genutzt wie eine if-else-Verzweigung
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{\alert{<Bedingung>} ? \alert{<Dann-Pfad>} : \alert{<Sonst-Pfad>};}
-		\end{itemize}
-		\item Das \alert{\texttt{?}} steht für \alert{dann}
-		\item Das \alert{\texttt{:}} steht für \alert{sonst}
-	\end{itemize}		
-	\lstinputlisting{resources/03_objektorientierung/tertiary.cs}
-\end{frame}
-
-\subsection{switch case}
-\begin{frame}{switch case}
-	\begin{itemize}
-		\item Hat ähnliches Verhalten wie die bedingte Verzweigung
-		\begin{itemize}
-			\item \alert{default} verhält sich wie \alert{else}
-		\end{itemize}
-		\item Jeder \alert{case} prüft die Variable im \alert{switch} auf Gleichheit und führt den darunterliegenden Code bis zum \alert{break} aus
-	\end{itemize}
-	\lstinputlisting{resources/03_objektorientierung/switch_case.cs}
-\end{frame}
-
-% ----------------------- Schleifen ------------------------------
-\section{Schleifen}
-\subsection{Zählschleife (for)}
-\begin{frame}{Zählschleife (for)}
-	\begin{itemize}
-		\item Zählt über eine Zählvariable in gewisser Schrittweite, bis die Bedingung nicht mehr erfüllt ist
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{for( \alert{<Zählvariable>}; \alert{<Bedingung>}; \alert{<Schrittweite>} )\\ \{ \alert{<Code>} \}}
-		\end{itemize}
-	\end{itemize}
-	\lstinputlisting{resources/03_objektorientierung/for.cs}	
-\end{frame}
-
-\subsection{break \& continue}
-\begin{frame}{break \& continue}
-	\textbf{break}\\
-	\begin{itemize}
-		\item Beendet die direkt umschließende Schleife, in der die Anweisung auftritt
-		\item Beachtet dabei nicht wie viele Schleifendurchläufe es eigentlich noch geben würde
-	\end{itemize}
-	\textbf{continue}\\
-	\begin{itemize}
-		\item Beendet den jetzigen Schleifen-Block-Durchlauf und geht zur Bedingung der Schleife zurück
-		\item Daraufhin kann die Schleife mit dem nächsten Iterationsschritt fortsetzen
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{break \& continue}
-	\textbf{break \& continue:}\\
-	\begin{itemize}
-		\item Beide können und sollten mit Verzweigungen benutzt werden
-	\end{itemize}
-	\lstinputlisting{resources/03_objektorientierung/break_continue.cs}
-\end{frame}
-
 % ----------------------- Objektorientierung ------------------------------
 \section{Objektorientierung}
 \begin{frame}{Objektorientierung}
 	\begin{itemize}
-		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. \alert{int} oder \alert{bool}
+		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. int oder bool
 		\item Damit kann alles in C\texttt{\#} Felder und Methoden besitzen		
 	\end{itemize}
 \end{frame}
@@ -108,7 +44,7 @@
 		\begin{itemize}
 			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
 		\end{itemize}
-		\item Sollten die Felder einer Klasse mit konkreten Werten befüllen
+		\item Befüllen die Felder einer Klasse mit konkreten Werten
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
 \end{frame}
@@ -118,9 +54,6 @@
 	\begin{itemize}
 		\item Sind spezielle Methoden die beim Erstellen einer Instanz einer Klasse aufgerufen werden
 		\item Sie besitzen keinen Namen und haben als Rückgabetyp ein Objekt der eigenen Klasse
-		\begin{itemize}
-			\item Es wird aber \textbf{kein} \alert{return} benötigt
-		\end{itemize}
 		\item Sollte sicherstellen, dass eine gültige Instanz einer Klasse erzeugt wird
 		\item Falls kein eigener Konstruktor deklariert wurde, existiert immer der Standardkonstruktor (parameterlos und weist allen Feldern Standardwerte zu)
 	\end{itemize}
@@ -174,7 +107,7 @@
 
 \subsection{Zugriff}
 \begin{frame}{Zugriff}
-	\textbf{Zugriff mit \texttt{\alert{.}} (Punkt)}\\
+	\textbf{Zugriff mit .}\\
 	\begin{itemize}
 		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{\textbf{.}}
 		\item Dahinter kommt der Member den man nutzen möchte
@@ -191,21 +124,94 @@
 	\end{itemize}
 \end{frame}
 
-% ----------------------- Scope ------------------------------
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
 \section{Gültigkeit (Scope)}
 \begin{frame}{Gültigkeit (Scope)}
 	\begin{itemize}
-		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden:
-		\begin{itemize}
-			\item Methoden und Felder nur in deren Klassen
-			\item Parameter nur in deren Methoden
-			\item Lokale Variablen innerhalb ihrer Blöcke
-		\end{itemize}
+		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden
+		\item Methoden und Felder nur in deren Klassen, Parameter nur in deren Methoden, lokale Variablen innerhalb ihrer Blöcke
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/scope.cs}
+\end{frame}
+
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
+\section{Zugriffsmodifikatoren/Sichtbarkeiten}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\begin{itemize}
+		\item Geben an, ob der zugehörige Code von anderen Code-Abschnitten verwendet werden kann
+		\item Es gibt mehrere Arten
+		\begin{description}
+			\item[public] kann von überall zugriffen werden, solange darauf verweist wird
+			\item[private] kann nur von Code in der eigenen Klasse benutzt werden
+			\item[protected] kann nur von Code in der eigenen und von abgeleiteten Klassen benutzt werden
+			\item[internal] kann von überall aus der eigenen Assembly heraus benutzt werden
+		\end{description}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Gültigkeit (Scope)}
-	\lstinputlisting{resources/03_objektorientierung/scope.cs}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\lstinputlisting{resources/03_objektorientierung/access_modifier.cs}
+\end{frame}
+
+% ----------------------- namespace und using ------------------------------
+\section{namespace \& using}
+\begin{frame}{namespace \& using}
+	\textbf{namespace}\\
+	\begin{itemize}
+		\item Werden zur Organisation von Klassen und anderem Code genutzt 
+		\item Können beliebig verschachtelt werden
+		\item der volle Name einer Klasse beinhaltet die Namen aller Namespaces, in denen die Klasse liegt
+		\item Vermeiden von Mehrdeutigen Bezeichnen 
+		\begin{itemize}
+			\item Zwei Klassen dürfen den selben Namen haben, wenn diese in unterschiedlichen Namespaces liegen		
+		\end{itemize}
+	\end{itemize}	
+	\lstinputlisting{resources/03_objektorientierung/namespace.cs}
+\end{frame}
+
+\begin{frame}{namespace \& using}
+	\textbf{using}\\
+	\begin{itemize}
+		\item Ein Schlüsselwort zur Nutzung eines bestimmten \alert{namespace}
+		\item Dies erspart die Eingabe des gesamten namespace bei Nutzung einer Klasse
+		\item Kann zu merhdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/using.cs}
+\end{frame}
+
+% ----------------------- Dokumentationskommentare ------------------------------
+\section{Dokumentationskommentare}
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Das Doku-Kommentar beginnt mit 3, anstatt 2 \alert{/}
+		\item Beschreiben nur Klassen, Felder/Eigenschaften und Methoden
+		\begin{itemize}
+			\item Das Kommentar steht dabei immer direkt über den zu kommentierenden Code
+		\end{itemize}
+		\item Man kann aus diesen eine Dokumentation generieren
+		\item Außerdem können einige IDEs (z.B. Visual Studio) daraus eine Kurzbeschreibung der Elemente während des Programmierens schaffen		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\textbf{Tags}
+	\begin{itemize}
+		\item Geben an, was genau von dem Code dokumentiert werden soll
+		\item 3 wichtige Tags:
+		\begin{description}
+			\item[summary] Beschreibung des zu kommentierenden Codes\\ Für alle 3 Arten
+			\item[param] Beschreibung der Übergabeparameter einer Methode
+			\item[returns] Beschreibung des Rückgabewertes einer Methode
+		\end{description}
+		\item \href{https://msdn.microsoft.com/de-de/library/5ast78ax.aspx}{Hier findet man weitere Tags}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumentationskommentare}
+	\begin{itemize}
+		\item Die genannten Tags am Beispiel einer Methode:
+	\end{itemize}
+	\lstinputlisting{resources/03_objektorientierung/documentation.cs}	
 \end{frame}
 
 \end{document}

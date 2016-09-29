@@ -1,0 +1,1 @@
+EineKlasse EinObject = new EineKlasse();

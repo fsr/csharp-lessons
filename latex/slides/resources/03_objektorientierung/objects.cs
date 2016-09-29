@@ -1,1 +1,1 @@
-EineKlasse EinObject = new EineKlasse();
+EineKlasse einObject = new EineKlasse();

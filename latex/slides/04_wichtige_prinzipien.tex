@@ -1,0 +1,128 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+\title{Wichtige Prinzipien von C\texttt{\#}}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+
+% ----------------------- Zugriffsmodifikatoren/Sichtbarkeiten ------------------------------
+\section{Zugriffsmodifikatoren/Sichtbarkeiten}
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\begin{itemize}
+		\item Geben an, ob der zugehörige Code von anderen Code-Abschnitten verwendet werden kann
+		\item Es gibt mehrere Arten
+		\begin{description}
+			\item[public] kann von überall zugriffen werden, solange darauf verwiesen wird
+			\item[private] kann nur von Code in der eigenen Klasse benutzt werden
+			\item[protected] kann nur von Code in der eigenen und von abgeleiteten Klassen benutzt werden
+			\item[( internal] kann von überall aus der eigenen Assembly heraus benutzt werden \textbf{)}
+		\end{description}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Zugriffsmodifikatoren/Sichtbarkeiten}
+	\lstinputlisting{resources/04_wichtige_prinzipien/access_modifier.cs}
+\end{frame}
+
+% ----------------------- namespace und using ------------------------------
+\section{namespace \& using}
+\begin{frame}{namespace \& using}
+	\textbf{namespace}\\
+	\begin{itemize}
+		\item Werden zur Organisation von Klassen und anderem Code genutzt 
+		\item Können beliebig verschachtelt werden
+		\item der volle Name einer Klasse beinhaltet die Namen aller Namespaces, in denen die Klasse liegt
+		\item Vermeiden von Mehrdeutigen Bezeichnen 
+		\begin{itemize}
+			\item Zwei Klassen dürfen den selben Namen haben, wenn diese in unterschiedlichen Namespaces liegen		
+		\end{itemize}
+	\end{itemize}	
+	\lstinputlisting{resources/04_wichtige_prinzipien/namespace.cs}
+\end{frame}
+
+\begin{frame}{namespace \& using}
+	\textbf{using}\\
+	\begin{itemize}
+		\item Ein Schlüsselwort zur Nutzung eines bestimmten \alert{namespace}
+		\item Dies erspart die Eingabe des gesamten Namespace bei Nutzung einer Klasse
+		\item Kann zu mehrdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/using.cs}
+\end{frame}
+
+% ----------------------- Methodenüberladung ------------------------------
+\section{Methodenüberladung}
+\begin{frame}{Methodenüberladung}
+	\begin{itemize}
+		\item Mehrere Methoden können den selben Namen haben
+		\item Diese Unterscheiden sich dann in dem Rückgabewert und/oder den Übergabeparametern
+		\item Wird genutzt wenn es mehrere Wege gibt eine Berechnung/Algorithmus auszuführen
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/method_overload.cs}
+\end{frame}
+
+% ----------------------- Wert- und Referenztyp ------------------------------
+\section{Wert- \& Referenztyp}
+\begin{frame}{Wert- \& Referenztyp}
+	\begin{itemize}
+		\item C\texttt{\#} unterscheidet zwischen 2 Arten von Variablen
+		\item Diese haben ein anderes Verhalten beim der Zuweisung zu einer Variable oder bei der Übergabe in eine Methode
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Werttyp}
+	\begin{itemize}
+		\item Sind alle grundlegenden Datentypen (\alert{int}, \alert{bool}, ...) und \alert{struct}
+	\end{itemize}
+	\begin{itemize}
+		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird der ganze Inhalt der Variable kopiert
+		\item Es entsteht somit eine identische Kopie
+		\begin{itemize}
+			\item Wenn eine Kopie verändert wird, bleibt die andere unbetroffen
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/valuetype.cs}	
+\end{frame}
+
+\begin{frame}{Referenztyp}
+	\begin{itemize}
+		\item Sind alle Objekte von Klassen, \alert{interface} und \alert{delegate}
+	\end{itemize}
+	\begin{itemize}
+		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird die Speicheradresse kopiert
+		\item Da alle Kopien auf den selben Speicher zeigen, sind alle Kopien identisch
+		\begin{itemize}
+			\item Wenn eine Kopie verändert wird, werden alle anderen auch verändert
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/referencetype.cs}	
+\end{frame}
+
+% ----------------------- null ------------------------------
+\section{null}
+\begin{frame}{null}
+	\begin{itemize}
+		\item Schlüsselwort für eine Referenz die auf kein Objekt zeigt
+		\item Alle Referenztyp-Variablen können \alert{null} sein
+		\item Versucht man ein \alert{null} Objekt zu dereferenzieren, wird eine \alert{NullReferenceException} geworfen 
+		\begin{itemize}
+			\item Es ist möglich ein Objekt auf eine \alert{null} Referenz zu prüfen
+		\end{itemize}
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/null.cs}	
+\end{frame}
+
+\end{document}

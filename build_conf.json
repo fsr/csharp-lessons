@@ -8,12 +8,14 @@
                 "01_grundlagen_1.tex",
                 "02_grundlagen_2.tex",
                 "03_objektorientierung.tex",
-                "04_vererbung_und_polymorphie.tex",
-                "05_null_exceptions_schluesselwoerter.tex",
-                "06_datenstrukturen.tex",
-                "07_methoden_fortgeschritten.tex",
-                "08_windows_forms_und_event_handling.tex",
-                "09_more_stuff.tex"
+                "04_wichtige_prinzipien.tex",
+                "05_exceptions_und_vererbung.tex",
+                "06_collections_generics_und_besondere_klassen.tex",
+                "07_datenstrukturen.tex",
+                "08_methoden_fortgeschritten_1.tex",
+                "09_methoden_fortgeschritten_2.tex",
+                "10_weiteres.tex",
+                "11_windows_forms.tex"
             ]
         },
         "html": {
