@@ -9,7 +9,7 @@ lesson: 5
 In this exercise we want to handel all kind of exceptions and more.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/05_null_exceptions_schluesselwoerter/A06_static_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A06_static_for_shapes/ExerciseSolution).
 
 ### Step 1
 

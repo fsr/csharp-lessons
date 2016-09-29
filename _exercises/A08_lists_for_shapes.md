@@ -9,7 +9,7 @@ lesson: 6
 Lists are better than arrays. Therefor we want to switch all arrays to lists.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/06_datenstrukturen/A08_lists_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/blob/master/lesson_06/A08_lists_for_shapes/ExerciseSolution/).
 
 ### Step 1
 
