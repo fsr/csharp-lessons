@@ -1,7 +1,7 @@
 ---
-title: A07 - Exception for Shapes
-number: 
-status: drafty
+title: A06 - Exception for Shapes
+number: 12
+status: finished
 authors: marc
 lesson: 5
 ---
@@ -9,16 +9,17 @@ lesson: 5
 This time we want to handle the exception of the user inputs.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A07_exception_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A06_exception_for_shapes/ExerciseSolution/).
 
 ### Step 1
 
-Catch the exception that can happen in the `CreatePoint` method. 
-If a exceptions happens return `null`.
+Throw a exception if the un overriden "calculateArea" method in `Shape` is used.
+
+*Hint: Which exception would be the suited one?*
 
 ### Step 2
 
-Update the `CreatePolygon` method so that the `null` as point is captured and solved.
+Update the `CreatePolygon` method so that the program catches a wrong input (no `int`).
 
 The user need to enter a new point if there was a problem.
 

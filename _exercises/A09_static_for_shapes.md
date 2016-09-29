@@ -1,6 +1,6 @@
 ---
 title: A08 - Static for Shapes
-number: 17
+number: 18
 status: drafty
 authors: marc
 lesson: 7
@@ -13,13 +13,21 @@ In this exercise we want to handel all kind of exceptions and more.[^solution]
 
 ### Step 1
 
-Create an `static` method in `Point2D` with the name CreatePoint. It will take a string as parameter (in the given writingstyle `x-y`).
+Create an `static` method in `Point2D` with the name "CreatePoint". It will take a string as parameter (in the given writingstyle `x-y`).
+
+*Hint: Don't forget your exception handling.*
 
 ### Step 2
 
-Also create and implement a `static` methode with the name Create`Shapename` in `Circle` and `Polygon`.
+Also create and implement a `static` methode with the name "CreateCircle" and "CreatPolygon" in `Circle` and `Polygon`.
 
 *Hint: We wrote a implementation in `Program` allready.*
+
+### Step 3
+
+Use in "CreateCircle" and "CreatePolygon" the new created "CreatePoint" method.
+
+*Hint: Maybe you need to update your exception handling.*
 
 ### Step 3
 

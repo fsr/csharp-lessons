@@ -1,6 +1,6 @@
 ---
 title: A06 - Abstract for shapes
-number: 13
+number: 14
 status: drafty
 authors: marc
 lesson: 6

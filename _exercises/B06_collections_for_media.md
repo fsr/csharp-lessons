@@ -1,6 +1,6 @@
 ---
 title: B06 - Collections for Media
-number: 16
+number: 17
 status: reviewed
 authors: [marc, sascha]
 lesson: 6
