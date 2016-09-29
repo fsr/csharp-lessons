@@ -16,32 +16,43 @@ slides:
     published: True
   -
     number: 4
-    name: Vererbung und Polymorphie
-    url: https://ifsr.de/kurs-materialien/csharp/04_vererbung_und_polymorphie.pdf
+    name: Wichtige Prinzipien
+    url: https://ifsr.de/kurs-materialien/csharp/04_wichtige_prinzipien.pdf
     published: True
   -
     number: 5
-    name: Null Exceptions und Schlüsselwörter
-    url: https://ifsr.de/kurs-materialien/csharp/05_null_exceptions_schluesselwoerter.pdf
+    name: Exceptions und Vererbung
+    url: https://ifsr.de/kurs-materialien/csharp/05_exceptions_und_vererbung.pdf
     published: True
   -
     number: 6
-    name: Datenstrukturen
-    url: https://ifsr.de/kurs-materialien/csharp/06_datenstrukturen.pdf
+    name: Collections Generics und besondere Klassen
+    url: https://ifsr.de/kurs-materialien/csharp/06_collections_generics_und_besondere_klassen.pdf
     published: True
   -
     number: 7
-    name: Methoden (fortgeschritten)
-    url: https://ifsr.de/kurs-materialien/csharp/07_Methoden_fortgeschritten.pdf
+    name: Datenstrukturen
+    url: https://www.ifsr.de/kurs-materialien/csharp/07_datenstrukturen.pdf
     published: True
   -
     number: 8
-    name: Windows Forms und Event Handling
-    url: https://www.ifsr.de/kurs-materialien/csharp/08_windows_forms_und_event_handling.pdf
+    name: Methoden (fortgeschritten) 1
+    url: https://ifsr.de/kurs-materialien/csharp/08_methoden_fortgeschritten_1.pdf
     published: True
   -
     number: 9
-    name: More Stuff
-    url: https://www.ifsr.de/kurs-materialien/csharp/09_more_stuff.pdf
+    name: Methoden (fortgeschritten) 2
+    url: https://ifsr.de/kurs-materialien/csharp/09_methoden_fortgeschritten_2.pdf
     published: True
+  -
+    number: 10
+    name: Weiteres
+    url: https://www.ifsr.de/kurs-materialien/csharp/10_weiteres.pdf
+    published: True
+  -
+    number: 11
+    name: Windows Forms
+    url: https://www.ifsr.de/kurs-materialien/csharp/11_windows_forms.pdf
+    published: False
+
 
