@@ -1,5 +1,5 @@
 ---
-title: X01 - Debugging Test 1
+title: X01 - Debugging exercise 1
 number: 4
 status: drafty
 authors: marc
@@ -10,7 +10,7 @@ There is a bug in the program given. Use the debugger and find the problem.
 
 ### Step 1
 
-Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_02/X01_debugging_test_1/ExerciseSolution).
+Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_02/X01_debugging_exercise_1/ExerciseSolution).
 
 ### Step 2
 

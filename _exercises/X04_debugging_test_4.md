@@ -1,5 +1,5 @@
 ---
-title: X03 - Debugging Test 3
+title: X04 - Debugging exercise 4
 number: 14
 status: drafty
 authors: marc
@@ -10,7 +10,7 @@ There is a bug in the program given. Use the debugger and find the problem.
 
 ### Step 1
 
-Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/X04_debugging_test_4/ExerciseSolution).
+Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/X04_debugging_exercise_4/ExerciseSolution).
 
 ### Step 2
 
