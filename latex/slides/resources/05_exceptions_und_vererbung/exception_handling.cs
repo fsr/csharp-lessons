@@ -7,9 +7,9 @@ catch(NullReferenceException e)
 {
     // Block fuer Fehler mit einem null-Objekt
 }
-catch(Exception e)
+catch(MeineException e)
 {
-    // Block fuer alle Fehler, die es gibt.
+    // Block fuer meine eigens erstelle Exception.
 }
 finally
 {

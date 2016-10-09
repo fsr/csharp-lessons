@@ -178,25 +178,6 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Handling}
-\begin{frame}{Handling}
-	\textbf{try catch finally}\\
-	\begin{itemize}
-		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
-		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
-		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
-		\begin{itemize}
-			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
-			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
-		\end{itemize}
-		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Handling}
-	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_handling.cs}	
-\end{frame}
-
 \subsection{Eigene Exceptions}
 \begin{frame}{Eigene Exceptions}
 	\textbf{throw}\\
@@ -215,6 +196,26 @@
 
 \begin{frame}{Eigene Exceptions}
 	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_throw.cs}
+\end{frame}
+
+\subsection{Handling}
+\begin{frame}{Handling}
+	\textbf{try catch finally}\\
+	\begin{itemize}
+		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
+		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
+		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
+		\begin{itemize}
+			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
+			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
+		\end{itemize}
+		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
+		\item \textbf{Wichtig:} Jeder dieser Blöcke benötigt immer eine paar aus geschweiften Klammern
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Handling}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/exception_handling.cs}	
 \end{frame}
 
 \end{document}
