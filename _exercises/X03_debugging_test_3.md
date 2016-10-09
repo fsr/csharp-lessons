@@ -1,6 +1,6 @@
 ---
 title: X03 - Debugging exercise 3
-number: 10
+number: 12
 status: drafty
 authors: marc
 lesson: 4

@@ -1,6 +1,6 @@
 ---
-title: B07 - Fee calculation with DateTime
-number: 20
+title: B08 - Fee calculation with DateTime
+number: 22
 status: reviewed
 authors: [marc, sascha]
 lesson: 7

@@ -1,6 +1,6 @@
 ---
-title: A07 - Abstract for shapes
-number: 15
+title: A08 - Abstract for shapes
+number: 17
 status: finished
 authors: marc
 lesson: 6

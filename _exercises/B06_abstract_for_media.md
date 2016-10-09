@@ -1,6 +1,6 @@
 ---
-title: B05 - Abstract for media
-number: 16
+title: B06 - Abstract for media
+number: 18
 status: finished
 authors: marc
 lesson: 6

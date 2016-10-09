@@ -57,7 +57,3 @@ The result array should have the size[^length] of the numbers of results and not
 ### Step 5
 
 Finally we implement the "AddNewBook" method. It should add the new book to the stock of books and save the new book count.
-
-### Step 6
-
-Create for all created classes, methodes, properties and fields documentation comments.

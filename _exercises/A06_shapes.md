@@ -1,6 +1,6 @@
 ---
-title: A05 - Shape class and derivation
-number: 11
+title: A06 - Shape class and derivation
+number: 13
 status: finished
 authors: marc
 lesson: 5

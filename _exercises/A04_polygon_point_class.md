@@ -43,11 +43,7 @@ The `Polygon` class needs the following members:
 
 Update the calculation methods with the new datastructures.
 
-### Step 4
-
-Give both classes all possible documentation commentaries.
-
-### Step 5 (Optional)
+### Step 4 (Optional)
 
 Put the whole process of the polygon creation in an own (`static`[^static]) method in the `Programm` class.
 

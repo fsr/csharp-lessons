@@ -1,6 +1,6 @@
 ---
-title: A08 - Lists for Shapes
-number: 17
+title: A09 - Lists for Shapes
+number: 19
 status: finished
 authors: marc
 lesson: 6

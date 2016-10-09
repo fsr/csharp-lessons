@@ -1,6 +1,6 @@
 ---
-title: B03 - User of the Library
-number: 9
+title: B04 - User of the Library
+number: 11
 status: reviewed
 authors: [marc, sascha]
 lesson: 4

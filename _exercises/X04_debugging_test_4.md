@@ -1,6 +1,6 @@
 ---
 title: X04 - Debugging exercise 4
-number: 14
+number: 16
 status: drafty
 authors: marc
 lesson: 5
