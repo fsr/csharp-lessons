@@ -1,6 +1,6 @@
 ---
 title: A10 - Static for Shapes
-number: 20
+number: 21
 status: finished
 authors: marc
 lesson: 7
