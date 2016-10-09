@@ -1,6 +1,6 @@
 ---
 title: A06 - Exception for Shapes
-number: 12
+number: 13
 status: finished
 authors: marc
 lesson: 5

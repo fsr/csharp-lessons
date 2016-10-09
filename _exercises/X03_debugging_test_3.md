@@ -1,6 +1,6 @@
 ---
 title: X03 - Debugging Test 3
-number: 13
+number: 10
 status: drafty
 authors: marc
 lesson: 4

@@ -1,6 +1,6 @@
 ---
 title: X02 - Debugging Test 2
-number: 9
+number: 8
 status: drafty
 authors: marc
 lesson: 3

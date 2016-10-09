@@ -1,6 +1,6 @@
 ---
 title: A09 - Static for Shapes
-number: 18
+number: 19
 status: drafty
 authors: marc
 lesson: 7

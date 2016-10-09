@@ -1,6 +1,6 @@
 ---
 title: A08 - Lists for Shapes
-number: 16
+number: 17
 status: drafty
 authors: marc
 lesson: 6
