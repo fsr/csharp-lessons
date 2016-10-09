@@ -9,10 +9,10 @@ lesson: 5
 Now we want to extend our Library example a bit more. This time we will use inheritance.[^tests] [^solution]
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/B04_media/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/B05_media/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/B04_media/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/B05_media/ExerciseSolution/).
 
 ### Step 1
 

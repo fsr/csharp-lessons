@@ -9,7 +9,7 @@ lesson: 7
 In this exercise we want to handel all kind of exceptions and more.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_07/A09_static_for_shapes/ExerciseSolution).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_07/A10_static_for_shapes/ExerciseSolution).
 
 ### Step 1
 

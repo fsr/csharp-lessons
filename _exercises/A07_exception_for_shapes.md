@@ -9,7 +9,7 @@ lesson: 5
 This time we want to handle the exception of the user inputs.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/A06_exception_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_05/A07_exception_for_shapes/ExerciseSolution/).
 
 ### Step 1
 

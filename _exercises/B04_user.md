@@ -9,10 +9,10 @@ lesson: 4
 After we created a `Library` and `Book` class we want to create a user to use this library.[^tests] [^solution]
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_04/B03_user/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_04/B04_user/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_04/B03_user/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_04/B04_user/ExerciseSolution/).
 
 ### Step 1
 
