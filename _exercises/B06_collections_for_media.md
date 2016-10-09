@@ -9,10 +9,10 @@ lesson: 6
 After we learned something about the collections we want to use them in our project.[^tests] [^solution]
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/B06_collections_for_media/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_06/B06_collections_for_media/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/B06_collections_for_media/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_06/B06_collections_for_media/ExerciseSolution/).
 
 ### Step 1
 

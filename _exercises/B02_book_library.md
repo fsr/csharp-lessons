@@ -9,10 +9,10 @@ lesson: 3
 This time we want to create three classes and fill them with some code.[^test] [^solution]
 
 [^test]:
-    You can find a test project for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_03/B02_book_library/Tests)
+    You can find a test project for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_03/B02_book_library/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_03/B02_book_library/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_03/B02_book_library/ExerciseSolution/).
 
 ### Step 1
 

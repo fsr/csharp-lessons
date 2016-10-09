@@ -9,7 +9,7 @@ lesson: 1
 Create a programm that tells us `Hello World`.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_01/hello_world/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_01/hello_world/ExerciseSolution/).
 
 ### Step 1
 

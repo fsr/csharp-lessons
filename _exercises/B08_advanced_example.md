@@ -9,10 +9,10 @@ lesson: 7
 Lets add some useful functionality to our library project[^solution]. The **tests** [^tests] for this exercise will help you work out the correct implementation. **Use them!**
 
 [^tests]:
-    You can find the tests for this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_07/B08_advanced_example/Tests)
+    You can find the tests for this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_07/B08_advanced_example/Tests)
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_07/B08_advanced_example/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_07/B08_advanced_example/ExerciseSolution/).
 
 ### What's to do
 

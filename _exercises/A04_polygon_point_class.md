@@ -9,7 +9,7 @@ lesson: 3
 We want to put the polygon and the euclidean distance exercise in own classes.[^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_03/A04_polygon_point_class/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_03/A04_polygon_point_class/ExerciseSolution/).
 
 ### Step 1
 

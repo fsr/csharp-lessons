@@ -9,7 +9,7 @@ lesson: 6
 Now that we know `abstract` how about using it![^solution]
 
 [^solution]:
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_06/A07_abstract_for_shapes/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_06/A07_abstract_for_shapes/ExerciseSolution/).
 
 ### Step 1
 

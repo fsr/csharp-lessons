@@ -9,7 +9,7 @@ lesson: 1
 Modify the Hello World prorgamm given in the slides and programmed in the first exercise to calculate the eudlidean distance.[^solution]
 
 [^solution]:    
-    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_01/A01_euclidean_distance/ExerciseSolution/).
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-lessons-exercise-solutions/tree/master/lesson_01/A01_euclidean_distance/ExerciseSolution/).
 
 ### Step 1
 
