@@ -6,11 +6,14 @@ authors: marc
 lesson: 5
 ---
 
-There is a bug in the program given. Use the debugger and find the problem.
+There is a bug in the program given. Use the debugger and find the problem.[^solution]:    
+
+[^solution]:    
+    You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/X04_debugging_exercise_4/ExerciseSolution).
 
 ### Step 1
 
-Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/X04_debugging_exercise_4/ExerciseSolution).
+Get the code from [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/X04_debugging_exercise_4/Exercise).
 
 ### Step 2
 

@@ -1,12 +1,12 @@
 ---
 title: A05 - Shape class and derivation
 number: 11
-status: drafty
+status: finished
 authors: marc
 lesson: 5
 ---
 
-Now we want to extend our Polygon example a bit more. This time we will use abstract class and more.[^solution]
+Now we want to extend our Polygon example a bit more. This time we will use inheritance.[^solution]
 
 [^solution]:
     You can find the solution to this task [Here](https://github.com/satkowski/csharp-solutions/tree/master/lesson_05/A05_shapes/ExerciseSolution/).

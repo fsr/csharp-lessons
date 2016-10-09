@@ -1,7 +1,7 @@
 ---
 title: A07 - Abstract for shapes
 number: 15
-status: drafty
+status: finished
 authors: marc
 lesson: 6
 ---

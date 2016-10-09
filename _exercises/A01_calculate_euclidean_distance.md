@@ -2,7 +2,7 @@
 title: A01 - Euclidean Distance
 number: 1
 status: finished
-authors: [marc]
+authors: marc
 lesson: 1
 ---
 

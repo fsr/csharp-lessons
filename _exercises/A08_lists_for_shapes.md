@@ -1,7 +1,7 @@
 ---
 title: A08 - Lists for Shapes
 number: 17
-status: drafty
+status: finished
 authors: marc
 lesson: 6
 ---

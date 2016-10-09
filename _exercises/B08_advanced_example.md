@@ -1,7 +1,7 @@
 ---
 title: B08 - Advancing the Library
 number: 21
-status: reviewed
+status: finished
 authors: sascha
 lesson: 7
 ---
