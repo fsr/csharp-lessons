@@ -23,7 +23,7 @@
 \begin{frame}{Arrays}
 	\begin{itemize}
 		\item Sind Auflistung einer beliebigen (aber nach Initialisierung festen) Anzahl von Variablen gleichen Typs
-		\item Können über eine Index aufgerufen werden
+		\item Können über einen Index aufgerufen werden
 		\begin{itemize}
 			\item Dieser geht von 0 bis (n - 1), wobei n die Anzahl der Elemente des Arrays ist
 		\end{itemize}
@@ -46,7 +46,7 @@
 	\begin{itemize}
 		\item Verändern den Ablauf des Programms
 		\item Können Verzweigungen oder Schleifen sein
-		\item Benötigen bool'sche Ausdrücke als Abfrage
+		\item Fast alle benötigen bool'sche Ausdrücke als Abfrage
 		\begin{itemize}
 			\item Beispiele: bool-Variable/-Methode, Vergleichsoperation, ...
 		\end{itemize}
@@ -62,12 +62,12 @@
 \subsection{Bedingte Verzweigung (if else)}
 \begin{frame}{Bedingte Verzweigung (if else)}
 	\begin{itemize}
-		\item Prüft die Bedingung des jeweiligen Kopfes
+		\item Prüft den Wahrheitsgehalt der jeweiligen Aussagen
 		\begin{itemize}
-			\item Die Köpfe werden von oben nach unten durchgegangen
+			\item Diese werden von oben nach unten durchgegangen
 		\end{itemize}
-		\item Falls ein Kopf zutrifft, wird der zugehörige Block ausgeführt und die anderen Köpfe werden nicht mehr geprüft
-		\item Falls keine der Köpfe zutrifft wird der \alert{else} Block gewählt
+		\item Falls ein Aussage zutrifft, wird der zugehörige Block ausgeführt und die anderen Aussagen werden nicht mehr geprüft
+		\item Falls keine der Aussagen zutrifft wird der \alert{else}-Block gewählt
 		\begin{itemize}
 			\item Dieser ist optional
 		\end{itemize}
@@ -91,7 +91,7 @@
 \begin{frame}{Fußgesteuerte Schleife (do while)}
 	\begin{itemize}
 		\item Selbe Funktion wie die while-Schleife
-		\item Die Bedingung wird hier aber erst am Ende evaluiert
+		\item Die Bedingung wird hier aber erst am Ende geprüft
 		\item Dementsprechend wird der Körper mindestens einmal ausgeführt, selbst wenn die Bedingung beim ersten Durchlauf falsch sein sollte
 	\end{itemize}
 	\lstinputlisting{resources/02_grundlagen_2/do_while.cs}	
@@ -102,6 +102,10 @@
 \begin{frame}{Debugging}
 	\begin{itemize}
 		\item Tätigkeit Fehler in einem Programm zu finden und zu beheben
+		\begin{itemize}
+			\item Laufzeitfehler
+			\item Logikfehler
+		\end{itemize}
 		\item Fehler können Programm zum Absturz bringen oder nicht ordnungsgemäß funktionieren lassen
 		\item Außerdem kann damit der Verlauf eines Programmes verfolgt werden
 	\end{itemize}

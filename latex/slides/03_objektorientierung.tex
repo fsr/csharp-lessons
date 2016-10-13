@@ -14,12 +14,14 @@
 \maketitle
 
 \begin{frame}{Gliederung}
-	\setbeamertemplate{section in toc}[sections numbered]
-	\tableofcontents
+	\begin{multicols}{2}
+		\setbeamertemplate{section in toc}[sections numbered]
+		\tableofcontents
+	\end{multicols}
 \end{frame}
 
-% ----------------------- Verzweigung ------------------------------
-\section{Verzweigungen}
+% ----------------------- Weiterführende Verzweigungen ------------------------------
+\section{Weiterführende Verzweigungen}
 \subsection{Tertiäre-Verzweigung}
 \begin{frame}{Tertiäre-Verzweigung}
 	\begin{itemize}
@@ -86,7 +88,7 @@
 \section{Objektorientierung}
 \begin{frame}{Objektorientierung}
 	\begin{itemize}
-		\item Alles in C\texttt{\#} ist ein Objekt, auch die primitiven Datentypen, wie z.B. \alert{int} oder \alert{bool}
+		\item Alles in C\texttt{\#} ist ein Objekt, auch die Variablen von primitiven Datentypen, wie z.B. \alert{int} oder \alert{bool}
 		\item Damit kann alles in C\texttt{\#} Felder und Methoden besitzen		
 	\end{itemize}
 \end{frame}
@@ -108,7 +110,7 @@
 		\begin{itemize}
 			\item Dies geschieht mit dem Schlüsselwort \alert{new} und einem von der Klasse definierten Konstruktor
 		\end{itemize}
-		\item Sollten die Felder einer Klasse mit konkreten Werten befüllen
+		\item Die Felder und Member einer Klasse können durch Objekte befüllt werden
 	\end{itemize}
 	\lstinputlisting{resources/03_objektorientierung/objects.cs}	
 \end{frame}
@@ -172,8 +174,8 @@
 	\lstinputlisting{resources/03_objektorientierung/field_property.cs}
 \end{frame}
 
-\subsection{Zugriff}
-\begin{frame}{Zugriff}
+\subsection{Zugriff von Objekteigenschaften}
+\begin{frame}{Zugriff von Objekteigenschaften}
 	\textbf{Zugriff mit \texttt{\alert{.}} (Punkt)}\\
 	\begin{itemize}
 		\item Um auf Inhalte (Methoden, Eigenschaften, ...) eines Objektes zugreifen zu können, nutzt man einen Punkt \alert{\textbf{.}}
