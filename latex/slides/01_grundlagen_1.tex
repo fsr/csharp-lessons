@@ -138,8 +138,21 @@
 		\item Achtung:
 		\begin{itemize}
 			\item Casting zwischen inkompatiblen Datentypen (z.B. string zu float) kann Fehler hervorrufen
-			\item Es kann die Genauigkeiten bei Zahlen verringern
 		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item Es gibt 2 Arten von Casting:
+		\begin{description}
+			\item[Implizit] Ohne besondere Syntax ausführbar
+			\item z.B. Bei \alert{int} zu \alert{long}
+			\item[Explizit] Benötigt besondere Syntax
+			\item z.B. Bei \alert{float} in \alert{int}
+		\end{description}
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{Explizites Casting}
+	\begin{itemize}
 		\item Syntax:
 		\begin{itemize}
 			\item \texttt{\alert{<Variable>} = (\alert{Variablentyp})\alert{Wert};}
