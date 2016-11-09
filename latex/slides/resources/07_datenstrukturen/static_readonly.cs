@@ -11,9 +11,12 @@ public class EineKlasse
     {
         AndererString = "Tschuess";
     }
-    // Statische Methode, kann nicht die beiden strings benutzen.
-    public static string EineMethode()
-    {
-        EineVariable = 42;
-    }
+}
+
+public class ZweiteKlasse
+{
+	public static string SetVariable()
+	{
+		EineKlasse.EineVariable = 42;
+	}
 }
