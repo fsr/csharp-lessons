@@ -1,8 +1,8 @@
 public class EineKlasse 
 {
-    public void EineMethode(out string param)
+    public void EineMethode(out int i, out string param)
     {
-        // Code
+		i = 42;
         param = "Hallo";
     }
 }

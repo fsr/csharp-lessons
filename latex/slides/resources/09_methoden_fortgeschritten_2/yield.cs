@@ -13,5 +13,4 @@ public IEnumerable<int> Methode()
 {
     yield return 7;
     yield return 42;
-    // ...
 }
