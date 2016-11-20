@@ -23,11 +23,11 @@
 \begin{frame}{Vererbung}
 	\begin{itemize}
 		\item Definieren von Klassen die auf anderen Klassen basieren
+		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
 		\item Diese erben (Kinder) die Struktur und Funktionalitäten der Basisklasse (Eltern) und können diese benutzen oder erweitern
 		\item Nicht alle Member sind für dem Erben sichtbar
 		\item Alle Klassen erben von der Klasse \alert{Object}
 		\item Es kann von maximal einer Klasse geerbt werden
-		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
 		\item Syntax:
 		\begin{itemize}
 			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}} \{ \}
@@ -40,7 +40,7 @@
 \begin{frame}{Polymorphie}
 	\begin{itemize}
 		\item Zu dt. Vielgestaltigkeit
-		\item Instanzen einer abgeleiteten Klassen können sind auch immer Instanzen einer ihrer Basisklassen
+		\item Instanzen einer abgeleiteten Klassen sind auch immer Instanzen einer ihrer Basisklassen
 		\item Methoden und Eigenschaften einer Basisklasse können von abgeleiteten Klassen überschrieben werden
 		\item Während der Nutzung eines Objektes vom Typ der Basisklasse wird der Laufzeittyp ermittelt und die dementsprechenden (überschriebenen) Methoden und Eigenschaften benutzt
 		\item Alle nicht überschriebenen Methoden oder Eigenschaften sind identisch mit denen der Basisklasse
@@ -48,7 +48,8 @@
 \end{frame}
 
 \begin{frame}{Polymorphie}
-	\lstinputlisting{resources/05_exceptions_und_vererbung/classcall.cs}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/class_call_1.cs}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/class_call_2.cs}
 \end{frame}
 
 
@@ -57,7 +58,7 @@
 	\textbf{virtual}
 	\begin{itemize}
 		\item Erlaubt das Überschreiben einer Methode
-		\item Keyword das an die Methoden der Basisklasse geschrieben wird
+		\item Schlüsselwort das an die Methoden der Basisklasse geschrieben wird
 	\end{itemize}
 	\lstinputlisting{resources/05_exceptions_und_vererbung/virtual.cs}
 \end{frame}
@@ -114,6 +115,8 @@
 	\begin{itemize}
 		\item Ist eine Referenz auf die Member der Basisklasse
 		\item Ermöglicht es auf die Methoden- und Eigenschaftsimplementationen der Basisklasse zuzugreifen
+	\end{itemize}
+	\begin{itemize}
 		\item Muss genutzt werden, wenn die Basisklasse einen Konstruktor mit Übergabeparametern hat
 		\begin{itemize}
 			\item Dabei wird der Konstruktor der Basisklasse vor dem eigenen aufgerufen
