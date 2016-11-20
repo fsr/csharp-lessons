@@ -12,7 +12,7 @@ public class AndereKlasse : EineKlasse
 {
     // Diese Methode muss implementiert werden,
     // die "AndereMethode" nicht.
-    public override float EineMethode() 
+    public override int EineMethode() 
     {
         // Code
     }
