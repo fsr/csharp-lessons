@@ -23,7 +23,7 @@
 \begin{frame}{Indexer}
 	\begin{itemize}
 		\item Sind Member einer Klasse
-		\item Geben die Möglichkeit wie ein/e Array/Collection über \alert{[ ]} angesprochen zu werden
+		\item Geben die Möglichkeit das Objekt einer Klasse wie ein Array oder eine Collection über \alert{[ ]} anzusprechen
 		\item Brauchen immer ein \alert{set} und \alert{get}
 		\item Syntax:
 		\begin{itemize}
@@ -41,13 +41,14 @@
 \begin{frame}{Enumeration}
 	\begin{itemize}
 		\item Zu dt. Aufzählung
-		\item Das Schlüsselwort dafür ist \alert{enum}
-		\item Ist ein eigens erstellter Datentyp mit fester Anzahl von Konstanten
-		\item Der Konstante werden Intern ein \alert{int}-Wert zugeordnet
+		\item Schlüsselwort ist \alert{enum}
+		\item Eigens erstellter Datentyp mit fester Anzahl von Konstanten
+		\item Der Konstante wird Intern ein \alert{int}-Wert zugeordnet
 		\begin{itemize}
 			\item Man kann auch andere Typen angeben (wie z.B. \alert{byte}, \alert{short} ...)
-			\item Diese beginnt Standardmäßig bei 0 und wird mit jedem neuen Element um 1 erhöht
-			\item Man kann den Konstanten Werte zuweisen und Werte können mehrmals vergeben werden
+			\item Diese beginnt standardmäßig bei 0 und wird mit jedem neuen Element um 1 erhöht
+			\item Man kann den Konstanten Werte zuweisen
+			\item Werte können mehrmals vergeben werden
 			\item Man kann damit einen \alert{enum}-Wert in einen zugehörigen Typ Wert casten			
 		\end{itemize}
 		\item Syntax zur Nutzung:
@@ -69,11 +70,11 @@
 	\begin{itemize}
 		\item Schlüsselwort ist \alert{struct}
 		\item Ist nahezu identisch mit einer Klasse
-		\item Sie sind nicht Referenz-, sondern Werttypen
+		\item Keine Referenz-, sondern Werttypen
 		\item Werden genutzt um kleine Gruppen verwandter Variablen zusammen zufassen
-		\item Sie können von Interfaces, aber nicht von anderen Structs oder Klassen erben 
+		\item Sie können nur von Interfaces erben 
 		\begin{itemize}
-			\item \alert{struct} sind automatisch \alert{sealed}
+			\item \alert{struct}s sind automatisch \alert{sealed}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -88,27 +89,28 @@
 \begin{frame}{Schlüsselwörter}
 	\textbf{static}\\
 	\begin{itemize}
-		\item Es können Klassen, Methoden, Eigenschaften, Felder und mehr statisch sein
+		\item Für Klassen, Methoden, Eigenschaften, Felder und mehr
 		\item Von einer statischen Klasse kann keine Instanz erzeugt werden
 		\begin{itemize}
-			\item Diese wird automatisch bei Programmstart angelegt
+			\item Wird automatisch bei Programmstart angelegt
 		\end{itemize}
-		\item Statische Member existieren außerhalb eines Objektes einer Klasse
+		\item Statische Member existieren auch außerhalb eines Objektes einer Klasse 
 		\begin{itemize}
-			\item Werden über die Klasse/Datentyp aufgerufen
-			\item Können nicht auf nicht-statische Member der zugehörigen Klasse zugreifen
+			\item Werden über die \texttt{\alert{<Klassenname>}}\textbf{.}\texttt{\alert{<Member>}} abgerufen
+			\item Können nicht auf andere nicht-statische Member der zugehörigen Klasse zugreifen
 		\end{itemize}
 	\end{itemize}
 	\textbf{readonly}\\
 	\begin{itemize}
-		\item Kann nur auf Felder benutzt werden
+		\item Kann nur für Felder benutzt werden
 		\item Stellt sicher, dass das Feld im Laufe der Benutzung nicht verändert wird
 		\item Der Wert des Feldes kann nur durch direkte Deklaration oder in einem Konstruktor der zugehörigen Klasse initialisiert werden
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Schlüsselwörter}
-	\lstinputlisting{resources/07_datenstrukturen/static_readonly.cs}
+	\lstinputlisting{resources/07_datenstrukturen/static_readonly_1.cs}
+	\lstinputlisting{resources/07_datenstrukturen/static_readonly_2.cs}
 \end{frame}
 
 \begin{frame}{Schlüsselwörter}

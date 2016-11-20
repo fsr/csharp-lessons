@@ -45,7 +45,7 @@
 	\begin{itemize}
 		\item Gibt dem Event die Möglichkeit zusätzliche Informationen an Empfänger zu übergeben
 		\begin{itemize}
-			\item Falls keine Informationen zum Event zur Verfügung stehen kann man \alert{EventArgs.Empty} übergeben
+			\item Falls keine Informationen zum Event zur Verfügung steht, kann man \alert{EventArgs.Empty} übergeben
 		\end{itemize}
 		\item Da der EventHanlder generisch ist, kann man seine eigenen \alert{EventArgs} übergeben
 	\end{itemize}
@@ -56,7 +56,7 @@
 \begin{frame}{event}
 	\begin{itemize}
 		\item Wird genutzt um bei einem Publisher ein Event zu deklarieren
-		\item Zusammen mit Attributen von einem Delegatetype genutzt
+		\item Zusammen mit Attributen von einem Delegatetypen genutzt
 		\item Kann ebenfalls alle Modifikatoren (wie \alert{virtual} oder \alert{override} nutzen)
 		\begin{itemize}
 			\item Bei \alert{abstract} muss ein eigener add/remove-Ereignisaccessorblock erstellt werden
@@ -68,7 +68,7 @@
 \subsection{Mehrere Events}
 \begin{frame}{Mehrere Events}
 	\begin{itemize}
-		\item Man kann verschiedene Methoden einen EventHandler (oder anderen \alert{Delegate}) mit dem add-Ereignisaccessorblock
+		\item Man kann verschiedenenen EventHandlern Methoden übergeben, etwa mit dem add-Ereignisaccessorblock
 			\begin{itemize}
 				\item \texttt{\alert{+=}}
 			\end{itemize}
@@ -98,8 +98,8 @@
 \subsection{Nullable}
 \begin{frame}{Nullable}
 	\begin{itemize}
-		\item Werden genutzt, damit Werttyp-Variablen ebenfalls den Inhalt von \alert{null} haben können
-		\item Ist eine generische Klasse
+		\item Werden genutzt, damit Werttyp-Variablen ebenfalls \alert{null} sein können
+		\item Generische Klasse
 		\item Besitzt 2 Eigenschaften
 		\begin{description}
 			\item[HasValue] Gibt an, ob das Objekt einen Wert hat oder nicht
@@ -120,16 +120,15 @@
 \begin{frame}{Weiteres zu null}
 	\begin{itemize}
 		\item Falls ein Objekt \alert{null} sein kann sollte man diese vor dem benutzen immer überprüfen
-		\item Da \alert{obj != null} viel Schreibaufwand ist, kann dies vereinfacht werden	
 	\end{itemize}
-	\begin{itemize}
-		\item Man nutzt dafür \texttt{\alert{?.}}
+	\begin{itemize}	
+		\item \alert{obj != null} kann durch \texttt{\textbf{\alert{?.}}} vereinfacht werden	
 		\item Syntax:
 		\begin{itemize}
-			\item \texttt{obj\alert{?.}Property ...}
+			\item \texttt{obj\textbf{\alert{?.}}Property}
 		\end{itemize}
 		\item Es wird vor dem Benutzen des Objektes geschaut, ob dieses \alert{null} ist
-		\item Falls es nich \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
+		\item Falls es nicht \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
 	\end{itemize}
 \end{frame}
 

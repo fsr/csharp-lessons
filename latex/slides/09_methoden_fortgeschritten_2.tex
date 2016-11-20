@@ -23,9 +23,11 @@
 \begin{frame}{Extensions}
 	\begin{itemize}
 		\item Ermöglichen es vorhandenen Typen eigene Methoden hinzuzufügen
-		\item Ohne eine abgeleitete Klasse zu erstellen oder den originalen Typen neu zu erstellen
-		\item Sind statische Methoden, welche aber als Instanzmethoden auf den erweiterten Typ agieren
-		\item Befinden sich selbst in einer extra statischen Klasse
+		\item Es muss keine abgeleitete Klasse oder der originale Typ neu erstellt werden
+		\item Extension Methoden sind statisch, agieren auf dem erweiterten Typ aber als wären sie Instanzmethoden
+		\begin{itemize}
+			\item Befinden sich selbst in einer extra statischen Klasse
+		\end{itemize}				
 		\item Syntax:
 		\begin{itemize}
 			\item \texttt{public static \alert{<Rückgabetyp> <Name>}( this \alert{<Erweiterter Typ> <Variablenname>}, \alert{[Übergabeparameter]} )\\ \{ \alert{<Code>} \}}
@@ -39,10 +41,14 @@
 
 \begin{frame}{Extensions}
 	\begin{itemize}
-		\item Um die Extension nutzen zu können, muss diese mit einem \alert{using} eingebunden werden
+		\item Um die Extension nutzen zu können, muss deren \alert{namespace} mit einem \alert{using} eingebunden werden oder die Extension Klasse hinzugefügt werden 
 	\end{itemize}
 	\lstinputlisting{resources/09_methoden_fortgeschritten_2/using_for_extension.cs}
 	\lstinputlisting{resources/09_methoden_fortgeschritten_2/extension_using.cs}
+	\begin{itemize}
+		\item Hinweis: Man kann beim schreiben von Extensions auch Objekte erzeugen, was nützlich sein kann wenn die zu erweiternde Klasse Methoden zum Verarbeiten von Daten haben soll (Punkte in einem Diagramm); Das kann man zum Beispiel über Conditional Weak Tables machen 
+	\end{itemize}		
+	
 \end{frame}
 
 % ----------------------- yield ------------------------------
@@ -63,7 +69,8 @@
 \end{frame}
 
 \begin{frame}{yield}
-	\lstinputlisting{resources/09_methoden_fortgeschritten_2/yield.cs}	
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/yield.cs}
+	\lstinputlisting{resources/09_methoden_fortgeschritten_2/yield_usage.cs}
 \end{frame}
 
 % ----------------------- Schlüsselwörter ------------------------------
@@ -76,7 +83,7 @@
 	\end{itemize}
 	\textbf{params}\\
 	\begin{itemize}
-		\item Ermöglicht es eine beliebige Anzahl von Übergabeparametern eines Typs einer Methode zu geben
+		\item Ermöglicht es eine beliebige Anzahl von Übergabeparametern gleichen Typs einer Methode zu geben
 		\item Diese werden in der Methode dann als Array genutzt
 		\item Die Übergabe kann über eine mit Komma getrennte Liste oder über ein Array passieren
 		\item Dieser muss am Ende der Übergabeparameter stehen
@@ -92,7 +99,7 @@
 	\textbf{out}\\
 	\begin{itemize}
 		\item Eine Variable wird, wie bei \alert{ref}, als Verweis übergeben
-		\item Jedoch muss diese Variable nun nicht deklariert sein
+		\item Jedoch muss diese Variable nicht deklariert sein
 		\item Die Variable enthält zum Ende der Methode den zuletzt zugewiesenen Wert
 		\item Es muss innerhalb der Methode mindestens eine Zuweisung erfolgen
 		\item Kann verwendet werden, wenn eine Methode mehr als einen Wert zurückgeben soll

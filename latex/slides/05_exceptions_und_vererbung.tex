@@ -22,12 +22,12 @@
 \section{Vererbung}
 \begin{frame}{Vererbung}
 	\begin{itemize}
-		\item Ermöglicht das definieren von Klassen die auf anderen basieren
-		\item Diese erben die Funktionalitäten der Basisklasse und können diese benutzen oder erweitern
-		\item Es wird alles vererbt, doch einige Member sind von dem Erben nicht sichtbar 
-		\item Alle Klassen erben von der Klasse \alert{Object}
-		\item Klassen können maximal von einer Klasse erben
+		\item Definieren von Klassen die auf anderen Klassen basieren
 		\item Die Klasse die Verhalten vererbt heiß \alert{Basisklasse} und die Klasse, die es erbt, heißt \alert{abgeleitete Klasse}
+		\item Diese erben (Kinder) die Struktur und Funktionalitäten der Basisklasse (Eltern) und können diese benutzen oder erweitern
+		\item Nicht alle Member sind für dem Erben sichtbar
+		\item Alle Klassen erben von der Klasse \alert{Object}
+		\item Es kann von maximal einer Klasse geerbt werden
 		\item Syntax:
 		\begin{itemize}
 			\item \texttt{class \alert{<Klassenname>} : \alert{<Basisklasse>}} \{ \}
@@ -40,19 +40,25 @@
 \begin{frame}{Polymorphie}
 	\begin{itemize}
 		\item Zu dt. Vielgestaltigkeit
-		\item Instanzen abgeleitete Klassen können auch immer als Instanzen einer ihrer Basisklassen betrachtet werden
-		\item Basisklassen können Methoden und Eigenschaften besitzen, die von den abgeleiteten Klassen überschrieben werden können
-		\item Während der Nutzung eines Objekts als Basisklasse wird der Laufzeittyp ermittelt und die überschrieben/veränderten Methoden und Eigenschaften genutzt
+		\item Instanzen einer abgeleiteten Klassen sind auch immer Instanzen einer ihrer Basisklassen
+		\item Methoden und Eigenschaften einer Basisklasse können von abgeleiteten Klassen überschrieben werden
+		\item Während der Nutzung eines Objektes vom Typ der Basisklasse wird der Laufzeittyp ermittelt und die dementsprechenden (überschriebenen) Methoden und Eigenschaften benutzt
 		\item Alle nicht überschriebenen Methoden oder Eigenschaften sind identisch mit denen der Basisklasse
 	\end{itemize} 
 \end{frame}
+
+\begin{frame}{Polymorphie}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/class_call_1.cs}
+	\lstinputlisting{resources/05_exceptions_und_vererbung/class_call_2.cs}
+\end{frame}
+
 
 \subsection{Methoden- \& Eigenschaftsüberschreibung}
 \begin{frame}{Methoden- \& Eigenschaftsüberschreibung}	
 	\textbf{virtual}
 	\begin{itemize}
 		\item Erlaubt das Überschreiben einer Methode
-		\item Wird an die Methoden einer Basisklasse geschrieben
+		\item Schlüsselwort das an die Methoden der Basisklasse geschrieben wird
 	\end{itemize}
 	\lstinputlisting{resources/05_exceptions_und_vererbung/virtual.cs}
 \end{frame}
@@ -62,9 +68,9 @@
 	\begin{itemize}
 		\item Gibt an, dass es sich um eine Überschreibung einer Methode aus der Basisklasse handelt
 		\begin{itemize}
-			\item Es darf bloß überschrieben werden, wenn die Methode in der Basisklasse ein \alert{virtual} hat
+			\item Entsprechende Methode in der Basisklasse muss mit \alert{virtual} gekennzeichnet sein
 		\end{itemize}
-		\item Wird an die Methoden in der abgeleiteten Klasse geschrieben
+		\item Keyword das an die Methoden der abgeleiteten Klasse geschrieben wird
 	\end{itemize}
 	\textbf{new}\\
 	\begin{itemize}
@@ -168,14 +174,15 @@
 	\textbf{try catch finally}\\
 	\begin{itemize}
 		\item Wird genutzt um Exceptions aufzufangen und diese zu behandeln
-		\item Der im \alert{try}-Block stehende Code wird ausgeführt und bei auftreten einer Exception werden die \alert{catch}-Blöcke ausgeführt
+		\item Der im \alert{try}-Block stehende Code wird versucht auszuführen
+		\item Beim Auftreten einer Exception wird der \alert{try}-Block abgebrochen und einer der \alert{catch}-Blöcke ausgeführt
 		\item Es kann mehrere \alert{catch}-Blöcke für verschiedene Exception geben
 		\begin{itemize}
 			\item Die Exception kann im \alert{catch}-Block als Variable genutzt werde
-			\item Man geht immer vom spezifischen zum allgemeinem Fehler, damit alle Exceptions gefangen werden können
+			\item Man geht sollte von spezifischen zu allgemeinen Fehlern gehen, damit alle Exceptions gefangen werden
 		\end{itemize}
-		\item Der \alert{finally}-Block wird immer ausgeführt, auch wenn keine Exception aufgetreten ist
-		\item \textbf{Wichtig:} Jeder dieser Blöcke benötigt immer eine paar aus geschweiften Klammern
+		\item Der \alert{finally}-Block wird am Ende ausgeführt, auch wenn keine Exception aufgetreten ist
+		\item \textbf{Wichtig:} Jeder dieser Blöcke wird durch geschweifte Klammer gekennzeichnet
 	\end{itemize}
 \end{frame}
 

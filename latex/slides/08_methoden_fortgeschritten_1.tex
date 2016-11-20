@@ -21,21 +21,6 @@
 % ----------------------- Opertatoren Überladung ------------------------------
 \section{Opertatoren Überladung}
 \begin{frame}{Opertatoren Überladung}
-	\begin{itemize}
-		\item Alle Typen können statische Methoden haben, welche Operatoren überschreiben und neu definieren können
-		\item Nicht alle Operatoren können überschrieben werden
-		\item Syntax:
-		\begin{itemize}
-			\item \texttt{public static \alert{<Datentyp>} operator \alert{<Operator>}\\( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \}}
-		\end{itemize}
-		\item Verschiedene Operatoren brauchen verschiedene Übergabeparameter und Rückgabeparameter
-		\begin{itemize}
-			 \item Man kann den selben Operator mit verschiedenen Übergabetypen überladen
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Opertatoren Überladung}
 	\textbf{Operatoren}\\
 	\begin{description}
 		\item[unäre] \texttt{\alert{+}, \alert{-}, \alert{!}, \alert{\texttt{\~}}, \alert{++}, \alert{--}, \alert{true}, \alert{false}}
@@ -47,6 +32,20 @@
 		\item Operatoren wie \alert{+=} und \alert{\&\&} werden durch \alert{+} und \alert{\&} beschrieben
 		\item \alert{true} und \alert{false} geben dem Objekt die Möglichkeit wie bool behandelt zu werden
 		\item Bei Vergleichsoperatoren muss der jeweilige Gegensatz auch überschrieben werden (z.B. bei \alert{==} auch \alert{!=} überschreiben)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Opertatoren Überladung}
+	\begin{itemize}
+		\item Alle Typen können statische Methoden haben, welche Operatoren überschreiben und neu definieren können
+		\item Syntax:
+		\begin{itemize}
+			\item \texttt{public static \alert{<Datentyp>} operator \alert{<Operator>}\\( \alert{[Übergabeparameter]} ) \{ \alert{<Code>} \}}
+		\end{itemize}
+		\item Verschiedene Operatoren brauchen verschiedene Übergabeparameter und Rückgabeparameter
+		\begin{itemize}
+			 \item Man kann den selben Operator mit verschiedenen Übergabetypen überladen
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -66,7 +65,7 @@
 				\item Alle Methoden mit dieser Signatur können durch den Delegate dargestellt werden
 			\end{itemize}
 		\item Wird genutzt um eine Methode aufzurufen ohne auf dessen Objekt eine Referenz zuhaben
-		\item Syntax (zur Datentyps Deklarierung):
+		\item Syntax (zur Datentyp Deklarierung):
 		\begin{itemize}
 			\item \texttt{delegate \alert{<Rückgabetyp> <Delegatename>}\\( \alert{[Übergabeparameter]} );}
 		\end{itemize}
@@ -149,7 +148,7 @@
 		\item Lamdas können auf Variablen außerhalb ihres eigenen Gültigkeitsbereichs/Scopes verweisen und diese nutzen
 		\item Diese werden zur Verwendung im Lamda gespeichert
 		\item In diesem Fall werden lokale Referenzen zu den Objekten im Lamda gespeichert
-		\item So eine aüßere Variable muss definitiv vorher zugewiesen sein
+		\item Solch eine äußere Variable muss definitiv vorher zugewiesen sein
 	\end{itemize}
 	\lstinputlisting{resources/08_methoden_fortgeschritten_1/anonym_method_delegate_creation_3.cs}
 \end{frame}
