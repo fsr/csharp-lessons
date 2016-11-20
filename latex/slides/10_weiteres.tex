@@ -120,12 +120,15 @@
 \begin{frame}{Weiteres zu null}
 	\begin{itemize}
 		\item Falls ein Objekt \alert{null} sein kann sollte man diese vor dem benutzen immer überprüfen
-		\item \alert{obj != null} kann durch \texttt{\alert{?.}} vereinfacht werden	
+	\end{itemize}
+	\begin{itemize}	
+		\item \alert{obj != null} kann durch \texttt{\textbf{\alert{?.}}} vereinfacht werden	
+		\item Syntax:
 		\begin{itemize}
-			\item Syntax: \texttt{obj\alert{?.}Property}
-			\item Es wird vor dem Benutzen des Objektes geschaut, ob dieses \alert{null} ist
-			\item Falls es nich \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
+			\item \texttt{obj\textbf{\alert{?.}}Property}
 		\end{itemize}
+		\item Es wird vor dem Benutzen des Objektes geschaut, ob dieses \alert{null} ist
+		\item Falls es nicht \alert{null} ist, wird es benutzt, sonst gibts es \alert{null} zurück
 	\end{itemize}
 \end{frame}
 
