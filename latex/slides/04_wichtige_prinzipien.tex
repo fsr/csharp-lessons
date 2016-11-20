@@ -23,8 +23,8 @@
 \section{Dokumentationskommentare}
 \begin{frame}{Dokumentationskommentare}
 	\begin{itemize}
-		\item Das Doku-Kommentar beginnt mit 3, anstatt 2 \texttt{\alert{/}}
-		\item Beschreiben nur Klassen, Felder/Eigenschaften und Methoden
+		\item Das Doku-Kommentar beginnt mit \texttt{\alert{///}} (3), anstatt \texttt{\alert{//}} (2)
+		\item Stehen nur Klassen, Felder/Eigenschaften und Methoden
 		\begin{itemize}
 			\item Das Kommentar steht dabei immer direkt über den zu kommentierenden Code
 		\end{itemize}
@@ -36,6 +36,7 @@
 \begin{frame}{Dokumentationskommentare}
 	\textbf{Tags}
 	\begin{itemize}
+		\item Sind Teil eines Dokumentationskommentars
 		\item Geben an, was genau von dem Code dokumentiert werden soll
 		\item 3 wichtige Tags:
 		\begin{description}
@@ -54,21 +55,33 @@
 	\lstinputlisting{resources/04_wichtige_prinzipien/documentation.cs}	
 \end{frame}
 
+\begin{frame}
+	\begin{itemize}
+		\item Und nun mit Inhalt:
+	\end{itemize}
+	\lstinputlisting{resources/04_wichtige_prinzipien/documentation_example.cs}		
+\end{frame}
+
 % ----------------------- Scope ------------------------------
 \section{Gültigkeit (Scope)}
 \begin{frame}{Gültigkeit (Scope)}
 	\begin{itemize}
-		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb des Bereichs gültig in denen sie deklariert wurden:
+		\item Variablen, Member, Klassen und andere Elementen sind nur innerhalb eines bestimmten Bereichs gültig:
 		\begin{itemize}
 			\item Methoden und Felder nur in deren Klassen
 			\item Parameter nur in deren Methoden
 			\item Lokale Variablen innerhalb ihrer Blöcke
 		\end{itemize}
+		\item Dieser Bereich ist definiert durch die Position an denen sie deklariert wurden
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Gültigkeit (Scope)}
-	\lstinputlisting{resources/04_wichtige_prinzipien/scope.cs}
+	\lstinputlisting{resources/04_wichtige_prinzipien/scope_1.cs}
+\end{frame}
+
+\begin{frame}{Gültigkeit (Scope)}
+	\lstinputlisting{resources/04_wichtige_prinzipien/scope_2.cs}
 \end{frame}
 
 % ----------------------- namespace und using ------------------------------
@@ -79,7 +92,10 @@
 		\item Werden zur Organisation von Klassen und anderem Code genutzt 
 		\item Können beliebig verschachtelt werden
 		\item der volle Name einer Klasse beinhaltet die Namen aller Namespaces, in denen die Klasse liegt
-		\item Vermeiden von Mehrdeutigen Bezeichnen 
+		\begin{itemize}
+			\item es gibt eine Aussnahme
+		\end{itemize}
+		\item Vermeiden von mehrdeutigen Bezeichnern 
 		\begin{itemize}
 			\item Zwei Klassen dürfen den selben Namen haben, wenn diese in unterschiedlichen Namespaces liegen		
 		\end{itemize}
@@ -94,6 +110,12 @@
 		\item Dies erspart die Eingabe des gesamten Namespace bei Nutzung einer Klasse
 		\item Kann zu mehrdeutigen Code führen, wenn 2 Namespaces eingebunden werden, die Elemente mit selben Namen beinhalten
 	\end{itemize}
+	\begin{itemize}
+		\item \alert{using} kann aber auch in anderen Zusammenhängen genutzt werden!
+	\end{itemize}
+\end{frame}
+
+\begin{frame}	
 	\lstinputlisting{resources/04_wichtige_prinzipien/using.cs}
 \end{frame}
 
@@ -125,7 +147,7 @@
 		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird der ganze Inhalt der Variable kopiert
 		\item Es entsteht somit eine identische Kopie
 		\begin{itemize}
-			\item Wenn eine Kopie verändert wird, bleibt die andere unbetroffen
+			\item Wenn eine Kopie verändert wird, bleibt die ursprünglich variable unbetroffen
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/04_wichtige_prinzipien/valuetype.cs}	
@@ -137,9 +159,9 @@
 	\end{itemize}
 	\begin{itemize}
 		\item Beim Kopieren oder Neuzuweisen einer Variable dieser Art wird die Speicheradresse kopiert
-		\item Da alle Kopien auf den selben Speicher zeigen, sind alle Kopien identisch
+		\item Da alle \glqq{}Kopien\grqq{} auf den selben Speicher zeigen, sind alle \glqq{}Kopien\grqq{} identisch
 		\begin{itemize}
-			\item Wenn eine Kopie verändert wird, werden alle anderen auch verändert
+			\item Wenn eine \glqq{}Kopie\grqq{} verändert wird, werden alle anderen auch verändert
 		\end{itemize}
 	\end{itemize}
 	\lstinputlisting{resources/04_wichtige_prinzipien/referencetype.cs}	
